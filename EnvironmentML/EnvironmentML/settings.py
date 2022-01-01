@@ -74,10 +74,20 @@ WSGI_APPLICATION = 'EnvironmentML.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'EnvironmentML',
+        'USER': 'EnvironmentML',
+        'PASSWORD': '83247923847923749',
+        'HOST': '192.168.1.3',  # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
     }
 }
 

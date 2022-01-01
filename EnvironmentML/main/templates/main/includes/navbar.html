@@ -1,29 +1,9 @@
 {% load static %}
-<div class="navbar-fixed">
-
-    <nav class="light-blue" style="padding:0px 15px; position: fixed;">
-        <div class="nav-wrapper">
-            <a href="#" class="sidenav-trigger" data-target="mobile-nav">
-                <i class="material-icons">menu</i>
-            </a>
-
-            <a href="/" class="brand-logo">
-                <i><img src="{% static 'graphics/logo.png' %}" alt="Image" style="width: 85%"></i>
-                AppliedML
-            </a>
-
-            <ul class="right hide-on-med-and-down">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about-us">About Us</a></li>
-                <li><a href="/projects">Projects</a></li>
-            </ul>
-
-        </div>
-    </nav>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}">
+</head>
+<div id="navbar" style="z-index: 100">
+    <a href="/home">EnvironmentML</a>
+    <a href="/get-started">Get Started</a>
+    <a href="/about">About</a>
 </div>
-
-<ul class="sidenav" id="mobile-nav">
-    <li><a href="/">Home</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/examples">Examples</a></li>
-</ul>
