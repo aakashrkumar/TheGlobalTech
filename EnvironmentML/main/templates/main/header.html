@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="{% static 'main/css/index.css' %}">
-    <script src="{% static 'main/js/index.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    <script src="{% static 'js/index.js' %}"></script>
 
     <link rel="shortcut icon" type="image/png" href="{% static 'graphics/logo.ico' %}"/>
     <!--Tiny MCE-->
@@ -26,9 +26,22 @@
     </script>
 </head>
 
-<body>
+<body class="powder_blue2">
 {% include "main/includes/navbar.html" %}
 {% block content %}
+    <div id="navbar" style="z-index: 100">
+        <a href="/home">The Life Cycle</a>
+        <a href="/get-started">Get Started</a>
+        <div class="dropdown">
+            <a href="#contact" style="width:62px">Contact</a>
+            <div class="dropdown-content" style="margin-top: 49px;">
+                <a href="mailto:thelifecycle12345@gmail.com" style="width:62px">Email</a>
+                <a href="https://github.com/TheRealAakash/TheTrashCycle" style="width:62px">Github</a>
+                <!--a href="#">Youtube</--a-->
+            </div>
+        </div>
+        <a href="/about">About</a>
+    </div>
 {% endblock %}
 </body>
 
