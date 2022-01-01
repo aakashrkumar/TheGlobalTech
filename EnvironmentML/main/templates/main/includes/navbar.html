@@ -1,0 +1,40 @@
+{% load static %}
+<div class="navbar-fixed">
+
+    <nav class="light-blue" style="padding:0px 15px; position: fixed;">
+        <div class="nav-wrapper">
+            <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+                <i class="material-icons">menu</i>
+            </a>
+
+            <a href="/" class="brand-logo">
+                <i><img src="{% static 'graphics/logo.png' %}" alt="Image" style="width: 85%"></i>
+                AppliedML
+            </a>
+            <!--a href="/" class="brand-logo">AppliedML</a-->
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <!--li><a href="/examples">Examples</a></li-->
+                {% if user.is_authenticated %}
+                    <li><a href="/games">Games</a></li>
+                    {% if user.is_superuser %}
+                        <!--li><a href="/manage-bots">ManageBots</a></li-->
+                    {% endif %}
+                    <!--li><a href="/account">{{ user.username }}</a></li-->
+                    <li><a href="/notifications">Notifications ({{ numNotifications }})</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                {% else %}
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<ul class="sidenav" id="mobile-nav">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/examples">Examples</a></li>
+</ul>
