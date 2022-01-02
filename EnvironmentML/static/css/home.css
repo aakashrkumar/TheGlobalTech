@@ -20,7 +20,7 @@
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 15vh;
+    width: 30vh;
     position: relative;
     margin: auto;
 }
