@@ -3,7 +3,7 @@
     position: fixed;
     width: 100%;
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px 10px;
 }
 
