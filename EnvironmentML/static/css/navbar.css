@@ -14,6 +14,7 @@
 
 /* Style the header links */
 .navbar a {
+    color: black;
     padding: 12px;
     text-decoration: none;
     font-size: 20px;
