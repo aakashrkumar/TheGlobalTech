@@ -29,12 +29,12 @@
 }
 
 /* When you mouse over the navigation links, change their color */
-.navbar a:hover {
+.sidebar a:hover {
     color: #0076BE;
 }
 
 /* Style the active/current link*/
-.navbar a.active {
+.sidebar a.active {
     color: #0076BE;
 }
 
