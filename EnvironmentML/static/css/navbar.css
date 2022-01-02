@@ -26,8 +26,7 @@
 
 /* Change the background color on mouse-over */
 .navbar a:hover {
-    background-color: #ddd;
-    color: black;
+    color: #0076BE;
 }
 
 /* Style the active/current link*/
