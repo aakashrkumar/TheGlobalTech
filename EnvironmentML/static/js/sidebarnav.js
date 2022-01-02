@@ -9,9 +9,9 @@ function closeNav() {
 
 jQuery('body').bind('click', function (e) {
     if (jQuery(e.target).closest('.sidebarnav').length == 0) {
-        console.log("click")
+        console.log(jQuery('.sidebarnav').style);
         // click happened outside of .navbar, so hide
-        var opened = jQuery('.sidebarnav').style.width == "0";
+        var opened = jQuery('.sidebarnav').style == "0";
         if (opened === true) {
             closeNav();
         }
