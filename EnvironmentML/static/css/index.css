@@ -14,9 +14,3 @@ body {
     height: 100%;
     overflow-x: hidden;
 }
-
-/* change the scroll bar */
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
