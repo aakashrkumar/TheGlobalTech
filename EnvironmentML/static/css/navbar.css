@@ -10,6 +10,10 @@
     transition: 0.5s; /* 0.5 second transition effect to slide in the navbar */
     display: inline-block;
     vertical-align: top;
+}
+
+.navcontainer {
+    width: 95%;
     margin: 0 auto;
     max-width: 1360px;
 }
