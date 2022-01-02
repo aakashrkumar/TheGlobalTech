@@ -1,5 +1,5 @@
 function openNav() {
-    document.getElementById("sideNavBar").style.width = "300px";
+    document.getElementById("sideNavBar").style.width = "400px";
     document.getElementById("sideNavBar").style.right = "0";
     document.getElementById("sideNavBar").classList.add("collapse");
 }
