@@ -1,12 +1,8 @@
 /* create headline class which shows text the left of screen if screen is large or center if screen is small */
 .headline {
+    padding-top: 30vh;
     display: block;
-    float: left;
-    top: 30vh;
     width: 50vh;
-    text-align: left;
-    font-size: 1.5em;
+    font-size: 4em;
     font-weight: bold;
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
 }

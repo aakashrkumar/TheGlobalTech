@@ -1,10 +1,3 @@
-/* create container which centers the content within a margin */
-.container {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1360px;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -13,4 +6,12 @@ body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+}
+
+/* create container which centers the content within a margin */
+.container {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1360px;
 }
