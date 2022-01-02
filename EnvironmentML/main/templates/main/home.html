@@ -3,50 +3,5 @@
     {% load static %}
 
     <body>
-    <div style="justify-content: center;">
-        <div class="intro">
-            <div id="opening">
-                <img src="{% static 'graphics/AppliedMLBannerLogo.png' %}" alt="Image" style="width: 100%;">
-            </div>
-            <div id="scroll">
-                <img src="{% static 'graphics/scrolldown.webp' %}" alt="Scroll Down">
-            </div>
-        </div>
-        <div class="intro2">
-            <div>
-                <h1 id="textbeforestat" style="font-family: boldflow;">
-                    Compete in various machine learning challenges
-                </h1>
-                <!-- <div style="width: 30%;"> -->
-                <div id="chart">
-                    <div class="row">
-                        <div class="column">
-                            <h2 style="text-align:left; font-size:34px">
-                                Easily learn about and compete in various machine learning challenges using advanced algorithms
-                            </h2>
-                            <br>
-                            <br>
-                            {% if user.is_authenticated %}
-                                <a id="start" href="/games"
-                                   style="float: left; font-family: Verdana, Geneva, Tahoma, sans-serif; width: 200px; margin-bottom: 30px;">
-                                    Get Started
-                                </a>
-                            {% else %}
-                                <a id="start" href="/login"
-                                   style="float: left; font-family: Verdana, Geneva, Tahoma, sans-serif; width: 200px; margin-bottom: 30px;">
-                                    Get Started
-                                </a>
-                            {% endif %}
-                            <a id="learnmore" href="/about"
-                               style="float: left; font-family: Verdana, Geneva, Tahoma, sans-serif; width: 200px;">
-                                Learn More
-                            </a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     </body>
 {% endblock %}
