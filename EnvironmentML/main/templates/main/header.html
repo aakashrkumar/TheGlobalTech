@@ -15,7 +15,8 @@
 
     <link rel="shortcut icon" type="image/png" href="{% static 'graphics/logo.ico' %}"/>
     <!--Tiny MCE-->
-    <link href="{% static "tinymce/css/prism.css" %}" rel="stylesheet">
+    <link href="{% static " tinymce
+    /css/prism.css" %}" rel="stylesheet">
 
     <script>
         $(document).ready(function () {
@@ -25,13 +26,15 @@
 </head>
 
 <body class="powder_blue2">
-{% include "main/includes/navbar.html" %}
-{% block content %}
-{% endblock %}
+<div class="container">
+    {% include "main/includes/navbar.html" %}
+    {% block content %}
+    {% endblock %}
+</div>
 </body>
 
 
 <!-- Prism JS -->
-<script src="{% static "tinymce/js/prism.js" %}"></script>
+<script src="{% static 'tinymce/js/prism.js' %}"></script>
 <script>M.AutoInit();</script>
 </html>
