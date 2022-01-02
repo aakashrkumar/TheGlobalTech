@@ -5,6 +5,7 @@
     width: 100%;
     display: block;
     transition: top 0.3s;
+    box-shadow: #000000;
 }
 
 #navbar a {
