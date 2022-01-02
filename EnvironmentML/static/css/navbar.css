@@ -50,3 +50,9 @@
         transform: translateY(0);
     }
 }
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
