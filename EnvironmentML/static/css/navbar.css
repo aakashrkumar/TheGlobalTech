@@ -49,7 +49,7 @@
 @media screen and (max-width: 500px) {
     .navbar.hideoverflow a {
         float: none;
-        display: none;
+        visibility: hidden;
     }
 
     .navbar-right {
