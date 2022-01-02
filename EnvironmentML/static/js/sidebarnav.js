@@ -14,9 +14,9 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
     if (currentScrollPos > 0) {
-        document.getElementById("navBar").style.height = "200px";
+        document.getElementById("navBar").style.height = "5%;";
     } else {
-        document.getElementById("navBar").style.height = "100px";
+        document.getElementById("navBar").style.height = "1%";
     }
     prevScrollpos = currentScrollPos;
 }
