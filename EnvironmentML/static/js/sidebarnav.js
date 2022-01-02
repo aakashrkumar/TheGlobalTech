@@ -9,7 +9,7 @@ function closeNav() {
     document.getElementById("sideNavBar").classList.remove("collapse");
 }
 
-var prevScrollpos = window.pageYOffset;
+/*var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
@@ -18,7 +18,7 @@ window.onscroll = function () {
         document.getElementById(".navbar").style.top = "-50px";
     }
     prevScrollpos = currentScrollPos;
-}
+}*/
 jQuery('body').bind('click', function (e) {
     if (jQuery(e.target).closest('.sidebarnavid').length == 0) {
         if (document.getElementById("sideNavBar").classList.contains('collapse')) {
