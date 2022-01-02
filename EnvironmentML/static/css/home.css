@@ -14,9 +14,12 @@
     max-width: 1360px;
 }
 
+.slideshow {
+    float: right;
+}
+
 /* Slideshow container */
 .slideshow-container {
-    float: right;
     max-width: 15vh;
     position: relative;
     margin: auto;
