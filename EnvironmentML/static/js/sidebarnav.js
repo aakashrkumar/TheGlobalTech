@@ -9,7 +9,7 @@ function closeNav() {
     document.getElementById("sideNavBar").style.width = "0";
     document.getElementById("sideNavBar").classList.remove("collapse");
 }
-
+/*
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
@@ -18,7 +18,7 @@ window.onscroll = function () {
     } else {
         document.getElementById("navBar").style.height = "5%;";
     }
-}
+}*/
 
 
 jQuery('body').bind('click', function (e) {
