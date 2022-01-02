@@ -9,7 +9,7 @@
 }
 
 @media (min-width: 600px) {
-    .site-header__wrapper {
+    .nav_header_wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
