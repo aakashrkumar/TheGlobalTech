@@ -1,7 +1,7 @@
 /* create headline class which shows text the left of screen if screen is large or center if screen is small */
 .container {
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
     max-width: 1360px;
 }
 
@@ -64,7 +64,7 @@
     font-size: 15px;
     padding: 8px 0px;
     position: relative;
-    bottom: -8px;
+    bottom: 30px;
     width: 100%;
     text-align: center;
 }
@@ -80,6 +80,8 @@
 
 /* The dots/bullets/indicators */
 .dot {
+    position:relative;
+    bottom:40px;
     cursor: pointer;
     height: 15px;
     width: 15px;
