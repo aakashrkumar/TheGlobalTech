@@ -2,6 +2,7 @@
 .headline {
     display: block;
     float: left;
+    top: 10vh;
     width: 50vh;
     text-align: left;
     font-size: 1.5em;
