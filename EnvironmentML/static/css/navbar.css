@@ -8,12 +8,6 @@
     font-size: 20px;
 }
 
-
-.nav__item a {
-    display: block;
-    padding: 1.5rem 1rem;
-}
-
 @media (min-width: 600px) {
     .nav_header_wrapper {
         display: flex;
@@ -51,8 +45,27 @@
     }
 }
 
+.wrapper {
+    max-width: 1140px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav__item a {
+    display: block;
+    padding: 1.5rem 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
 *,
 *:before,
 *:after {
     box-sizing: border-box;
 }
+
