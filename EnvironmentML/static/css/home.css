@@ -1,23 +1,24 @@
 /* create headline class which shows text the left of screen if screen is large or center if screen is small */
-.headline {
-    float: left;
-    color: #1F1F1F;
-    display: block;
-    width: 22vw;
-    font-size: 80px;
-    font-weight: bold;
-}
-
 .container {
     margin: 0 auto;
     width: 80%;
     max-width: 1360px;
 }
 
+.headline {
+    float: left;
+    color: #1F1F1F;
+    display: block;
+    width: 30%;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+
 .slideshow {
     float: right;
     margin: auto;
-    width:40%;
+    width: 40%;
 }
 
 /* Slideshow container */
