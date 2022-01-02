@@ -4,7 +4,7 @@
     width: 100%;
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 1vh 1vw;
+    padding: 10px 10px;
     box-shadow: black 0px 0px 10px;
     z-index: 100;
     transition: 0.5s; /* 0.5 second transition effect to slide in the navbar */
@@ -16,9 +16,9 @@
 .navbar a {
     vertical-align: middle;
     color: black;
-    padding: 1vh;
+    padding: 12px;
     text-decoration: none;
-    font-size: 2vh;
+    font-size: 20px;
     border-radius: 4px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
@@ -46,7 +46,7 @@
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 4in) {
+@media screen and (max-width: 500px) {
     .hideoverflow {
         display: none;
     }
