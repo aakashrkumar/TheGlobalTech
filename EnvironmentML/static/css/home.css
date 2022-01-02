@@ -21,8 +21,8 @@
 
 /* Slideshow container */
 .slideshow-container {
-    width: 30vw;
     position: relative;
+    width: 30vw;
     margin: auto;
     padding-top: 25vh;
 }
