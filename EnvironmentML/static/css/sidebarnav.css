@@ -25,11 +25,17 @@
     color: #818181;
     display: block;
     transition: 0.3s;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidebarnav a:hover {
-    color: #f1f1f1;
+.navbar a:hover {
+    color: #0076BE;
+}
+
+/* Style the active/current link*/
+.navbar a.active {
+    color: #0076BE;
 }
 
 /* Position and style the close button (top right corner) */
