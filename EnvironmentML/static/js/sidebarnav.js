@@ -13,10 +13,10 @@ function closeNav() {
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navBar").style.top = "0";
+    if (currentScrollPos > 0) {
+        document.getElementById("navBar").style.height = "200px";
     } else {
-        document.getElementById("navBar").style.top = "-50px";
+        document.getElementById("navBar").style.height = "100px";
     }
     prevScrollpos = currentScrollPos;
 }
