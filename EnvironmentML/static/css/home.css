@@ -2,7 +2,6 @@
 .headline {
     float: left;
     color: #1F1F1F;
-    padding-top: 20vh;
     display: block;
     width: 22vw;
     font-size: 80px;
@@ -19,7 +18,6 @@
     float: right;
     margin: auto;
     width:40%;
-    padding-top:25%;
 }
 
 /* Slideshow container */
