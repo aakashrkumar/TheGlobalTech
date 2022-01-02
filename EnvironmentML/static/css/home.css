@@ -5,6 +5,10 @@
     max-width: 1360px;
 }
 
+.homepage {
+    display: table;
+}
+
 .headline {
     float: left;
     color: #1F1F1F;
@@ -79,7 +83,6 @@
     position: absolute;
     top: 0;
 }
-
 
 
 .activeimg {
