@@ -11,7 +11,7 @@ jQuery('body').bind('click', function (e) {
     if (jQuery(e.target).closest('.sidebarnav').length == 0) {
         console.log("click")
         // click happened outside of .navbar, so hide
-        var opened = jQuery('.sidebarnav').hasClass('collapse in');
+        var opened = jQuery('.mySidebar').style.width = "0";
         if (opened === true) {
             closeNav();
         }
