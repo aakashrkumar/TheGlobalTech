@@ -8,6 +8,8 @@
     box-shadow: black 0px 0px 10px;
     z-index: 100;
     transition: 0.5s; /* 0.5 second transition effect to slide in the navbar */
+    display: inline-block;
+    vertical-align: top;
 }
 
 /* Style the header links */
@@ -41,7 +43,6 @@
 /* Float the link section to the right */
 .navbar-right {
     float: right;
-    display: inline-block;
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
