@@ -1,5 +1,6 @@
 /* Style the header with a grey background and some padding */
 .navbar {
+    position: fixed;
     width: 100%;
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.9);
