@@ -36,10 +36,10 @@
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 48%;
     width: auto;
     /*margin-top: 37.5vh; */
-    /*padding: 1vh;*/
+    padding: 0.5%;
     color: white;
     font-weight: bold;
     font-size: 30px;
