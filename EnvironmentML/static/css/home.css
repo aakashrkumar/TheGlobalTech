@@ -6,3 +6,9 @@
     font-size: 4em;
     font-weight: bold;
 }
+
+.container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1360px;
+}
