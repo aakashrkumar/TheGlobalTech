@@ -14,8 +14,6 @@
 
 /* Style the header links */
 .navbar a {
-    /* center text vertically */
-    display: block;
     padding: 12px;
     text-decoration: none;
     font-size: 20px;
