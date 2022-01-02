@@ -9,7 +9,7 @@ function closeNav() {
 
 jQuery('body').bind('click', function (e) {
     if (jQuery(e.target).closest('sideNavBar').length == 0) {
-        if (document.getElementById("sideNavBar").style.width == "0") {
+        if (document.getElementById("sideNavBar").style.width != "0") {
             closeNav();
         }
     }
