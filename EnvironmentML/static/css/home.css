@@ -1,3 +1,7 @@
-body {
-    background: url('trash.png') no-repeat center center fixed;
+/* Create a class "background image" which fills the whole screen */
+.background-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
 }
