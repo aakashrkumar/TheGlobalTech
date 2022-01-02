@@ -1,12 +1,13 @@
 /* The sidebar menu */
 .sidebarnav {
     height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
+    /*width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     float: right; /* Stay in place */
     z-index: 101; /* Stay on top */
     top: 0;
-    left: 0;
+    right: 0;
+    width: 200px;
     background-color: #111; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
