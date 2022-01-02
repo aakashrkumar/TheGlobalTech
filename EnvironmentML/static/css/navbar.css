@@ -31,8 +31,7 @@
 
 /* Style the active/current link*/
 .navbar a.active {
-    background-color: dodgerblue;
-    color: white;
+    color: #0076BE;
 }
 
 /* Float the link section to the right */
