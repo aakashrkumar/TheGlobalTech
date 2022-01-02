@@ -1,7 +1,14 @@
-/* Create a class "background image" which fills the whole screen */
-.background-image {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 100vh;
+/* create headline class which shows text on bottom left of screen if screen is large or center if screen is small */
+.headline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000;
+    z-index: 1;
 }
