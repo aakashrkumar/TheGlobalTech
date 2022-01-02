@@ -1,6 +1,5 @@
 /* Style the header with a grey background and some padding */
 .navbar {
-    display: flex;
     position: fixed;
     width: 100%;
     overflow: hidden;
@@ -15,7 +14,6 @@
 .navbar a {
     float: left;
     color: black;
-    text-align: center;
     padding: 12px;
     text-decoration: none;
     font-size: 18px;
