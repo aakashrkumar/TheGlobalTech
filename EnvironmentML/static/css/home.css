@@ -3,7 +3,7 @@
     color: #1F1F1F;
     padding-top: 20vh;
     display: block;
-    width: 40vh;
+    width: 40vw;
     font-size: 4em;
     font-weight: bold;
 }
@@ -20,7 +20,7 @@
 
 /* Slideshow container */
 .slideshow-container {
-    width: 30vh;
+    width: 30vw;
     position: relative;
     margin: auto;
 }
