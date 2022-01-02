@@ -64,7 +64,7 @@
     font-size: 15px;
     padding: 8px 0px;
     position: relative;
-    bottom: 8px;
+    bottom: -8px;
     width: 100%;
     text-align: center;
 }
