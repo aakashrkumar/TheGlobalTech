@@ -13,7 +13,7 @@ function closeNav() {
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
-    if (currentScrollPos < 5) {
+    if (currentScrollPos < 20) {
         document.getElementById("navBar").style.height = "5%;";
     } else {
         document.getElementById("navBar").style.height = "1%";
