@@ -4,27 +4,27 @@
     color: #1F1F1F;
     padding-top: 20vh;
     display: block;
-    width: 10vw;
-    font-size: 3vw;
+    width: 22vw;
+    font-size: 80px;
     font-weight: bold;
 }
 
 .container {
     margin: 0 auto;
     width: 80%;
-    max-width: 1360px;
+    max-width: 1560px;
 }
 
 .slideshow {
     float: right;
+    margin: auto;
+    width:40%;
+    padding-top:25%;
 }
 
 /* Slideshow container */
 .slideshow-container {
     position: relative;
-    width: 30vw;
-    margin: auto;
-    padding-top: 25vh;
 }
 
 /* Hide the images by default */
@@ -38,11 +38,11 @@
     position: absolute;
     top: 50%;
     width: auto;
-    margin-top: -2vh;
-    padding: 1vh;
+    /*margin-top: 37.5vh; */
+    /*padding: 1vh;*/
     color: white;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 30px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
