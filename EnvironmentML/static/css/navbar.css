@@ -18,6 +18,7 @@
     text-decoration: none;
     font-size: 20px;
     border-radius: 4px;
+    text-align: center;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -40,6 +41,7 @@
 /* Float the link section to the right */
 .navbar-right {
     float: right;
+    display: inline-block;
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
