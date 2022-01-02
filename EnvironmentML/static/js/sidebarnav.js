@@ -20,7 +20,7 @@ window.onscroll = function () {
     prevScrollpos = currentScrollPos;
 }
 jQuery('body').bind('click', function (e) {
-    if (jQuery(e.target).closest('sideNavBar').length == 0) {
+    if (jQuery(e.target).closest('.sidebarnavid').length == 0) {
         console.log('clicked outside of sideNavBar');
         console.log(document.getElementById("sideNavBar").style.width);
         if (document.getElementById("sideNavBar").classList.contains('collapse')) {
