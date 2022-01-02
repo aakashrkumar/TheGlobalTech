@@ -16,6 +16,8 @@
 
 
 .slideshow {
+    position: relative;
+    vertical-align: middle;
     float: right;
     margin: auto;
     width: 40%;
