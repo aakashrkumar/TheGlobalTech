@@ -1,6 +1,11 @@
-/* create headline class which shows text the left of screen if screen is large or center if screen is small, limit spacing to less than half of screen */
+/* create headline class which shows text the left of screen if screen is large or center if screen is small */
 .headline {
-    position: absolute;
-    top: 10vh;
-    width: 5vh;
+    display: block;
+    float: left;
+    width: 50vh;
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
 }
