@@ -9,6 +9,16 @@ function closeNav() {
     document.getElementById("sideNavBar").classList.remove("collapse");
 }
 
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+    } else {
+        document.getElementById("navbar").style.top = "-50px";
+    }
+    prevScrollpos = currentScrollPos;
+}
 jQuery('body').bind('click', function (e) {
     if (jQuery(e.target).closest('sideNavBar').length == 0) {
         console.log('clicked outside of sideNavBar');
