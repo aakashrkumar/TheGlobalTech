@@ -5,7 +5,7 @@
 </head>
 <div>
     <nav class="navbar" id="navBar">
-        <div class="navcontainer">
+        <div class="navcontainer valign-wrapper">
             <a href="" class="logo">EarthAI</a>
             <div class="navbar-right">
                 {% if request.path == "/" %}
@@ -23,6 +23,9 @@
                 {% else %}
                 <a class="hideoverflow" href="/about-us">About Us</a>
                 {% endif %}
+                <a onclick="openNav()" class="sidebarnavid">
+                    <i class="material-icons" style="">view_headline</i>
+                </a>
             </div>
         </div>
     </nav>
