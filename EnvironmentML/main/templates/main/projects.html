@@ -18,9 +18,9 @@
                 <div class="card-content white-text">
                     <span class="card-title">{{project.project_name}}</span>
                     <!-- image -->
-                    <img src="{% media '{{project.project_image}}' %}">
-                    <p style="font-size:70%">Published {{tut.project_date}}</p>
-                    <p>{{tut.project_summary|safe}}</p>
+                    <img src="/home/aakash/Documents/Projects/Python/EnvironmentML/EnvironmentML/media/{{project.project_image}}">
+                    <p style="font-size:70%">Published {{project.project_date}}</p>
+                    <p>{{project.project_summary|safe}}</p>
                 </div>
             </div>
         </div>
