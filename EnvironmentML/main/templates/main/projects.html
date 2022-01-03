@@ -6,9 +6,13 @@
 </head>
 <!-- add headline to the bottom left-->
 <div class="container">
+    <br>
+    <br>
     {% for project in projects %}
     <div class="project">
         <h1>{{ project.project_name }}</h1>
+        <h1>{{ project.project_image }}</h1>
+        <h1>{{ project.project_date }}</h1>
     </div>
     {% endfor %}
 </div>
