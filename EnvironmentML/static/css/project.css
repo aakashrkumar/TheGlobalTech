@@ -16,6 +16,7 @@
 .publishInfo {
     position: absolute;
     text-decoration: none;
+    color: white;
     top: 8px;
     left: 16px;
 }
