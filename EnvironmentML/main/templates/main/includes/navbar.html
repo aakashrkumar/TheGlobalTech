@@ -2,14 +2,12 @@
 <head>
     <link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/sidebarnav.css' %}">
-    <script src="{% static 'js/sidebarnav.js' %}"></script>
 </head>
 <div>
     <nav class="navbar" id="navBar">
         <div class="navcontainer">
             <a href="" class="logo">EarthAI</a>
             <div class="navbar-right">
-            {{ if }}
                 <a class="active hideoverflow" href="">Home</a>
                 <a class="hideoverflow" href="/projects">Projects</a>
                 <a class="hideoverflow" href="/about-us">About Us</a>
@@ -30,3 +28,4 @@
         </ul>
     </div>
 </div>
+<script src="{% static 'js/sidebarnav.js' %}"></script>
