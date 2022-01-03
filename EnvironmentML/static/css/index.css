@@ -16,8 +16,11 @@ body {
 }
 
 /* improve scroll bar */
-::-webkit-scrollbar {
-    width: 0px;
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
 }
 
 /* enable smooth scrolling */
