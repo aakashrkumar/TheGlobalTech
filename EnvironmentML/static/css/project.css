@@ -12,3 +12,9 @@
 .card:hover {
     border: 2px solid dodgerblue;
 }
+
+.publishInfo {
+    position: relative;
+    top: 8px;
+    left: 16px;
+}
