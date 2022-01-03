@@ -3,6 +3,10 @@
     height: 300px;
     float: left;
     border: gray;
-  border-radius: 25px;
+    border-radius: 25px;
     margin: 10px;
+}
+
+.card:hover {
+    border: 2px solid #0099ff;
 }
