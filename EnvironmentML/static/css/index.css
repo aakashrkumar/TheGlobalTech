@@ -14,3 +14,13 @@ body {
     width: 90%;
     max-width: 1360px;
 }
+
+/* improve scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* enable smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
