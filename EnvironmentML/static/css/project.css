@@ -10,7 +10,7 @@
 }
 
 .box-shadow {
-    box-shadow: 0 0 0px 300px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 0 0px 300px rgba(0, 0, 0, 1) inset;
 }
 
 .box-shadow img {
