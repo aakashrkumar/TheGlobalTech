@@ -17,7 +17,7 @@ body {
 
 /* improve scroll bar */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 0px;
 }
 
 /* enable smooth scrolling */
