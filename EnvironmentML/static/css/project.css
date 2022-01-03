@@ -14,9 +14,11 @@
 }
 
 .publishInfo {
+    box-shadow: black 0px 0px 100px;
     position: absolute;
     text-decoration: none;
     color: white;
     top: 8px;
     left: 16px;
+    z-index: 10;
 }
