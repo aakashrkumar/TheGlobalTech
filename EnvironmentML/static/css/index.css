@@ -16,6 +16,9 @@ body {
 }
 
 /* improve scroll bar */
+::-webkit-scrollbar {
+    width: 0px;
+}
 ::-webkit-scrollbar-thumb {
   background-color: #d6dee1;
   border-radius: 20px;
