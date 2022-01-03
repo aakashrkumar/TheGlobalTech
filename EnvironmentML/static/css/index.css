@@ -18,4 +18,5 @@ body {
 /* enable smooth scrolling */
 html {
     scroll-behavior: smooth;
+    overflow-y: scroll;
 }
