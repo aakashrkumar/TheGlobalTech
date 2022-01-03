@@ -17,7 +17,12 @@
     <div class="row">
         {% for project in projects %}
         <div class="col s12 m6 l4">
-            <a href="#"> <img src="static/media/{{ project.project_image }}" class="img-responsive img-thumbnail" style="object-fit: cover"/>
+            <a href="#">
+                <div class="card hoverable" style="overflow: hidden">
+                    <div class="card-content">
+                        <img src="static/media/{{ project.project_image }}" class="img-responsive img-thumbnail" style="object-fit: cover"/>
+                    </div>
+                </div>
             </a>
         </div>
         {% endfor %}
