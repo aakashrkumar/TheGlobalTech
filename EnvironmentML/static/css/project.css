@@ -7,24 +7,48 @@
     border-radius: 25px;
     margin: 10px;
     border: 3px solid #000000;
+}
+
+.draw {
     -webkit-transition: color 0.25s;
     transition: color 0.25s;
 }
 
-.draw:hover {
-    color: dodgerblue;
+.draw::before, .draw::after {
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
 }
 
-.card:hover::before {
-    border-top-color: dodgerblue;
-    border-right-color: dodgerblue;
+.draw::before {
+    top: 0;
+    left: 0;
+}
+
+.draw::after {
+    bottom: 0;
+    right: 0;
+}
+
+.draw:hover {
+    color: #60daaa;
+}
+
+.draw:hover::before, .draw:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.draw:hover::before {
+    border-top-color: #60daaa;
+    border-right-color: #60daaa;
     -webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
     transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 
-.card:hover::after {
-    border-bottom-color: dodgerblue;
-    border-left-color: dodgerblue;
+.draw:hover::after {
+    border-bottom-color: #60daaa;
+    border-left-color: #60daaa;
     -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
     transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
 }
