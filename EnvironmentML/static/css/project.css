@@ -22,7 +22,7 @@
     border: 2px solid dodgerblue;
 }
 
-.publishInfo {
+.publishDate {
     box-shadow: black 0px 0px 100px;
     position: absolute;
     text-decoration: none;
@@ -30,4 +30,10 @@
     top: 8px;
     left: 16px;
     z-index: 10;
+}
+
+.publishInfo {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
 }
