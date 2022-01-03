@@ -34,11 +34,11 @@
 
 .publishInfo {
     position: absolute;
-    bottom: 8px;
-    right: 16px;
+    bottom: 12px;
+    right: 20px;
     text-decoration: none;
     color: white;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-size: 32px;
     font-weight: bold;
 }
