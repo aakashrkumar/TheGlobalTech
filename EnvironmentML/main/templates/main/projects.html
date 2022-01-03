@@ -18,7 +18,7 @@
                 <div class="card-content white-text">
                     <span class="card-title">{{project.project_name}}</span>
                     <!-- image -->
-                    <img src="{% static 'media/'|add:project.project_image %}" alt="">
+                    <img src="{{ project.project_image.path }}" alt="">
                     <p style="font-size:70%">Published {{project.project_date}}</p>
                 </div>
             </div>
