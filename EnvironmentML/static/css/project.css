@@ -1,12 +1,15 @@
 .card {
+    position: absolute;
     width: 300px;
     height: 300px;
     float: left;
     border: gray;
     border-radius: 25px;
     margin: 10px;
+    transition-duration: 0.1s;
 }
 
 .card:hover {
-    border: 2px solid #0099ff;
+    width: 350px;
+    height: 350px;
 }
