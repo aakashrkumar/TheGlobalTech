@@ -6,6 +6,10 @@
 </head>
 <!-- add headline to the bottom left-->
 <div class="container">
-
+    {% for project in projects %}
+    <div class="project">
+        <h1>{{ project.name }}</h1>
+    </div>
+    {% endfor %}
 </div>
 {% endblock %}
