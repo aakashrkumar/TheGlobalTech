@@ -10,6 +10,5 @@
 }
 
 .card:hover {
-    width: 350px;
-    height: 350px;
+    border: dodgerblue;
 }
