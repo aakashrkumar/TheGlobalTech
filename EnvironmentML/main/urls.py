@@ -19,5 +19,5 @@ from .Views import homepage, projects
 
 urlpatterns = [
     path('', homepage.homepage, name="homepage"),
-    path('projects', projects.projects, name="projectspage"),
+    path('projects/', projects.projects, name="projectspage"),
 ]
