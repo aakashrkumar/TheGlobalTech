@@ -10,6 +10,17 @@
     transition-duration: 0.1s;
 }
 
-.card:hover {
-    border: 3px solid dodgerblue;
+
+.card:hover::before {
+    border-top-color: dodgerblue;
+    border-right-color: dodgerblue;
+    -webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.card:hover::after {
+    border-bottom-color: dodgerblue;
+    border-left-color: dodgerblue;
+    -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
 }
