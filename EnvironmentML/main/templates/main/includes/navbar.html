@@ -13,12 +13,12 @@
                 {% else %}
                 <a class="hideoverflow" href="/">Home</a>
                 {% endif %}
-                {% if request.path == "/projects/" %}
+                {% if "/projects/" in request.path %}
                 <a class="active hideoverflow" href="/projects">Projects</a>
                 {% else %}
                 <a class="hideoverflow" href="/projects">Projects</a>
                 {% endif %}
-                {% if request.path == "/about-us" %}
+                {% if request.path == "/about-us/" %}
                 <a class="active hideoverflow" href="/about-us">About Us</a>
                 {% else %}
                 <a class="hideoverflow" href="/about-us">About Us</a>
