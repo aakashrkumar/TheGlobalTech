@@ -36,4 +36,9 @@
     position: absolute;
     bottom: 8px;
     right: 16px;
+    text-decoration: none;
+    color: white;
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: bold;
 }
