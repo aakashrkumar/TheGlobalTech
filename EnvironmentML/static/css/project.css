@@ -6,6 +6,7 @@
     border: gray;
     border-radius: 25px;
     margin: 10px;
+    border: 2px solid #000000;
 }
 
 .draw {
