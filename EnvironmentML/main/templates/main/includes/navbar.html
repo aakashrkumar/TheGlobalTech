@@ -8,8 +8,8 @@
         <div class="navcontainer">
             <a href="" class="logo">EarthAI</a>
             <div class="navbar-right">
-                {% if request.path == "" %}
-                <a class="active hideoverflow" href="">Home</a>
+                {% if request.path == "/" %}
+                <a class="active hideoverflow" href="/">Home</a>
                 {% else %}
                 <a class="hideoverflow" href="">Home</a>
                 {% endif %}
