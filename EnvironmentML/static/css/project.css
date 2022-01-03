@@ -9,11 +9,11 @@
     border: 2px solid #000000;
 }
 
-.box-shadow {
+.image-cover-shadow {
     box-shadow: 0 0 0px 300px rgba(0, 0, 0, 0.5) inset;
 }
 
-.box-shadow img {
+.image-cover-shadow img {
     position: relative;
     z-index: -1;
 }
