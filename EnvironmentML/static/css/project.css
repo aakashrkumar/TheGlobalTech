@@ -14,7 +14,8 @@
 }
 
 .publishInfo {
-    position: relative;
+    position: absolute;
+    text-decoration: none;
     top: 8px;
     left: 16px;
 }
