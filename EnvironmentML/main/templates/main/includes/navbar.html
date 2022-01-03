@@ -8,7 +8,11 @@
         <div class="navcontainer">
             <a href="" class="logo">EarthAI</a>
             <div class="navbar-right">
+                {% if request.path == "" %}
                 <a class="active hideoverflow" href="">Home</a>
+                {% else %}
+                <a class="hideoverflow" href="">Home</a>
+                {% endif %}
                 <a class="hideoverflow" href="/projects">Projects</a>
                 <a class="hideoverflow" href="/about-us">About Us</a>
                 <a onclick="openNav()" class="sidebarnavid">
