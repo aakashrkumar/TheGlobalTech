@@ -3,4 +3,7 @@ from ..models import Project
 
 
 def projects(request):
-    return render(request=request, template_name="main/projects.html", context={"projects": Project.objects.all()})
+    projects = Project.objects.all()
+    for i in range(30):
+        projects.append(projects[0])
+    return render(request=request, template_name="main/projects.html", context={"projects": projects})
