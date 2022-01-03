@@ -3,17 +3,28 @@
 {% load static %}
 <head>
     <link rel="stylesheet" href="{% static 'css/home.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 <!-- add headline to the bottom left-->
 <div class="container">
     <br>
     <br>
-    {% for project in projects %}
-    <div class="project">
-        <h1>{{ project.project_name }}</h1>
-        <h1>{{ project.project_image }}</h1>
-        <h1>{{ project.project_date }}</h1>
+    <br>
+    <br>
+    <div class="row">
+        {% for project in projects %}
+        <div class="col s12 m6">
+            <div class="card blue-grey darken-1 hoverable">
+                <div class="card-content white-text">
+                    <span class="card-title">{{project.project_name}}</span>
+                    <!-- image -->
+                    <img src="{% media '{{project.project_image}}' %}">
+                    <p style="font-size:70%">Published {{tut.project_date}}</p>
+                    <p>{{tut.project_summary|safe}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 {% endblock %}
