@@ -1,9 +1,6 @@
 $(document).ready(function () {
 
-    $('.main-content').css('display', 'none');
-
-    $('.main-content').fadeIn(2000);
-
+    $('.main-content').css('display', 'none').wait(100).fadeIn(2000);
 
     $('.link').click(function (event) {
 
