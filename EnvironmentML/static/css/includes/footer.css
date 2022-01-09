@@ -1,13 +1,17 @@
-.footer {
+.main-footer {
     display: flex;
     position: relative;
     left: 0;
     width: 100%;
     background-color: #4DB4D7;
-    color: lightgray;
+    color: gray;
     text-align: center;
     clear: both;
     height: 80px;
     align-items: center;
     justify-content: center;
+}
+
+.main-footer.tile-text {
+    color: black;
 }
