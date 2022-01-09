@@ -25,7 +25,7 @@
     <hr>
     <br>
     {% for author in project.project_authors.all %}
-    {{ author.firstname }} {{ author.lastname }}{% if not forloop.last %}, {% endif %}
+    {{ author.first_name }} {{ author.last_name }}{% if not forloop.last %}, {% endif %}
     {% endfor %}
 </div>
 {% endblock %}
