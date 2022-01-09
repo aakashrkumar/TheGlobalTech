@@ -20,7 +20,9 @@ class ProjectAdmin(admin.ModelAdmin):
         models.TextField: {'widget': TinyMCE()},
         models.ManyToManyField: {'widget': admin.widgets.FilteredSelectMultiple('authors', False)},
     }
-    list_display = (formfield_for_manytomany,)
+    # set "project_authors" to use formfield_for_manytomany
+    inlines = [UsersInline]
+    list_display = ('project_name', 'project_description', 'project_authors', 'project_date_created', 'project_date_modified')
 
 
 admin.site.register(Project, ProjectAdmin)
