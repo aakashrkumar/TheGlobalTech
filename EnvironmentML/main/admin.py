@@ -18,10 +18,7 @@ class ProjectAdmin(admin.ModelAdmin):
 
     formfield_overrides = {
         models.TextField: {'widget': TinyMCE()},
-        models.ManyToManyField: {'widget': admin.widgets.FilteredSelectMultiple('authors', False)},
     }
-    # set "project_authors" to use formfield_for_manytomany
-    inlines = [UsersInline]
     list_display = ('project_name', 'project_authors')
 
 

@@ -14,5 +14,8 @@ class Project(models.Model):
     project_authors = models.ManyToManyField(User, related_name='authors')
     slug = models.CharField(max_length=300)
 
+    def get_project_authors(self):
+        return ",".join([str(p) for p in self.project_authors.all()])
+
     def __str__(self):
         return self.project_name
