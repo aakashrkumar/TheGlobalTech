@@ -1,15 +1,21 @@
 /* Style the header with a grey background and some padding */
 .navbar {
+    position: fixed;
     display: inline-block;
     *display: inline;
     vertical-align: middle;
-    position: fixed;
     width: 100%;
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: black 0px 0px 10px;
     z-index: 100;
     transition: 0.5s; /* 0.5 second transition effect to slide in the navbar */
+}
+
+.logo {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
 }
 
 .navcontainer {

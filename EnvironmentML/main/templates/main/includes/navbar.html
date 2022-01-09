@@ -1,5 +1,5 @@
 {% load static %}
-<head>
+<head xmlns="http://www.w3.org/1999/html">
     <link rel="stylesheet" type="text/css" href="{% static 'css/includes/navbar.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/includes/sidebarnav.css' %}">
 </head>
@@ -7,7 +7,8 @@
     <nav class="navbar" id="navBar">
         <div class="navcontainer">
             <ul>
-                <li><a href="/" class="logo"><img src="static/graphics/logo.png"></a></li>
+                <img src="static/graphics/logo.png" class="logo">
+                <!--li><a href="/" class="logo"></a></li-->
                 <li>
                     {% if request.path == "/" %}
                     <a class="active hideoverflow right" href="/">Home</a>
