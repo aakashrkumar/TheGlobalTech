@@ -30,7 +30,7 @@ html {
     z-index: 999999;
     pointer-events: none;
     background: white;
-    animation-duration: 300ms;
+    animation-duration: 3000ms;
     animation-timing-function: ease-in-out;
 }
 

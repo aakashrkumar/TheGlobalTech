@@ -19,11 +19,10 @@
 </head>
 
 <body>
-<svg id="fader">
-    {% include "main/includes/navbar.html" %}
-    {% block content %}
-    {% endblock %}
-</svg>
+{% include "main/includes/navbar.html" %}
+{% block content %}
+{% endblock %}
+<svg id="fader"></svg>
 <script>
     fadeInPage();
 </script>
