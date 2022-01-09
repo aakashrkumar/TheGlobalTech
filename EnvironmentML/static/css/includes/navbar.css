@@ -18,10 +18,6 @@
     vertical-align: middle;
 }
 
-ul {
-    text-align: right;
-}
-
 .navcontainer {
     position: relative;
     width: 95%;
@@ -31,6 +27,7 @@ ul {
 
 .navbar li {
     display: inline-block;
+    text-align: right;
 }
 
 /* Float the link section to the right */
