@@ -37,7 +37,6 @@
     border: gray;
     border-radius: 25px;
     border: 2px solid #000000;
-    vertical-align: center;
 }
 
 /* Slideshow container */
@@ -52,7 +51,6 @@
 
 /* Next & previous buttons */
 .prev, .next {
-    left: 0;
     cursor: pointer;
     position: absolute;
     top: 48%;
