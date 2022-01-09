@@ -11,7 +11,7 @@ class UsersInline(admin.StackedInline):
 
 # Register your models here
 class ProjectAdmin(admin.ModelAdmin):
-    inlines = [UsersInline]
+    inlines = (UsersInline,)
     formfield_overrides = {
         models.TextField: {'widget': TinyMCE()},
     }
