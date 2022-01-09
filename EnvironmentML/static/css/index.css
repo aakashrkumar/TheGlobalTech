@@ -17,8 +17,8 @@ body {
 
 /* enable smooth scrolling */
 html {
+    width: calc(100vw - 34px);
     scroll-behavior: smooth;
-    overflow-y: scroll;
 }
 
 #fader {
