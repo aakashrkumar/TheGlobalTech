@@ -39,7 +39,7 @@ ul {
 
 /* Style the header links */
 .navbar a {
-    display: block;
+    display: inline-block;
     text-decoration: none;
     color: black;
     padding: 0 12px;
