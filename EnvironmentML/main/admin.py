@@ -20,7 +20,7 @@ class ProjectAdmin(admin.ModelAdmin):
         models.TextField: {'widget': TinyMCE()},
         models.ManyToManyField: {'widget': admin.widgets.FilteredSelectMultiple('authors', False)},
     }
-    list_display = (formfield_for_manytomany)
+    list_display = (formfield_for_manytomany,)
 
 
 admin.site.register(Project, ProjectAdmin)
