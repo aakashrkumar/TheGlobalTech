@@ -16,9 +16,9 @@ class ProjectAdmin(admin.ModelAdmin):
             kwargs["queryset"] = User.objects.filter(is_staff=True)
         return super().formfield_for_manytomany(db_field, request, **kwargs)
 
-    # formfield_overrides = {
-    #     models.TextField: {'widget': TinyMCE()},
-    # }
+    formfield_overrides = {
+        models.TextField: {'widget': TinyMCE()},
+    }
 
 
 admin.site.register(Project, ProjectAdmin)
