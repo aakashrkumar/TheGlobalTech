@@ -17,12 +17,13 @@ class Project(models.Model):
     def get_project_authors(self):
         return ",".join([str(p) for p in self.project_authors.all()])
 
-    class UserProfile(models.Model):
-        user = models.ForeignKey(User, verbose_name='User', on_delete=models.CASCADE)
-        avatar = models.ImageField()  # or whatever
-
-        def __str__(self):
-            return self.user.username
-
     def __str__(self):
         return self.project_name
+
+
+class UserProfile(models.Model):
+    user = models.ForeignKey(User, verbose_name='User', on_delete=models.CASCADE)
+    avatar = models.ImageField()  # or whatever
+
+    def __str__(self):
+        return self.user.username
