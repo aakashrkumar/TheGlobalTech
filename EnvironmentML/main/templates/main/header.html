@@ -16,7 +16,13 @@
     <link rel="shortcut icon" type="image/png" href="{% static 'graphics/logo.ico' %}"/>
     <!--Tiny MCE-->
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-
+    <script>
+        tinyMCE.init({
+            force_br_newlines: true,
+            force_p_newlines: false,
+            forced_root_block: '' // Needed for 3.x
+        });
+    </script>
 </head>
 
 <body>
