@@ -1,9 +1,9 @@
 /* create headline class which shows text the left of screen if screen is large or center if screen is small */
 .homepage {
+    display: flex;
 }
 
 .headline {
-    display: block;
     float: left;
     color: #1F1F1F;
     width: 30%;
