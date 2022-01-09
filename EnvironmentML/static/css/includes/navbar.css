@@ -36,8 +36,8 @@
 
 /* Change the background color on mouse-over */
 .navbar a:hover {
-        cursor: pointer;
-color: #0076BE;
+    cursor: pointer;
+    color: #0076BE;
 }
 
 /* Style the active/current link*/
@@ -48,6 +48,7 @@ color: #0076BE;
 /* Float the link section to the right */
 .navbar-right {
     float: right;
+    vertical-align: center;
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
