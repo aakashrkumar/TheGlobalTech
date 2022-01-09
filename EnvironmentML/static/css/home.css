@@ -8,7 +8,6 @@
 
 
 .homepage {
-    /* center text */
     width: 100%;
 }
 
@@ -40,8 +39,8 @@
 }
 
 .card {
-    width: 500px;
-    height: 500px;
+    width: 800px;
+    height: 800px;
     border: gray;
     border-radius: 25px;
     border: 2px solid #000000;
@@ -131,12 +130,5 @@
     }
     to {
         opacity: 1
-    }
-}
-
-@media screen and (max-width: 1260px) {
-    .card {
-        width: 400px;
-        height: 400px;
     }
 }
