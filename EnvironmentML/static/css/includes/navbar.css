@@ -13,6 +13,7 @@
 }
 
 .navcontainer {
+    height: 100%;
     position: relative;
     width: 95%;
     margin: 0 auto;
@@ -21,6 +22,7 @@
 
 /* Style the header links */
 .navbar a {
+    height: 100%;
     color: black;
     padding: 12px;
     text-decoration: none;
@@ -48,6 +50,7 @@
 
 /* Float the link section to the right */
 .navbar-right {
+    height: 100%;
     float: right;
     vertical-align: center;
 }
