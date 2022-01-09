@@ -22,9 +22,8 @@
 }
 
 .card {
-    width: 60%;
-    height: 0;
-    padding-bottom: 50%;
+    width: 600px;
+    height: 600px;
     border: gray;
     border-radius: 25px;
     border: 2px solid #000000;
