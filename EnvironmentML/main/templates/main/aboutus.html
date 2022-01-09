@@ -1,0 +1,34 @@
+{% extends 'main/header.html' %}
+{% block content %}
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/project.css'%}">
+</head>
+<!-- add headline to the bottom left-->
+<div class="article-container">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2 class="project-title">{{ project.project_name }}</h2>
+    <p style="font-size:70%;">Published {{ project.project_date.date }} by
+        {% for author in project.project_authors.all %}
+        {{author.first_name}} {{author.last_name}}{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+    </p>
+    <hr>
+    <br>
+    <br>
+    {{ project.project_article|safe }}
+    <hr>
+    <br>
+    {% for author in project.project_authors.all %}
+    <div class="card draw image-cover-shadow" style="overflow: hidden">
+        <img src="/static/media/{{ author.userprofile.avatar }}" class="" style="width: 100%; height: 100%; object-fit:cover;"/>
+        <div class="authorInfo">{{author.first_name}} {{author.last_name}}</div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
