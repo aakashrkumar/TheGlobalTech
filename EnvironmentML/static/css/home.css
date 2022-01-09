@@ -7,17 +7,15 @@
 
 
 .homepage {
-    display: flex;
-    justify-content: space-between;
+    align-items: center;
 }
 
 .headline {
     color: #1F1F1F;
     width: 30%;
-    font-size: 70px;
+    font-size: 27px;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
-    left: 0;
     align-self: center;
 }
 
@@ -63,7 +61,7 @@
 }
 
 .next {
-   /* Position the "next button" to the right */
+    /* Position the "next button" to the right */
     right: 0;
     border-radius: 3px 0 0 3px;
 }
