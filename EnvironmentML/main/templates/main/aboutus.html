@@ -24,10 +24,12 @@
     {{ project.project_article|safe }}
     <hr>
     <br>
-    {% for author in project.project_authors.all %}
+    {% for author in team %}
     <div class="card draw image-cover-shadow" style="overflow: hidden">
         <img src="/static/media/{{ author.userprofile.avatar }}" class="" style="width: 100%; height: 100%; object-fit:cover;"/>
-        <div class="authorInfo">{{author.first_name}} {{author.last_name}}</div>
+        <div class="authorName">{{author.first_name}} {{author.last_name}}</div>
+        <hr>
+        <div class="authorRole">{{author.userprofile.bio}}</div>
     </div>
     {% endfor %}
 </div>
