@@ -1,4 +1,11 @@
 /* create headline class which shows text the left of screen if screen is large or center if screen is small */
+.container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1260px;
+}
+
+
 .homepage {
     display: flex;
 }
@@ -24,8 +31,8 @@
 }
 
 .card {
-    width: 700px;
-    height: 700px;
+    width: 500px;
+    height: 500px;
     border: gray;
     border-radius: 25px;
     border: 2px solid #000000;
