@@ -23,7 +23,7 @@ ul {
     display: inline-block;
     vertical-align: middle;
     position: absolute;
-    top: 0;
+    top: -20px;
     left: 0;
     padding: 0;
     margin: 0 0 0 0;
@@ -32,7 +32,7 @@ ul {
 .navcontainer {
     position: relative;
     width: 95%;
-    margin: auto auto;
+    margin: 0 auto;
     max-width: 1360px;
 }
 
