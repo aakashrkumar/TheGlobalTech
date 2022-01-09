@@ -12,9 +12,8 @@
 
 .navcontainer {
     width: 95%;
-    margin: auto auto;
+    margin: 0 auto;
     max-width: 1360px;
-    vertical-align: middle;
 }
 
 /* Style the header links */
