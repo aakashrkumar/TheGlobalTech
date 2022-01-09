@@ -8,7 +8,8 @@
 
 .homepage {
     display: flex;
-justify-content: space-between;}
+    justify-content: space-between;
+}
 
 .headline {
     color: #1F1F1F;
@@ -17,6 +18,7 @@ justify-content: space-between;}
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
     left: 0;
+    align-self: center;
 }
 
 
@@ -31,6 +33,7 @@ justify-content: space-between;}
     border: gray;
     border-radius: 25px;
     border: 2px solid #000000;
+    align-self: center;
 }
 
 /* Slideshow container */
