@@ -20,6 +20,7 @@ ul {
 .logo {
     position: relative;
     display: inline-block;
+    horiz-align: left;
     left: 0;
 }
 
