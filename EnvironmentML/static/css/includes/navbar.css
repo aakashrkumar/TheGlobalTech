@@ -32,6 +32,7 @@
 .navbar a.logo {
     font-size: 25px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 /* Change the background color on mouse-over */
