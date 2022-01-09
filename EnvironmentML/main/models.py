@@ -22,7 +22,7 @@ class Project(models.Model):
 
 
 class UserProfile(models.Model):
-    user = models.ForeignKey(User, verbose_name='User', on_delete=models.CASCADE)
+    user = models.OneToOneField(User, verbose_name='User', on_delete=models.CASCADE)
     avatar = models.ImageField(upload_to="profiles")  # or whatever
 
     def __str__(self):
