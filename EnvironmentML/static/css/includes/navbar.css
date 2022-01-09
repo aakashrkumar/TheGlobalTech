@@ -24,6 +24,7 @@ ul {
     *display: inline;
     vertical-align: middle;
     left: 0;
+    position: absolute;
 }
 
 .navcontainer {
