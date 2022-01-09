@@ -15,9 +15,6 @@
 
     <link rel="shortcut icon" type="image/png" href="{% static 'graphics/logo.ico' %}"/>
     <!--Tiny MCE-->
-<script>
-  window.addEventListener("beforeunload",function(){document.body.classList.add("animate-out")});
-</script>
 
 </head>
 
@@ -25,6 +22,9 @@
 {% include "main/includes/navbar.html" %}
 {% block content %}
 {% endblock %}
+<script>
+  window.addEventListener("beforeunload",function(){document.body.classList.add("animate-out")});
+</script>
 </body>
 
 
