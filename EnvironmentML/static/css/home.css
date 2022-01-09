@@ -32,8 +32,8 @@
 }
 
 .card {
-      text-align: center;
-  width: 500px;
+    position: center;
+    width: 500px;
     height: 500px;
     border: gray;
     border-radius: 25px;
