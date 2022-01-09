@@ -37,6 +37,7 @@
 .authorInfo {
     position: absolute;
     bottom: 8px;
+    left: 8px;
     text-decoration: none;
     color: white;
     font-family: "Roboto", sans-serif;
