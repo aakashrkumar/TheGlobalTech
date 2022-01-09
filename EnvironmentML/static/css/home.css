@@ -8,8 +8,8 @@
 
 .homepage {
     /* center text */
-    text-align: center;
     background: #4f7cac;
+    text-align: center;
     align-content: center;
 }
 
@@ -73,7 +73,7 @@
 
 .next {
     /* Position the "next button" to the right */
-    right: 0;
+    right: -50px;
     border-radius: 3px 0 0 3px;
 }
 
