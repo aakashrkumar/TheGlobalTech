@@ -1,6 +1,6 @@
 /* Style the header with a grey background and some padding */
 .navbar {
-    display: table;
+    display: flex;
     position: fixed;
     width: 100%;
     overflow: hidden;
@@ -20,7 +20,6 @@
 
 /* Style the header links */
 .navbar a {
-    display: table-cell;
     text-decoration: none;
     color: black;
     padding: 0 12px;
@@ -32,7 +31,6 @@
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .navbar a.logo {
-    display: table-cell;
     margin: auto 0;
     font-size: 25px;
     font-weight: bold;
@@ -52,6 +50,7 @@
 
 /* Float the link section to the right */
 .navbar-right {
+    justify-content: left;
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
