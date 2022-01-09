@@ -19,5 +19,5 @@ def project():
     pass
 
 
-def singleslug(request, slug):
+def slug(request, slug):
     return HttpResponse(f"<h1>{slug}</h1>")
