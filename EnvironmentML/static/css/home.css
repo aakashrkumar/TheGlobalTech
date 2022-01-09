@@ -23,7 +23,6 @@ justify-content: space-between;}
 .slideshow {
     position: relative;
     width: 40%;
-    margin-left: auto;
 }
 
 .card {
