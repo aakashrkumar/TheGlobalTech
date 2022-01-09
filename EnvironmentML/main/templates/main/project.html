@@ -25,9 +25,9 @@
     <hr>
     <br>
     {% for author in project.project_authors.all %}
-    {{ author.userprofile.avatar.path }}
+    {{ author.userprofile.avatar }}
     <div class="card draw image-cover-shadow" style="overflow: hidden">
-        <img src="/static/media/{{ author.userprofile.avatar.path }}" class="" style="width: 100%; height: 100%; object-fit:cover;"/>
+        <img src="/static/media/{{ author.userprofile.avatar }}" class="" style="width: 100%; height: 100%; object-fit:cover;"/>
         <div class="publishInfo">{{author.first_name}} {{author.last_name}}</div>
     </div>
     {{ author.first_name }} {{ author.last_name }}{% if not forloop.last %}, {% endif %}
