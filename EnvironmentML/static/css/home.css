@@ -11,7 +11,6 @@
 }
 
 .headline {
-    float: left;
     color: #1F1F1F;
     width: 30%;
     font-size: 70px;
@@ -25,7 +24,6 @@
     position: relative;
     vertical-align: middle;
     right: 0;
-    float: right;
     margin: auto;
     width: 40%;
 }
