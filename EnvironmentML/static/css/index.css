@@ -5,7 +5,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
     overflow-x: hidden;
-    width: calc(100vw - 34px);
+    width: calc(100vw - scrollbarWidth());
 }
 
 /* create container which centers the content within a margin */
