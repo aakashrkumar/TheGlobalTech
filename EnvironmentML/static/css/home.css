@@ -10,11 +10,14 @@
     font-size: 100px;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
+    left: 0;
 }
 
 
 .slideshow {
     position: relative;
+    vertical-align: middle;
+    right: 0;
     float: right;
     margin: auto;
     width: 40%;
