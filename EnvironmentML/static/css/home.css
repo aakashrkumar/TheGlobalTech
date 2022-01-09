@@ -11,6 +11,13 @@
     align-items: center;
 }
 
+.title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 0;
+}
+
 .headline {
     color: #1F1F1F;
     font-size: 27px;
