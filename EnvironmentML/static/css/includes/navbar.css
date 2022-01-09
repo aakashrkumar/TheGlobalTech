@@ -22,7 +22,6 @@
 .navbar a {
     display: table-cell;
     text-decoration: none;
-    margin: auto 0;
     color: black;
     padding: 0 12px;
     font-size: 20px;
@@ -34,6 +33,7 @@
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .navbar a.logo {
     display: table-cell;
+    margin: auto 0;
     font-size: 25px;
     font-weight: bold;
     vertical-align: middle;
