@@ -22,7 +22,7 @@ class ProjectAdmin(admin.ModelAdmin):
     }
     # set "project_authors" to use formfield_for_manytomany
     inlines = [UsersInline]
-    list_display = ('project_name', 'project_description', 'project_authors', 'project_date_created', 'project_date_modified')
+    list_display = ('project_name', 'project_authors')
 
 
 admin.site.register(Project, ProjectAdmin)
