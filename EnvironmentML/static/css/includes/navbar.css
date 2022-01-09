@@ -19,6 +19,7 @@
 
 /* Style the header links */
 .navbar a {
+    vertical-align: center;
     margin: auto 0;
     color: black;
     padding: 12px;
