@@ -27,7 +27,7 @@
 
 .navbar li {
     display: inline-block;
-    text-align: right;
+    horiz-align: left;
 }
 
 /* Float the link section to the right */
