@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 
 class UsersInline(admin.StackedInline):
-    model = Project.project_authors.through
+    model = User.username.through
 
 
 # Register your models here
