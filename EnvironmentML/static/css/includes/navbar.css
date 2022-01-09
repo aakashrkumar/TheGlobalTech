@@ -14,11 +14,12 @@
     width: 95%;
     margin: auto auto;
     max-width: 1360px;
+    vertical-align: middle;
 }
 
 /* Style the header links */
 .navbar a {
-    vertical-align: middle;
+    margin: auto auto;
     color: black;
     padding: 12px;
     text-decoration: none;
