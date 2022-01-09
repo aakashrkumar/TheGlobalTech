@@ -1,5 +1,6 @@
 /* Style the header with a grey background and some padding */
 .navbar {
+    display: table;
     position: fixed;
     width: 100%;
     overflow: hidden;
@@ -7,6 +8,7 @@
     box-shadow: black 0px 0px 10px;
     z-index: 100;
     transition: 0.5s; /* 0.5 second transition effect to slide in the navbar */
+    height: 80px;
 }
 
 .navcontainer {
@@ -14,12 +16,11 @@
     width: 95%;
     margin: 0 auto;
     max-width: 1360px;
-    height: 80px;
 }
 
 /* Style the header links */
 .navbar a {
-    display: inline-block;
+    display: table-cell;
     text-decoration: none;
     height: 100%;
     color: black;
