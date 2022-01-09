@@ -53,7 +53,6 @@
     position: absolute;
     top: 48%;
     width: auto;
-    /*margin-top: 37.5vh; */
     padding: 0.5%;
     color: white;
     font-weight: bold;
@@ -125,9 +124,3 @@
     }
 }
 
-@media screen and (max-width: 1260px) {
-    .card {
-        width: 400px;
-        height: 400px;
-    }
-}
