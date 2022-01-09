@@ -20,6 +20,10 @@
     max-width: 1360px;
 }
 
+nav li {
+    display: inline-block;
+}
+
 /* Float the link section to the right */
 
 /* Style the header links */
