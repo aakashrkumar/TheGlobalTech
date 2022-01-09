@@ -20,6 +20,7 @@ class ProjectAdmin(admin.ModelAdmin):
         models.TextField: {'widget': TinyMCE()},
         models.ManyToManyField: {'widget': admin.widgets.FilteredSelectMultiple('authors', False)},
     }
+    list_display = ('project_name', 'project_description', 'project_authors', 'project_created', 'project_updated')
 
 
 admin.site.register(Project, ProjectAdmin)
