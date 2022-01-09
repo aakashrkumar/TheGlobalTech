@@ -8,7 +8,7 @@
 
 .homepage {
     display: flex;
-}
+justify-content: space-between;}
 
 .headline {
     color: #1F1F1F;
