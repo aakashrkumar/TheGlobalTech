@@ -13,5 +13,6 @@
 }
 
 .footer-tile-text {
+    line-break: unset;
     color: white;
 }
