@@ -1,6 +1,7 @@
 /* Style the header with a grey background and some padding */
 .navbar {
-    display: flex;
+    display: inline-block;
+    vertical-align: middle;
     position: fixed;
     width: 100%;
     overflow: hidden;
@@ -21,7 +22,6 @@
 /* Float the link section to the right */
 .navbar-right {
     align-content: flex-end;
-    justify-content: left;
 }
 
 /* Style the header links */
