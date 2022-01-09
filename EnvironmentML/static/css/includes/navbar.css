@@ -32,12 +32,12 @@
 .navbar a.logo {
     font-size: 25px;
     font-weight: bold;
-    cursor: pointer;
 }
 
 /* Change the background color on mouse-over */
 .navbar a:hover {
-    color: #0076BE;
+        cursor: pointer;
+color: #0076BE;
 }
 
 /* Style the active/current link*/
