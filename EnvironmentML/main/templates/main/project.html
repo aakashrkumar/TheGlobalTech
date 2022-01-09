@@ -20,7 +20,9 @@
     </p>
     <br>
     <br>
+    <hr>
     {{ project.project_article|safe }}
+    <hr>
     <br>
     {% for author in project.project_authors.all %}
     {{ author }}{% if not forloop.last %}, {% endif %}
