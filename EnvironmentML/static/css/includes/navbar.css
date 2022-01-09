@@ -21,6 +21,9 @@
 
 /* Style the header links */
 .navbar a {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
     color: black;
     padding: 12px;
     text-decoration: none;
