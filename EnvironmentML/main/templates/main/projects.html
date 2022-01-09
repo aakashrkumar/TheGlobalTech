@@ -13,7 +13,7 @@
     <br>
     <br>
     {% for project in projects %}
-    <a href="#">
+    <a href="projects/{{project.slug}}">
         <div class="card draw image-cover-shadow" style="overflow: hidden">
             <img src="/static/media/{{ project.project_image }}" class="" style="width: 100%; height: 100%; object-fit:cover;"/>
             <div class="publishDate">Published on {{project.project_date.date}}</div>
