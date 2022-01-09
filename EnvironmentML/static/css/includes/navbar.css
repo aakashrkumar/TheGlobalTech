@@ -21,7 +21,6 @@ ul {
 
 .logo {
     display: inline-block;
-    *display: inline;
     vertical-align: middle;
     position: absolute;
     top: 0;
