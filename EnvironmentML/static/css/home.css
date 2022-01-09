@@ -23,6 +23,7 @@
 .slideshow {
     position: relative;
     width: 40%;
+    margin-left: auto;
 }
 
 .card {
