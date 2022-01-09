@@ -19,8 +19,6 @@
 }
 
 .headline {
-    width: 30%;
-    text-align: center;
     color: #1F1F1F;
     font-size: 27px;
     font-family: 'Roboto', sans-serif;
@@ -40,7 +38,6 @@
     border-radius: 25px;
     border: 2px solid #000000;
     vertical-align: center;
-    justify-content: space-between;
 }
 
 /* Slideshow container */
