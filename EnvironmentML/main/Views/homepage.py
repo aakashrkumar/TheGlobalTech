@@ -1,5 +1,8 @@
 from django.shortcuts import render, redirect
 
+from ..models import Project
+
 
 def homepage(request):
-    return render(request=request, template_name="main/home.html")
+    projectsList = list(Project.objects.all().order_by('-project_date'))
+    return render(request=request, template_name="main/home.html", context={'projects': projectsList})
