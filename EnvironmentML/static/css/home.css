@@ -26,6 +26,7 @@
     right: 0;
     margin: auto;
     width: 40%;
+    align-self: flex-end;
 }
 
 .card {
