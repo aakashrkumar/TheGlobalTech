@@ -14,7 +14,7 @@ class ProjectAdmin(admin.ModelAdmin):
     formfield_overrides = {
         models.TextField: {'widget': TinyMCE()},
     }
-    filter_horizontal = ('User',)
+    filter_horizontal = ('project_authors',)
 
 
 admin.site.register(Project, ProjectAdmin)
