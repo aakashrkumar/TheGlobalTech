@@ -19,7 +19,7 @@ class ProjectAdmin(admin.ModelAdmin):
     formfield_overrides = {
         models.TextField: {'widget': TinyMCE()},
     }
-    list_display = ('project_name', 'formfield_for_manytomany')
+    list_display = ('project_name', 'formfield_for_manytomany', "get_project_authors")
 
 
 admin.site.register(Project, ProjectAdmin)
