@@ -19,7 +19,7 @@
     max-width: 1360px;
 }
 
-nav li {
+.navbar li {
     display: inline-block;
 }
 
