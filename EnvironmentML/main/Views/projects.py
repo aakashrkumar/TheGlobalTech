@@ -19,8 +19,8 @@ def projectRender(request, project):
     return render(request=request, template_name="main/project.html", context={"project": project})
 
 
-def slug(request, slug):
-    projectsList = list(Project.objects.all().order_by('-project_date').filter(project_slug=slug))
+def projectslug(request, slug):
+    projectsList = list(Project.objects.all().order_by('-project_date').filter(slug=slug))
     if len(projectsList) > 0:
         return projectRender(request, projectsList[0])
     return HttpResponse(status=404)

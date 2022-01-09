@@ -11,5 +11,7 @@ class Project(models.Model):
     project_article = models.TextField()
     project_image = models.ImageField(upload_to='project_images/')
     project_authors = models
+    slug = models.CharField(max_length=300)
+
     def __str__(self):
         return self.project_name
