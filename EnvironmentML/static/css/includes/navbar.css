@@ -1,6 +1,7 @@
 /* Style the header with a grey background and some padding */
 .navbar {
     display: inline-block;
+    *display: inline;
     vertical-align: middle;
     position: fixed;
     width: 100%;
