@@ -32,8 +32,10 @@
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .navbar a.logo {
-    font-size: 25px;
+       display: table-cell;
+ font-size: 25px;
     font-weight: bold;
+    vertical-align: middle;
 }
 
 /* Change the background color on mouse-over */
