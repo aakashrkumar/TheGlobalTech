@@ -7,6 +7,8 @@
 
 
 .homepage {
+    /* center text */
+    text-align: center;
     background: #4f7cac;
 }
 
