@@ -9,8 +9,6 @@
 .homepage {
     /* center text */
     background: #4f7cac;
-    text-align: center;
-    align-content: center;
 }
 
 .title {
@@ -73,7 +71,7 @@
 
 .next {
     /* Position the "next button" to the right */
-    right: -50px;
+    right: 0;
     border-radius: 3px 0 0 3px;
 }
 
