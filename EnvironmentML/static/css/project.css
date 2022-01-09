@@ -34,23 +34,13 @@
     border: 2px solid dodgerblue;
 }
 
-.publishDate {
-    box-shadow: black 0px 0px 100px;
-    position: absolute;
-    text-decoration: none;
-    color: white;
-    top: 8px;
-    left: 16px;
-    z-index: 10;
-}
-
-.publishInfo {
+.authorInfo {
     position: absolute;
     bottom: 8px;
     right: 30px;
     text-decoration: none;
     color: white;
     font-family: "Roboto", sans-serif;
-    font-size: 32px;
+    font-size: 16px;
     font-weight: bold;
 }
