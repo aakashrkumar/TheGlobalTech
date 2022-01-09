@@ -12,6 +12,7 @@
 }
 
 .title {
+    text-align: center;
     font-size: 2.5em;
     font-weight: bold;
     color: #000000;
@@ -19,20 +20,23 @@
 }
 
 .headline {
+    text-align: center;
     color: #1F1F1F;
     font-size: 27px;
     font-family: 'Roboto', sans-serif;
+    width: 50%;
+
 }
 
 
 .slideshow {
     position: relative;
+    margin: 0 auto;
     width: min-content;
     height: min-content;
 }
 
 .card {
-    position: center;
     width: 500px;
     height: 500px;
     border: gray;
