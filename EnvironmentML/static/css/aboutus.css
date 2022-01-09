@@ -1,0 +1,51 @@
+.project-title {
+    font-size: 4.5em;
+    font-weight: bold;
+    margin-bottom: 0.1em;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    float: left;
+    border: gray;
+    border-radius: 10px;
+    margin: 10px;
+    border: 2px solid #000000;
+}
+
+.image-cover-shadow {
+    box-shadow: 0 0 0px 300px rgba(0, 0, 0, 0.5) inset;
+}
+
+.image-cover-shadow img {
+    position: relative;
+    z-index: -1;
+}
+
+.card:hover {
+    border: 2px solid dodgerblue;
+}
+
+.authorName {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    text-decoration: none;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.authorRole {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    text-decoration: none;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
