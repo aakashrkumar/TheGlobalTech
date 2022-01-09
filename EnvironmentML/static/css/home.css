@@ -63,9 +63,9 @@
     user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
-    margin-left: auto;
+   /* Position the "next button" to the right */
+    right: 0;
     border-radius: 3px 0 0 3px;
 }
 
