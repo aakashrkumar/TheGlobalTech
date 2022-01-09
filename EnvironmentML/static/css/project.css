@@ -3,3 +3,9 @@
     font-weight: bold;
     margin-bottom: 0.1em;
 }
+
+.article-container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1060px;
+}
