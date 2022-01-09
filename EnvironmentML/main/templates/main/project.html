@@ -13,7 +13,7 @@
     <br>
     <br>
     <h2 class="project-title">{{ project.project_name }}</h2>
-    {% for author in project.project_authors %}
+    {% for author in project.project_authors.all() %}
     <h3 class="project-author">{{ author }}</h3>
     {% endfor %}
     <p style="font-size:70%;">Published {{ project.project_date.date }}</p>
