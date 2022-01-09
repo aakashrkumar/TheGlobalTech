@@ -49,7 +49,7 @@ ul {
     display: inline-block;
     text-decoration: none;
     color: black;
-    padding: 0 12px;
+    padding-right: 12px;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
 }
