@@ -10,6 +10,6 @@ class Project(models.Model):
     project_summary = models.TextField()
     project_article = models.TextField()
     project_image = models.ImageField(upload_to='project_images/')
-
+    project_authors = models
     def __str__(self):
         return self.project_name
