@@ -21,8 +21,6 @@
 }
 
 /* Float the link section to the right */
-.navbar-right {
-}
 
 /* Style the header links */
 .navbar a {
@@ -59,7 +57,4 @@
         display: none;
     }
 
-    .navbar-right {
-        float: right;
-    }
 }

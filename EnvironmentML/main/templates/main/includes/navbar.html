@@ -7,25 +7,25 @@
     <nav class="navbar" id="navBar">
         <div class="navcontainer">
             <a href="/" class="logo">EarthAI</a>
+            {% if request.path == "/" %}
+            <a class="active hideoverflow" href="/">Home</a>
+            {% else %}
+            <a class="hideoverflow" href="/">Home</a>
+            {% endif %}
+            {% if "/projects/" in request.path %}
+            <a class="active hideoverflow" href="/projects">Projects</a>
+            {% else %}
+            <a class="hideoverflow" href="/projects">Projects</a>
+            {% endif %}
+            {% if request.path == "/about-us/" %}
+            <a class="active hideoverflow" href="/about-us">About Us</a>
+            {% else %}
+            <a class="hideoverflow" href="/about-us">About Us</a>
+            {% endif %}
+            <a onclick="openNav()" class="sidebarnavid">
+                <i class="material-icons" style="">view_headline</i>
+            </a>
             <div class="navbar-right">
-                {% if request.path == "/" %}
-                <a class="active hideoverflow" href="/">Home</a>
-                {% else %}
-                <a class="hideoverflow" href="/">Home</a>
-                {% endif %}
-                {% if "/projects/" in request.path %}
-                <a class="active hideoverflow" href="/projects">Projects</a>
-                {% else %}
-                <a class="hideoverflow" href="/projects">Projects</a>
-                {% endif %}
-                {% if request.path == "/about-us/" %}
-                <a class="active hideoverflow" href="/about-us">About Us</a>
-                {% else %}
-                <a class="hideoverflow" href="/about-us">About Us</a>
-                {% endif %}
-                <a onclick="openNav()" class="sidebarnavid">
-                    <i class="material-icons" style="">view_headline</i>
-                </a>
             </div>
         </div>
     </nav>
