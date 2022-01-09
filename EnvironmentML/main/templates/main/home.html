@@ -22,9 +22,9 @@
             <div class="slideshow-container">
                 {% for project in projects %}
                 <div class="mySlides fade">
-                    <div class="numbertext">{{forloop.counter}} / {{projects.count}}</div>
+                    <div class="numbertext">{{forloop.counter}} / {{projects.__length__}}</div>
                     <img src="/static/media/{{ project.project_image }}" style="width:100%">
-                    <div class="slideshowCaption">{{project.project_title}}</div>
+                    <div class="slideshowCaption">{{project.project_name}}</div>
                 </div>
                 {% endfor %}
                 <!-- Next and previous buttons -->
