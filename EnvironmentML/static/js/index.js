@@ -1,28 +1,26 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-$('body').css('display', 'none');
+    $('.main-content').css('display', 'none');
 
-$('body').fadeIn(1000);
-
-
-
-$('.link').click(function(event) {
-
-event.preventDefault();
-
-newLocation = this.href;
-
-$('body').fadeOut(1000, newpage);
-
-});
+    $('.main-content').fadeIn(1000);
 
 
+    $('.link').click(function (event) {
 
-function newpage() {
+        event.preventDefault();
 
-window.location = newLocation;
+        newLocation = this.href;
 
-}
+        $('.main-content').fadeOut(1000, newpage);
+
+    });
+
+
+    function newpage() {
+
+        window.location = newLocation;
+
+    }
 
 });
 
