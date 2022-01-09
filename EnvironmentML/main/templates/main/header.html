@@ -22,19 +22,6 @@
 {% include "main/includes/navbar.html" %}
 {% block content %}
 {% endblock %}
-<script>
-    window.addEventListener("beforeunload", function () {
-        document.body.classList.add("animate-out")
-    });
-</script>
-<script>
-    document.addEventListener('beforeload', function (event) {
-        event.preventDefault();
-        document.body.classList.add("animate-in")
-    }, true);
-</script>
 </body>
-
-
 <!-- Prism JS -->
 </html>
