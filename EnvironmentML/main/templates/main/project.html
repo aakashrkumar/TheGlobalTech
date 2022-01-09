@@ -21,5 +21,9 @@
     <br>
     <br>
     {{ project.project_article|safe }}
+    <br>
+    {% for author in project.project_authors.all %}
+    {{ author }}{% if not forloop.last %}, {% endif %}
+    {% endfor %}
 </div>
 {% endblock %}
