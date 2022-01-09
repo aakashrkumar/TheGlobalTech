@@ -22,9 +22,6 @@
 
 .slideshow {
     position: relative;
-    vertical-align: middle;
-    right: 0;
-    margin: auto;
     width: 40%;
     align-self: flex-end;
 }
@@ -43,7 +40,7 @@
 }
 
 /* Hide the images by default */
-.mySlides {
+.slidesContainer {
     display: none;
 }
 
