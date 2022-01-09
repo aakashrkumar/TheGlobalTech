@@ -116,3 +116,10 @@
         opacity: 1
     }
 }
+
+@media screen and (max-width: 1500px) {
+    .card {
+        width: 400px;
+        height: 400px;
+    }
+}
