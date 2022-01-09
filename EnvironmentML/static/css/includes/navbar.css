@@ -1,6 +1,6 @@
 /* Style the header with a grey background and some padding */
 .navbar {
-    display: flex;
+    display: inline-block;
     position: fixed;
     width: 100%;
     overflow: hidden;
