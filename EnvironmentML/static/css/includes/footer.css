@@ -3,8 +3,8 @@
     position: relative;
     left: 0;
     width: 100%;
-    background-color: #4DB4D7;
-    color: gray;
+    background-color: black;
+    color: lightgray;
     text-align: center;
     clear: both;
     height: 80px;
@@ -12,6 +12,6 @@
     justify-content: center;
 }
 
-.main-footer.tile-text {
-    color: black;
+.footer-tile-text {
+    color: white;
 }
