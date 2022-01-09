@@ -18,6 +18,12 @@
     max-width: 1360px;
 }
 
+/* Float the link section to the right */
+.navbar-right {
+    align-content: flex-end;
+    justify-content: left;
+}
+
 /* Style the header links */
 .navbar a {
     text-decoration: none;
@@ -46,10 +52,6 @@
     color: #0076BE;
 }
 
-/* Float the link section to the right */
-.navbar-right {
-    justify-content: left;
-}
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
 @media screen and (max-width: 500px) {
