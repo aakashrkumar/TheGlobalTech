@@ -13,19 +13,15 @@
 }
 
 ul {
-    position: relative;
+    position: ab\;
     text-align: right;
     width: 100%;
 }
 
 .logo {
-    display: inline-block;
-    vertical-align: middle;
-    position: absolute;
-    top: -20px;
+        position: absolute;
+display: inline-block;
     left: 0;
-    padding: 0;
-    margin: 0 0 0 0;
 }
 
 .navcontainer {
