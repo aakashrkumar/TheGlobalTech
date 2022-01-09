@@ -22,4 +22,4 @@ class ProjectAdmin(admin.ModelAdmin):
     list_display = ('project_name', 'formfield_for_manytomany', "get_project_authors")
 
 
-admin.site.register(Project, ProjectAdmin)
+# admin.site.register(Project, ProjectAdmin)
