@@ -12,6 +12,7 @@
 
 .navcontainer {
     width: 95%;
+    margin: auto auto;
     max-width: 1360px;
     vertical-align: middle;
 }
