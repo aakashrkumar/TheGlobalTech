@@ -10,7 +10,6 @@
     box-shadow: black 0px 0px 10px;
     z-index: 100;
     transition: 0.5s; /* 0.5 second transition effect to slide in the navbar */
-    height: 80px;
 }
 
 .navcontainer {
@@ -36,10 +35,6 @@ nav li {
     border-radius: 4px;
     font-family: 'Roboto', sans-serif;
     line-height: 1;
-}
-
-.navbar a.right {
-    text-align: right;
 }
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
