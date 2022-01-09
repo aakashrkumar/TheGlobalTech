@@ -10,23 +10,23 @@
             <ul>
                 <li>
                     {% if request.path == "/" %}
-                    <a class="active hideoverflow" href="/">Home</a>
+                    <a class="active hideoverflow right" href="/">Home</a>
                     {% else %}
-                    <a class="hideoverflow" href="/">Home</a>
+                    <a class="hideoverflow right" href="/">Home</a>
                     {% endif %}
                 </li>
                 <li>
                     {% if "/projects/" in request.path %}
-                    <a class="active hideoverflow" href="/projects">Projects</a>
+                    <a class="active hideoverflow right" href="/projects">Projects</a>
                     {% else %}
-                    <a class="hideoverflow" href="/projects">Projects</a>
+                    <a class="hideoverflow right" href="/projects">Projects</a>
                     {% endif %}
                 </li>
                 <li>
                     {% if request.path == "/about-us/" %}
-                    <a class="active hideoverflow" href="/about-us">About Us</a>
+                    <a class="active hideoverflow right" href="/about-us">About Us</a>
                     {% else %}
-                    <a class="hideoverflow" href="/about-us">About Us</a>
+                    <a class="hideoverflow right" href="/about-us">About Us</a>
                     {% endif %}
                 </li>
                 <li>
