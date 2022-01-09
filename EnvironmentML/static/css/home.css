@@ -23,8 +23,8 @@
 
 .card {
     position: relative;
-    width: 40%;
-    height: 40%;
+    width: 300px;
+    height: 300px;
     float: left;
     border: gray;
     border-radius: 25px;
