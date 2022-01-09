@@ -21,13 +21,13 @@
 
 /* Style the header links */
 .navbar a {
+    text-decoration: none;
     height: 100%;
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
     color: black;
     padding: 12px;
-    text-decoration: none;
     font-size: 20px;
     border-radius: 4px;
     font-family: 'Roboto', sans-serif;
