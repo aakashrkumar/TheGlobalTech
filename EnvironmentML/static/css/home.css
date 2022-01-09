@@ -1,5 +1,6 @@
 /* create headline class which shows text the left of screen if screen is large or center if screen is small */
 .container {
+    position: center;
     margin: 0 auto;
     width: 90%;
     max-width: 1260px;
@@ -9,6 +10,7 @@
 .homepage {
     /* center text */
     background: #4f7cac;
+    width: 100%;
 }
 
 .title {
@@ -20,6 +22,8 @@
 }
 
 .headline {
+    margin: 0 auto;
+    position: center;
     text-align: center;
     color: #1F1F1F;
     font-size: 27px;
