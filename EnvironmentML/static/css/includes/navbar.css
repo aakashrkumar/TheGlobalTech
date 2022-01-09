@@ -28,6 +28,7 @@ nav li {
 
 /* Style the header links */
 .navbar a {
+    display: block;
     text-decoration: none;
     color: black;
     padding: 0 12px;
