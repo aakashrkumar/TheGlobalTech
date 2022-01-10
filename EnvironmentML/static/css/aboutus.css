@@ -4,7 +4,7 @@
     margin-bottom: 0.1em;
 }
 
-.card {
+.project-card {
     position: relative;
     width: 300px;
     height: 300px;
@@ -24,7 +24,7 @@
     z-index: -1;
 }
 
-.card:hover {
+.project-card:hover {
     border: 2px solid dodgerblue;
 }
 

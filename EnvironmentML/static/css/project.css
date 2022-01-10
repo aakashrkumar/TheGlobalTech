@@ -10,7 +10,7 @@
     max-width: 1060px;
 }
 
-.card {
+.project-card {
     position: relative;
     width: 100px;
     height: 100px;
@@ -30,7 +30,7 @@
     z-index: -1;
 }
 
-.card:hover {
+.project-card:hover {
     border: 2px solid dodgerblue;
 }
 
