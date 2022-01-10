@@ -130,7 +130,7 @@
 @media screen and (min-width: 600px) {
     .headline {
         text-align: left;
-        font-size: clamp(2em, 3em, 5em);
+        font-size: clamp(2em, 2.5em, 5em);
     }
 }
 
