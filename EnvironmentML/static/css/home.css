@@ -1,12 +1,4 @@
 /* create headline class which shows text the left of screen if screen is large or center if screen is small */
-.container {
-    position: center;
-    margin: 0 auto;
-    width: 90%;
-    max-width: 1260px;
-}
-
-
 .homepage {
     width: 100%;
 }
