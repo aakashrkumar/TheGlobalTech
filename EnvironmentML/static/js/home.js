@@ -22,9 +22,12 @@ function showSlides(n) {
     }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
+        slides[i].classList.remove("active-project-card");
     }
     slides[slideIndex - 1].style.display = "block";
-    slides[slideIndex - 1].children[0].style.height = $(".project-card").outerWidth() + "px";
+    slides[slideIndex - 1].children[0].classList.add("active-project-card");
+    slides[slideIndex - 1].children[0].style.height = $(".active-project-card").outerWidth() + "px";
+    console.log();
 }
 
 // on resize
