@@ -136,6 +136,6 @@
 /* set headline to 7em if screen is greater than 1500px */
 @media screen and (min-width: 1500px) {
     .headline {
-        font-size: 7em;
+        font-size: 5em;
     }
 }
