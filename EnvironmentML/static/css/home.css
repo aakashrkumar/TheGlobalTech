@@ -2,6 +2,7 @@
 .homepage {
     width: 100%;
     min-height: 100vh;
+    margin: 0 0 0 0;
 }
 
 .title {
@@ -46,8 +47,9 @@
 
 /* Next & previous buttons */
 .prev, .next {
+    position: relative;
+    display: block;
     cursor: pointer;
-    position: absolute;
     top: 48%;
     width: auto;
     padding: 0.5%;
