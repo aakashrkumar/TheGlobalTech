@@ -119,3 +119,10 @@
         opacity: 1
     }
 }
+
+/* center headline if scree nis less than 600px */
+@media screen and (max-width: 600px) {
+    .headline {
+        text-align: center;
+    }
+}
