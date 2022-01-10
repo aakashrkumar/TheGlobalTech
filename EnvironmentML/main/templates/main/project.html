@@ -21,7 +21,9 @@
     <hr>
     <br>
     <br>
-    {{ project.project_article|safe }}
+    <div class="flow-text">
+        {{ project.project_article|safe }}
+    </div>
     <hr>
     <br>
     {% for author in project.project_authors.all %}
