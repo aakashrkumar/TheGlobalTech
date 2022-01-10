@@ -29,7 +29,7 @@ function showSlides(n) {
     if (slides[slideIndex - 1].children[0].style.height != $(".project-card:visible").outerWidth() + "px") {
         setTimeout(function () {
             slides[slideIndex - 1].children[0].style.height = $(".project-card:visible").outerWidth() + "px";
-        }, 2000);
+        }, 3000);
     }
     if ($(window).width() < 600) {
         $("#home-aligner").removeClass("valign-wrapper");
