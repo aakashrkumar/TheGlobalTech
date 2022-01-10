@@ -23,7 +23,7 @@
 .slideshow {
     position: relative;
     margin: 0 auto;
-    width: min-content;
+    width: 100%;
     height: min-content;
 }
 
