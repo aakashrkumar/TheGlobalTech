@@ -23,7 +23,7 @@
                 <div class="slideshow-container">
                     {% for project in projects %}
                     <div class="slidesContainer fade">
-                        <div class="card" style="overflow: hidden;">
+                        <div class="project-card" style="overflow: hidden;">
                             <div class="numbertext">{{forloop.counter}} / {{projects | length}}</div>
                             <!--img src="/static/media/{{ project.project_image }}" style="object-fit: cover;" class=""-->
                             <div class="slideshowCaption">{{project.project_name}}</div>
