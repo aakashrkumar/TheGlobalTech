@@ -26,6 +26,14 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     slides[slideIndex - 1].children[0].style.height = $(".project-card:visible").outerWidth() + "px";
     console.log();
+    if ($(window).width() < 600) {
+        $("#home-aligner").removeClass("valign-wrapper");
+    }
+    // add the class align-center valign-wrapper if screen size is more than 600px
+    else {
+        $("#home-aligner").addClass("valign-wrapper");
+    }
+
 }
 
 // on resize
