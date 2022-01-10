@@ -130,11 +130,11 @@
 @media screen and (min-width: 600px) {
     .headline {
         text-align: left;
-        font-size: 5em;
+        font-size: 3.5em;
     }
 
     .project-card {
-        width: 300px;
+        width: 400px;
     }
 }
 
