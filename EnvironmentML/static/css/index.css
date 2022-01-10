@@ -18,7 +18,7 @@ html {
     scroll-behavior: smooth;
 }
 
-#fader {
+#page-fader {
     position: fixed;
     top: 0;
     left: 0;
@@ -49,12 +49,12 @@ html {
     }
 }
 
-#fader.fade-out {
+#page-fader.fade-out {
     opacity: 0;
     animation-name: fade-out;
 }
 
-#fader.fade-in {
+#page-fader.fade-in {
     opacity: 1;
     animation-name: fade-in;
 }

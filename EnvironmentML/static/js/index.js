@@ -2,7 +2,7 @@ function fadeInPage() {
     if (!window.AnimationEvent) {
         return;
     }
-    var fader = document.getElementById('fader');
+    var fader = document.getElementById('page-fader');
     fader.classList.add('fade-out');
 }
 
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
             continue;
         }
         anchors[idx].addEventListener('click', function (event) {
-            var fader = document.getElementById('fader'),
+            var fader = document.getElementById('page-fader'),
                 anchor = event.currentTarget;
 
             var listener = function () {
@@ -36,11 +36,9 @@ window.addEventListener('pageshow', function (event) {
     if (!event.persisted) {
         return;
     }
-    var fader = document.getElementById('fader');
+    var fader = document.getElementById('page-fader');
     fader.classList.remove('fade-in');
 });
-
-// Or with jQuery
 
 $(document).ready(function () {
     $('.sidenav').sidenav();
