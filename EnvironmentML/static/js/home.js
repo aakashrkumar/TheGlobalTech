@@ -32,5 +32,5 @@ function showSlides(n) {
 
 // on resize
 $(window).resize(function () {
-    $(".slidesContainer").children().css("height", $(".project-card").outerWidth() + "px");
+    $(".slidesContainer").children().css("height", $(".active-project-card").outerWidth() + "px");
 });
