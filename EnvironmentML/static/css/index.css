@@ -14,8 +14,8 @@ body {
 
 /* enable smooth scrolling */
 html {
-    width: 100vw;
     scroll-behavior: smooth;
+    overflow-y: scroll;
 }
 
 #page-fader {
@@ -31,10 +31,6 @@ html {
     animation-timing-function: ease-in-out;
 }
 
-/* hide scrollbar */
-::-webkit-scrollbar {
-    float: right;
-}
 
 @keyframes fade-out {
     from {
