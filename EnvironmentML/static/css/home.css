@@ -13,7 +13,7 @@
 
 .headline {
     color: #1F1F1F;
-    font-size: clamp(1.5em, 2.5em, 2.5em);
+    font-size: clamp(1.5em, 2.5em, 6.5em);
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
 }
