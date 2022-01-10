@@ -25,8 +25,8 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block";
     slides[slideIndex - 1].children[0].style.height = $(".project-card:visible").outerWidth() + "px";
-    // if height was updated to 0, wait for it to update and try again
-    if (slides[slideIndex - 1].children[0].style.height == "0px") {
+    // if height is not equal to outer width, wait for it to update and try again
+    if (slides[slideIndex - 1].children[0].style.height != $(".project-card:visible").outerWidth() + "px") {
         setTimeout(function () {
             slides[slideIndex - 1].children[0].style.height = $(".project-card:visible").outerWidth() + "px";
         }, 100);
