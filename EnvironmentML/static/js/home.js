@@ -25,6 +25,7 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block";
     slides[slideIndex - 1].children[0].style.height = $(".project-card:visible").outerWidth() + "px";
+    $(".slidesContainer").children().css("height", $(".project-card:visible").outerWidth() + "px");
     if ($(window).width() < 600) {
         $("#home-aligner").removeClass("valign-wrapper");
     }
