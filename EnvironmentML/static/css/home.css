@@ -1,5 +1,7 @@
 /* create headline class which shows text the left of screen if screen is large or center if screen is small */
 .homepage {
+    width: 100%;
+    min-height: 100%;
 }
 
 .title {
@@ -147,11 +149,4 @@
     .project-card {
         width: 600px;
     }
-}
-
-.center-vertical {
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
 }
