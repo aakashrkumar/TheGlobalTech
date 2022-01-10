@@ -1,3 +1,8 @@
 .brand-logo {
     height: 64px;
 }
+
+.nav-wrapper {
+    position: fixed;
+    color: rgba(255, 255, 255, 0.87);
+}
