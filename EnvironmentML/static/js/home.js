@@ -25,11 +25,12 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block";
     slides[slideIndex - 1].children[0].style.height = $(".project-card:visible").outerWidth() + "px";
-    // if height is not equal to outer width, wait 2 seconds for it to update and try again
+    // if height is not equal to outer width, keep trying until it is and print error every time it is not
     if (slides[slideIndex - 1].children[0].style.height != $(".project-card:visible").outerWidth() + "px") {
         setTimeout(function () {
             slides[slideIndex - 1].children[0].style.height = $(".project-card:visible").outerWidth() + "px";
-        }, 3000);
+            console.log(slides[slideIndex - 1].children[0].style.height);
+        }, 100);
     }
     if ($(window).width() < 600) {
         $("#home-aligner").removeClass("valign-wrapper");
