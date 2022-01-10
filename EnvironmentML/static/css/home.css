@@ -13,7 +13,6 @@
 
 .headline {
     color: #1F1F1F;
-    font-size: clamp(1em, 2em, 7em);
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
 }
@@ -124,5 +123,19 @@
 @media screen and (max-width: 600px) {
     .headline {
         text-align: center;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .headline {
+        text-align: left;
+        font-size: 4em;
+    }
+}
+
+/* set headline to 7em if screen is greater than 1500px */
+@media screen and (min-width: 1500px) {
+    .headline {
+        font-size: 7em;
     }
 }
