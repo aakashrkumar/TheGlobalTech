@@ -12,13 +12,6 @@ body {
     overflow-x: hidden;
 }
 
-/* create container which centers the content within a margin */
-.container {
-    margin: 0 auto;
-    width: 90%;
-    max-width: 1360px;
-}
-
 /* enable smooth scrolling */
 html {
     width: 100vw;
