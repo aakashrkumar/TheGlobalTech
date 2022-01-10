@@ -28,7 +28,7 @@
 }
 
 .project-card {
-    width: 600px;
+    width: 100%;
     height: 600px;
     border: gray;
     border-radius: 25px;
