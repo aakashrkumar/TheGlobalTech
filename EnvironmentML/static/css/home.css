@@ -75,7 +75,7 @@
     padding: 8px 0px;
     position: relative;
     bottom: 30px;
-    width: 100%;
+    width: 600px;
     text-align: center;
 }
 
@@ -132,12 +132,20 @@
         text-align: left;
         font-size: clamp(2em, 2.5em, 5em);
     }
+
+    .project-card {
+        width: 300px;
+    }
 }
 
 /* set headline to 7em if screen is greater than 1500px */
 @media screen and (min-width: 1500px) {
     .headline {
-        font-size: clamp(4em, 1em, 7em);
+        font-size: 7em;
+    }
+
+    .project-card {
+        width: 600px;
     }
 }
 
