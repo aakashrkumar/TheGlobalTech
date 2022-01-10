@@ -25,5 +25,9 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block";
     slides[slideIndex - 1].children[0].style.height = $(".project-card").outerWidth() + "px";
-    console.log(slides[slideIndex - 1].children[0].style.height);
 }
+
+// on resize
+$(window).resize(function () {
+    $(".slidesContainer").children().css("height", $(".project-card").outerWidth() + "px");
+});
