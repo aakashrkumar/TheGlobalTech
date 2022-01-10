@@ -143,6 +143,17 @@
 /* set headline to 7em if screen is greater than 1500px */
 @media screen and (min-width: 1500px) {
     .headline {
+        font-size: 5em;
+    }
+
+    .project-card {
+        width: 500px;
+    }
+}
+
+/* set headline to 7em if screen is greater than 1500px */
+@media screen and (min-width: 1800px) {
+    .headline {
         font-size: 6em;
     }
 
