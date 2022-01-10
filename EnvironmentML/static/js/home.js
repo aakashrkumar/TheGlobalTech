@@ -25,7 +25,12 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block";
     slides[slideIndex - 1].children[0].style.height = $(".project-card:visible").outerWidth() + "px";
-    $(".slidesContainer").children().css("height", $(".project-card:visible").outerWidth() + "px");
+    // if width was updated to 0, wait for it to update and try again
+    if (slides[slideIndex - 1].children[0].style.height == "0px") {
+        setTimeout(function () {
+            slides[slideIndex - 1].children[0].style.height = $(".project-card:visible").outerWidth() + "px";
+        }, 100);
+    }
     if ($(window).width() < 600) {
         $("#home-aligner").removeClass("valign-wrapper");
     }
