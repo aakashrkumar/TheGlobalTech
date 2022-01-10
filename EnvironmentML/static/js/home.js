@@ -25,5 +25,7 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block";
     slides[slideIndex - 1].style.height = slides[slideIndex - 1].style.width;
+    console.log(slides[slideIndex].children[0]);
+    console.log(slides[slideIndex].children[0].outerWidth());
     console.log(slides[slideIndex].children[0].style.outerWidth);
 }
