@@ -28,12 +28,6 @@ function showSlides(n) {
     // if height is not equal to outer width, keep trying until it is and print error every time it is not
     // console log outer width
     console.log($(".project-card:visible").outerWidth());
-    if (slides[slideIndex - 1].children[0].style.height !== $(".project-card:visible").outerWidth() + "px") {
-        console.log(slides[slideIndex - 1].children[0].style.height);
-        setTimeout(function () {
-            slides[slideIndex - 1].children[0].style.height = $(".project-card:visible").outerWidth() + "px";
-        }, 100);
-    }
     if ($(window).width() < 600) {
         $("#home-aligner").removeClass("valign-wrapper");
     }
