@@ -33,7 +33,7 @@ html {
 
 /* hide scrollbar */
 ::-webkit-scrollbar {
-    display: none;
+    float: right;
 }
 
 @keyframes fade-out {
