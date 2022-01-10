@@ -1,35 +1,35 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/includes/navbar.css' %}">
 <div>
-    <nav class="nav-fixed">
+    <nav class="nav-fixed" style="background-color: rgba(255, 255, 255, 0.8)">
         <div class="nav-wrapper">
-                <div class="container" style="background-color: rgba(255, 255, 255, 0.8)">
-                    <a href="/" class="brand-logo"><img class="brand-logo" src="{% static 'graphics/logo.png' %}"></a>
-                    <a href="#" data-target="expandableSidebar" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>
-                    <ul class="right hide-on-med-and-down">
-                        <li>
-                            {% if request.path == "/" %}
-                            <a class="active black-text" href="/">Home</a>
-                            {% else %}
-                            <a class="black-text" href="/">Home</a>
-                            {% endif %}
-                        </li>
-                        <li>
-                            {% if "/projects/" in request.path %}
-                            <a class="active black-text" href="/projects">Projects</a>
-                            {% else %}
-                            <a class="black-text" href="/projects">Projects</a>
-                            {% endif %}
-                        </li>
-                        <li>
-                            {% if request.path == "/about-us/" %}
-                            <a class="active black-text" href="/about-us">About Us</a>
-                            {% else %}
-                            <a class="black-text" href="/about-us">About Us</a>
-                            {% endif %}
-                        </li>
-                    </ul>
-                </div>
+            <div class="container">
+                <a href="/" class="brand-logo"><img class="brand-logo" src="{% static 'graphics/logo.png' %}"></a>
+                <a href="#" data-target="expandableSidebar" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        {% if request.path == "/" %}
+                        <a class="active black-text" href="/">Home</a>
+                        {% else %}
+                        <a class="black-text" href="/">Home</a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if "/projects/" in request.path %}
+                        <a class="active black-text" href="/projects">Projects</a>
+                        {% else %}
+                        <a class="black-text" href="/projects">Projects</a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if request.path == "/about-us/" %}
+                        <a class="active black-text" href="/about-us">About Us</a>
+                        {% else %}
+                        <a class="black-text" href="/about-us">About Us</a>
+                        {% endif %}
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <ul class="sidenav" id="expandableSidebar">
