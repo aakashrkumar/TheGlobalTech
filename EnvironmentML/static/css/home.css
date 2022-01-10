@@ -4,6 +4,7 @@
 }
 
 .title {
+    display: none;
     text-align: center;
     font-size: 2.5em;
     font-weight: bold;
@@ -12,11 +13,9 @@
 }
 
 .headline {
-    margin: 0 auto;
-    position: center;
-    text-align: center;
     color: #1F1F1F;
     font-size: 27px;
+    font-weight: bold;
     font-family: 'Roboto', sans-serif;
     width: 50%;
 
