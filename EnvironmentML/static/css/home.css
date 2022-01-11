@@ -36,7 +36,7 @@
 
 /* Slideshow container */
 .slideshow-container {
-    position: absolute;
+    position: relative;
     width: min-content;
 }
 
