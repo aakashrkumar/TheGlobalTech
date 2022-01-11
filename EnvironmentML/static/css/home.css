@@ -20,7 +20,6 @@
 
 
 .slideshow {
-    position: relative;
     margin: 0 auto;
 }
 
@@ -33,7 +32,6 @@
 
 /* Slideshow container */
 .slideshow-container {
-    position: relative;
 }
 
 /* Hide the images by default */
