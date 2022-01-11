@@ -127,33 +127,34 @@
         text-align: center;
         font-size: 2em;
     }
+
+    .project-card {
+        width: 300px;
+        height: 300px;
+    }
 }
 
 @media screen and (min-width: 600px) {
     .headline {
         text-align: left;
-        font-size: 1em;
+        font-size: 3em;
     }
 
     .project-card {
-        max-width: 400px;
-        min-width: 400px;
-        min-height: 400px;
-        max-height: 400px;
+        width: 400px;
+        height: 400px;
     }
 }
 
 /* set headline to 7em if screen is greater than 1500px */
 @media screen and (min-width: 1500px) {
     .headline {
-        font-size: 1em;
+        font-size: 4em;
     }
 
     .project-card {
-        max-width: 500px;
-        min-width: 500px;
-        min-height: 500px;
-        max-height: 500px;
+        width: 500px;
+        height: 500px;
     }
 }
 
@@ -164,9 +165,7 @@
     }
 
     .project-card {
-        max-width: 600px;
-        min-width: 600px;
-        min-height: 600px;
-        max-height: 600px;
+        width: 600px;
+        height: 600px;
     }
 }
