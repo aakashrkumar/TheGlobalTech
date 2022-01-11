@@ -38,6 +38,7 @@
 /* Slideshow container */
 .slideshow-container {
     position: absolute;
+    width: min-content;
 }
 
 /* Hide the images by default */
