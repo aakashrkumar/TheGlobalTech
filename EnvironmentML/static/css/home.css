@@ -139,6 +139,7 @@
     .project-card {
         width: 400px;
         height: 400px;
+        max-width: 400px;
     }
 }
 
@@ -151,6 +152,7 @@
     .project-card {
         width: 500px;
         height: 500px;
+        max-width: 500px;
     }
 }
 
@@ -163,5 +165,6 @@
     .project-card {
         width: 600px;
         height: 600px;
+        max-width: 600px;
     }
 }
