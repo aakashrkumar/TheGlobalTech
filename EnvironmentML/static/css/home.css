@@ -24,6 +24,7 @@
 .slideshow {
     position: relative;
     margin: 0 auto;
+    right: 0;
 }
 
 .project-card {
