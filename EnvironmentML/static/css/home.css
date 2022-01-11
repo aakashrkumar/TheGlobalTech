@@ -46,8 +46,7 @@
 
 /* Next & previous buttons */
 .prev, .next {
-    position: relative;
-    display: block;
+    position: absolute;
     cursor: pointer;
     top: 48%;
     width: auto;
