@@ -136,8 +136,10 @@
     }
 
     .project-card {
-        width: 400px;
-        height: 400px;
+        max-width: 400px;
+        min-width: 400px;
+        min-height: 400px;
+        max-height: 400px;
     }
 }
 
@@ -148,8 +150,10 @@
     }
 
     .project-card {
-        width: 500px;
-        height: 500px;
+        max-width: 500px;
+        min-width: 500px;
+        min-height: 500px;
+        max-height: 500px;
     }
 }
 
@@ -160,7 +164,9 @@
     }
 
     .project-card {
-        width: 600px;
-        height: 600px;
+        max-width: 600px;
+        min-width: 600px;
+        min-height: 600px;
+        max-height: 600px;
     }
 }
