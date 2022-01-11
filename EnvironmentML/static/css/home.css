@@ -150,6 +150,20 @@
     }
 }
 
+
+/* set headline to 7em if screen is greater than 1500px */
+@media screen and (min-width: 1000px) {
+    .headline {
+        font-size: 4em;
+    }
+
+    .project-card {
+        width: 450px;
+        height: 450px;
+    }
+}
+
+
 /* set headline to 7em if screen is greater than 1500px */
 @media screen and (min-width: 1500px) {
     .headline {
