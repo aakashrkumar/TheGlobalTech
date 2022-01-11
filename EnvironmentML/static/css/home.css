@@ -28,7 +28,6 @@
 
 .project-card {
     display: block;
-    width: 100%;
     border: gray;
     border-radius: 25px;
     border: 2px solid #000000;
@@ -79,7 +78,7 @@
     padding: 8px 0px;
     position: relative;
     bottom: 30px;
-    width: 600px;
+    width: 100%;
     text-align: center;
 }
 
@@ -139,7 +138,7 @@
 
     .project-card {
         width: 400px;
-        max-width: 400px;
+        height: 400px;
     }
 }
 
@@ -151,7 +150,7 @@
 
     .project-card {
         width: 500px;
-        max-width: 500px;
+        height: 500px;
     }
 }
 
@@ -163,6 +162,6 @@
 
     .project-card {
         width: 600px;
-        max-width: 600px;
+        height: 600px;
     }
 }
