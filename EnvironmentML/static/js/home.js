@@ -29,6 +29,7 @@ function showSlides(n) {
     // console log outer width
     if ($(window).width() < 1000) {
         $("#home-aligner").removeClass("valign-wrapper");
+        $("#headline").removeClass("m5");
     }
     // add the class align-center valign-wrapper if screen size is more than 600px
     else {
