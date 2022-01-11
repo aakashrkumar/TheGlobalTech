@@ -38,7 +38,7 @@ function showSlides(n) {
 }
 
 // on resize
-$(document).resize(function () {
+$(window).resize(function () {
     $(".slidesContainer").children().css("height", $(".project-card:visible").outerWidth() + "px");
     // get div by the id home-aligner and remove the class align-center valign-wrapper if screen size is less than 600px
     if ($(window).width() < 860) {
