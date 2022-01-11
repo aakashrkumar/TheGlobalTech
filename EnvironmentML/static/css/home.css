@@ -122,7 +122,7 @@
 }
 
 /* center headline if scree nis less than 600px */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
     .headline {
         text-align: center;
         font-size: 2em;
@@ -137,19 +137,6 @@
         width: 100%;
     }
 }
-
-@media screen and (min-width: 600px) {
-    .headline {
-        text-align: left;
-        font-size: 3em;
-    }
-
-    .project-card {
-        width: 350px;
-        height: 350px;
-    }
-}
-
 
 /* set headline to 7em if screen is greater than 1500px */
 @media screen and (min-width: 1000px) {
