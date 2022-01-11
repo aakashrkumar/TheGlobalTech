@@ -62,12 +62,12 @@ $(window).resize(function () {
     }
     // add the class align-center valign-wrapper if screen size is more than 600px
     else {
-        $("#home-aligner").addClass("valign-wrapper");
 
         $("#headline").removeClass("m12");
         $("#headline").addClass("m6");
 
         $("#slides").removeClass("12");
         $("#slides").addClass("m6");
+        $("#home-aligner").addClass("valign-wrapper");
     }
 });
