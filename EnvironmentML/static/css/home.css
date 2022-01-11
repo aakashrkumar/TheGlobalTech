@@ -1,5 +1,7 @@
 /* create headline class which shows text the left of screen if screen is large or center if screen is small */
 .homepage {
+    width: 100%;
+    margin: 0 0 0 0;
 }
 
 .title {
@@ -15,16 +17,18 @@
     color: #1F1F1F;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
-    width: 30%;
 }
 
 
 .slideshow {
+    position: relative;
     margin: 0 auto;
+    width: 100%;
 }
 
 .project-card {
-    position: absolute;
+    display: block;
+    width: 100%;
     border: gray;
     border-radius: 25px;
     border: 2px solid #000000;
@@ -32,6 +36,7 @@
 
 /* Slideshow container */
 .slideshow-container {
+    position: relative;
 }
 
 /* Hide the images by default */
@@ -46,12 +51,14 @@
     top: 48%;
     width: auto;
     padding: 0.5%;
-    color: white;
+    /*color: white;*/
     font-weight: bold;
     font-size: 30px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    color: black;
+    z-index: 1000;
 }
 
 .next {
@@ -90,53 +97,6 @@
     background-color: #717171;
 }
 
-
-/* center headline if scree nis less than 600px */
-@media screen and (max-width: 600px) {
-    .headline {
-        text-align: center;
-        font-size: 2em;
-    }
-}
-
-@media screen and (min-width: 600px) {
-    .headline {
-        text-align: left;
-        font-size: 3.5em;
-    }
-
-    .project-card {
-        width: 400px;
-        height: 400px;
-    }
-}
-
-/* set headline to 7em if screen is greater than 1500px */
-@media screen and (min-width: 1500px) {
-    .headline {
-        font-size: 5em;
-    }
-
-    .project-card {
-        width: 500px;
-        height: 500px;
-    }
-}
-
-/* set headline to 7em if screen is greater than 1500px */
-@media screen and (min-width: 1800px) {
-    .headline {
-        font-size: 6em;
-    }
-
-    .project-card {
-        width: 600px;
-        height: 600px;
-    }
-}
-
-
-/* animations */
 /* Fading animation */
 .fade {
     -webkit-animation-name: fade;
@@ -160,5 +120,49 @@
     }
     to {
         opacity: 1
+    }
+}
+
+/* center headline if scree nis less than 600px */
+@media screen and (max-width: 600px) {
+    .headline {
+        text-align: center;
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .headline {
+        text-align: left;
+        font-size: 3.5em;
+    }
+
+    .project-card {
+        width: 400px;
+        max-width: 400px;
+    }
+}
+
+/* set headline to 7em if screen is greater than 1500px */
+@media screen and (min-width: 1500px) {
+    .headline {
+        font-size: 5em;
+    }
+
+    .project-card {
+        width: 500px;
+        max-width: 500px;
+    }
+}
+
+/* set headline to 7em if screen is greater than 1500px */
+@media screen and (min-width: 1800px) {
+    .headline {
+        font-size: 6em;
+    }
+
+    .project-card {
+        width: 600px;
+        max-width: 600px;
     }
 }
