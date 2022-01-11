@@ -22,14 +22,12 @@
 
 
 .slideshow {
-    position: relative;
+    position: absolute;
     margin: 0 auto;
-    right: 0;
     width: min-content;
 }
 
 .project-card {
-    right: 0;
     width: 100%;
     border: gray;
     border-radius: 25px;
@@ -38,9 +36,8 @@
 
 /* Slideshow container */
 .slideshow-container {
-    position: relative;
+    position: absolute;
     width: min-content;
-    right: 0;
 }
 
 /* Hide the images by default */
