@@ -1,8 +1,5 @@
 /* create headline class which shows text the left of screen if screen is large or center if screen is small */
 .homepage {
-    width: 95%;
-    max-width: 1000px;
-    margin: 0 auto;
 }
 
 .title {
@@ -18,7 +15,7 @@
     color: #1F1F1F;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
-    width: 30%;
+    width: 45%;
 }
 
 
