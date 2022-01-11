@@ -15,18 +15,17 @@
     color: #1F1F1F;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
-    width: 45%;
+    width: 30%;
 }
 
 
 .slideshow {
-    position: relative;
+    position: absolute;
     margin: 0 auto;
-    width: 100%;
+    right: 0;
 }
 
 .project-card {
-    right: 0;
     position: relative;
     border: gray;
     border-radius: 25px;
