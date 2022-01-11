@@ -22,12 +22,12 @@
 
 
 .slideshow {
-    position: absolute;
+    position: relative;
     margin: 0 auto;
-    width: min-content;
 }
 
 .project-card {
+    position: absolute;
     width: 100%;
     border: gray;
     border-radius: 25px;
@@ -36,8 +36,7 @@
 
 /* Slideshow container */
 .slideshow-container {
-    position: absolute;
-    width: min-content;
+    position: relative;
 }
 
 /* Hide the images by default */
@@ -47,7 +46,7 @@
 
 /* Next & previous buttons */
 .prev, .next {
-    position: relative;
+    position: absolute;
     cursor: pointer;
     top: 48%;
     width: auto;
