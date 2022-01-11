@@ -1,59 +1,11 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/includes/navbar.css' %}">
 <div>
-    <nav class="nav-fixed transparent-white">
-        <div class="nav-wrapper">
-            <div class="container">
-                <a href="/" class="brand-logo"><img class="brand-logo" src="{% static 'graphics/logo.png' %}"></a>
-                <a href="#" data-target="expandableSidebar" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li>
-                        {% if request.path == "/" %}
-                        <a class="active flow-text" href="/">Home</a>
-                        {% else %}
-                        <a class="black-text flow-text" href="/">Home</a>
-                        {% endif %}
-                    </li>
-                    <li>
-                        {% if "/projects/" in request.path %}
-                        <a class="active flow-text" href="/projects">Projects</a>
-                        {% else %}
-                        <a class="black-text flow-text" href="/projects">Projects</a>
-                        {% endif %}
-                    </li>
-                    <li>
-                        {% if request.path == "/about-us/" %}
-                        <a class="active flow-text" href="/about-us">About Us</a>
-                        {% else %}
-                        <a class="black-text flow-text" href="/about-us">About Us</a>
-                        {% endif %}
-                    </li>
-                </ul>
-            </div>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24">
+            </a>
         </div>
     </nav>
-    <ul class="sidenav" id="expandableSidebar">
-        <li>
-            {% if request.path == "/" %}
-            <a class="active black-text" href="/">Home</a>
-            {% else %}
-            <a class="black-text" href="/">Home</a>
-            {% endif %}
-        </li>
-        <li>
-            {% if "/projects/" in request.path %}
-            <a class="active black-text" href="/projects">Projects</a>
-            {% else %}
-            <a class="black-text" href="/projects">Projects</a>
-            {% endif %}
-        </li>
-        <li>
-            {% if request.path == "/about-us/" %}
-            <a class="active black-text" href="/about-us">About Us</a>
-            {% else %}
-            <a class="black-text" href="/about-us">About Us</a>
-            {% endif %}
-        </li>
-    </ul>
-
 </div>
