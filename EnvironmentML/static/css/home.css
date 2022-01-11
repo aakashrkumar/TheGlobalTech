@@ -1,7 +1,5 @@
 /* create headline class which shows text the left of screen if screen is large or center if screen is small */
 .homepage {
-    width: 100%;
-    margin: 0 0 0 0;
 }
 
 .title {
