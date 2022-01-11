@@ -22,12 +22,10 @@
 .slideshow {
     position: relative;
     margin: 0 auto;
-    float: right;
 }
 
 .project-card {
     position: absolute;
-    width: 100%;
     border: gray;
     border-radius: 25px;
     border: 2px solid #000000;
