@@ -132,7 +132,7 @@
 @media screen and (min-width: 600px) {
     .headline {
         text-align: left;
-        font-size: 3.5em;
+        font-size: 1em;
     }
 
     .project-card {
@@ -144,7 +144,7 @@
 /* set headline to 7em if screen is greater than 1500px */
 @media screen and (min-width: 1500px) {
     .headline {
-        font-size: 5em;
+        font-size: 1em;
     }
 
     .project-card {
@@ -156,7 +156,7 @@
 /* set headline to 7em if screen is greater than 1500px */
 @media screen and (min-width: 1800px) {
     .headline {
-        font-size: 6em;
+        font-size: 2em;
     }
 
     .project-card {
