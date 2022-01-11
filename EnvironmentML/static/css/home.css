@@ -22,6 +22,7 @@
 .slideshow {
     position: relative;
     margin: 0 auto;
+    float: right;
 }
 
 .project-card {
