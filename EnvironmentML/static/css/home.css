@@ -20,13 +20,12 @@
 
 
 .slideshow {
-    position: absolute;
+    position: relative;
     margin: 0 auto;
-    right: 0;
 }
 
 .project-card {
-    position: relative;
+    position: absolute;
     border: gray;
     border-radius: 25px;
     border: 2px solid #000000;
@@ -75,7 +74,7 @@
     padding: 8px 0px;
     position: relative;
     bottom: 30px;
-    width: 100%;
+    width: 600px;
     text-align: center;
 }
 
