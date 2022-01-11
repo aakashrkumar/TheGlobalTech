@@ -1,5 +1,8 @@
 /* create headline class which shows text the left of screen if screen is large or center if screen is small */
 .homepage {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .title {
@@ -21,12 +24,12 @@
 
 .slideshow {
     position: absolute;
+    margin: 0 auto;
     right: 0;
 }
 
 .project-card {
     position: relative;
-    right: 0;
     border: gray;
     border-radius: 25px;
     border: 2px solid #000000;
