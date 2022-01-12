@@ -14,15 +14,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="shortcut icon" type="image/png" href="{% static 'graphics/logo.ico' %}"/>
-    <!--Tiny MCE-->
-    <script src="{% static 'tinymce/tinymce.min.js' %}"></script>
-    <script>
-        tinyMCE.init({
-            force_br_newlines: true,
-            force_p_newlines: true,
-            forced_root_block: '' // Needed for 3.x
-        });
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -45,6 +37,15 @@
 <script src="{% static 'js/index.js' %}"></script>
 <script>
     fadeInPage();
+</script>
+<!--Tiny MCE-->
+<script src="{% static 'tinymce/tinymce.min.js' %}"></script>
+<script>
+    tinyMCE.init({
+        force_br_newlines: true,
+        force_p_newlines: true,
+        forced_root_block: '' // Needed for 3.x
+    });
 </script>
 </body>
 <!-- Prism JS -->
