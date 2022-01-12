@@ -1,7 +1,7 @@
 
 .navbar {
     /* White tint with 0.5 opacity. */
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     z-index: 100;
 
     /* Notice how RGB of 255,255,255 is white. */
