@@ -1,9 +1,6 @@
-.transparent-white {
-    background-color: rgba(255, 255, 255, 0.93);
+.navbar {    background-color: rgba(255, 255, 255, 0.93);
     z-index: 100;
-}
 
-.navbar {
 }
 
 .active {
