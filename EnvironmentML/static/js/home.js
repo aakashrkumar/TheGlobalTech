@@ -24,7 +24,7 @@ function showSlides(n) {
         slides[i].style.display = "none";
     }
     slides[slideIndex - 1].style.display = "block";
-    slides[slideIndex - 1].children[0].style.height = $(".project-card:visible").outerWidth() + "px";
+    // slides[slideIndex - 1].children[0].style.height = $(".project-card:visible").outerWidth() + "px";
     // if height is not equal to outer width, keep trying until it is and print error every time it is not
     // console log outer width
     /*if ($(window).width() <= 1000) {
