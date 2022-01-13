@@ -2,6 +2,10 @@
 .homepage {
 }
 
+.headline{
+    font-weight: bold;
+}
+
 .homepageslide {
     width: 500px;
     height: 500px;
