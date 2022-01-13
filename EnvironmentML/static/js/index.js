@@ -39,8 +39,3 @@ window.addEventListener('pageshow', function (event) {
     var fader = document.getElementById('page-fader');
     fader.classList.remove('fade-in');
 });
-
-$(document).ready(function () {
-    $('.sidenav').sidenav();
-});
-
