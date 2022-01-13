@@ -5,6 +5,8 @@
 .headline {
     font-weight: bold;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 100%;
+
 }
 
 .homepageslide {
