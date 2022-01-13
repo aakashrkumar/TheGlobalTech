@@ -16,17 +16,17 @@
     {% endfor %}
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <!--{% for project in projects %}
-            <div class="carousel-item active">
+            <{% for project in projects %}
+            {% if forloop.first %}
+            <div class="carousel-item active" style="width:100%; height: 500px !important;">
                 <img class="d-block w-100" src="/static/media/{{ project.project_image }}" alt="{{ project.project_name }}">
             </div>
-            {% endfor %} -->
-            <div class="carousel-item active" style="width:100%; height: 500px !important;">
-                <img class="d-block w-100" src="/static/media/project_images/4.CarDrivingPerturbed2png.png" alt="First slide">
+            {% else %}
+            <div class="carousel-item" style="width:100%; height: 500px !important;">
+                <img class="d-block w-100" src="/static/media/{{ project.project_image }}" alt="{{ project.project_name }}">
             </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="/static/media/project_images/trash.png" alt="2 slide">
-            </div>
+            {% endif %}
+            {% endfor %}>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
