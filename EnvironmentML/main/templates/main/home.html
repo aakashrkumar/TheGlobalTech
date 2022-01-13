@@ -4,7 +4,14 @@
 <!-- add headline to the bottom left-->
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
 <div class="d-flex align-items-center min-vh-100">
-    <div id="slideshowHomePage" class="carousel slide" style="width:100vw" data-bs-ride="carousel">
+
+    <div class="container">
+        <h1 class="headline display-2 align-center" style="width: 40%;">
+            Applying innovative technologies to solve critical global issues
+        </h1>
+    </div>
+
+    <!-- <div id="slideshowHomePage" class="carousel slide" style="width:100vw" data-bs-ride="carousel">
         <div class="carousel-inner">
             <{% for project in projects %}
             {% if forloop.first %}
@@ -28,11 +35,6 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-    </div>
-    <div class="container">
-        <h1 class="headline display-2 align-center" style="width: 40%;">
-            Applying innovative technologies to solve critical global issues
-        </h1>
-    </div>
+    </div> -->
 </div>
 {% endblock %}
