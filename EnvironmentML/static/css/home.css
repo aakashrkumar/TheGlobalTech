@@ -3,6 +3,6 @@
 }
 
 .homepageslide {
-    width: 500px !important;
-    height: 500px !important;
+    min-width: 500px !important;
+    minheight: 500px !important;
 }
