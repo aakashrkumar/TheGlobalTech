@@ -2,7 +2,9 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/includes/navbar.css' %}">
 <nav class="navbar fixed-top navbar-expand-lg shadow-sm navbar-light">
     <div class="container">
-        <a class="navbar-brand" href="/">Navbar</a>
+        <a class="navbar-brand" href="#">
+            <img src="/static/graphics/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        </a>
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
                 aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -11,14 +13,27 @@
         <div class="collapse navbar-collapse flex-gow-1 text-right" id="navbarNav">
             <ul class="navbar-nav ms-auto flex-nowrap">
                 <li class="nav-item">
-                    <a class="nav-link active" href="/">Home</a>
+                    {% if request.path == "/" %}
+                    <a class="active" href="/">Home</a>
+                    {% else %}
+                    <a class="black-text" href="/">Home</a>
+                    {% endif %}
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/projects">Projects</a>
+                    {% if "/projects/" in request.path %}
+                    <a class="active" href="/projects">Projects</a>
+                    {% else %}
+                    <a class="black-text" href="/projects">Projects</a>
+                    {% endif %}
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/about-us">About Us</a>
+                    {% if request.path == "/about-us/" %}
+                    <a class="active" href="/about-us">About Us</a>
+                    {% else %}
+                    <a class="black-text" href="/about-us">About Us</a>
+                    {% endif %}
                 </li>
+
             </ul>
         </div>
     </div>
