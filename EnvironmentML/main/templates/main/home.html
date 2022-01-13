@@ -8,34 +8,37 @@
     <br>
     <br>
     <br>
-    <div class="float-start">
-        <h1 class="headline">
-            Applying innovative technologies to solve critical global issues
-        </h1>
-        <div id="slideshowHomePage" class="carousel slide" style="width:min-content" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <{% for project in projects %}
-                {% if forloop.first %}
-                <div class="carousel-item active homepageslide">
-                    <img class="d-block" src="/static/media/{{ project.project_image }}" style="width:100%;height: 100%; object-fit: cover;" alt="{{ project.project_name }}">
+    <div class="grid">
+        <div class="g-col-6">
+            <h1 class="headline">
+                Applying innovative technologies to solve critical global issues
+            </h1>
+        </div>
+        <div class="g-col-6">
+            <div id="slideshowHomePage" class="carousel slide" style="width:min-content" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <{% for project in projects %}
+                    {% if forloop.first %}
+                    <div class="carousel-item active homepageslide">
+                        <img class="d-block" src="/static/media/{{ project.project_image }}" style="width:100%;height: 100%; object-fit: cover;" alt="{{ project.project_name }}">
+                    </div>
+                    {% else %}
+                    <div class="carousel-item homepageslide">
+                        <img class="d-block" src="/static/media/{{ project.project_image }}" style="width:100%;height: 100%; object-fit: cover;" alt="{{ project.project_name }}">
+                    </div>
+                    {% endif %}
+                    {% endfor %}>
                 </div>
-                {% else %}
-                <div class="carousel-item homepageslide">
-                    <img class="d-block" src="/static/media/{{ project.project_image }}" style="width:100%;height: 100%; object-fit: cover;" alt="{{ project.project_name }}">
-                </div>
-                {% endif %}
-                {% endfor %}>
+                <button class="carousel-control-prev" type="button" data-bs-target="#slideshowHomePage" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#slideshowHomePage" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#slideshowHomePage" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#slideshowHomePage" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
     </div>
 </div>
-
 {% endblock %}
