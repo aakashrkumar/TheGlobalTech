@@ -1,6 +1,6 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/includes/navbar.css' %}">
-<nav class="navbar">
+<nav class="navbar fixed-top navbar-expand-lg shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="/">Navbar</a>
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarText"
@@ -8,7 +8,7 @@
                 aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse flex-gow-1 text-right" id="navbarNav">
+        <div class="navbar-collapse flex-gow-1 text-right" id="navbarNav">
             <ul class="navbar-nav ms-auto flex-nowrap">
                 <li class="nav-item active">
                     <a class="nav-link" href="/">Home</a>
