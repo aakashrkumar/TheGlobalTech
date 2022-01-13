@@ -10,9 +10,3 @@
     width: 500px;
     height: 500px;
 }
-
-.vertical-center {
-    min-height: 100vh; /* These two lines are counted as one :-)       */
-    display: flex;
-    align-items: center;
-}
