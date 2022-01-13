@@ -14,23 +14,23 @@
             <ul class="navbar-nav ms-auto flex-nowrap">
                 <li class="nav-item">
                     {% if request.path == "/" %}
-                    <a class="active" href="/">Home</a>
+                    <a class="nav-link active" href="/">Home</a>
                     {% else %}
-                    <a class="black-text" href="/">Home</a>
+                    <a class="nav-link" href="/">Home</a>
                     {% endif %}
                 </li>
                 <li class="nav-item">
                     {% if "/projects/" in request.path %}
-                    <a class="active" href="/projects">Projects</a>
+                    <a class="nav-link active" href="/projects">Projects</a>
                     {% else %}
-                    <a class="black-text" href="/projects">Projects</a>
+                    <a class="nav-link" href="/projects">Projects</a>
                     {% endif %}
                 </li>
                 <li class="nav-item">
                     {% if request.path == "/about-us/" %}
-                    <a class="active" href="/about-us">About Us</a>
+                    <a class="nav-link active" href="/about-us">About Us</a>
                     {% else %}
-                    <a class="black-text" href="/about-us">About Us</a>
+                    <a class="nav-link" href="/about-us">About Us</a>
                     {% endif %}
                 </li>
 
