@@ -4,11 +4,13 @@
 <!-- add headline to the bottom left-->
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
 <div class="">
-    <img src="{% static 'graphics/banner.jpg' %}" style="width: 100vw; height: 100vh; object-fit: cover; float: left">
     <div class="container">
-        <h1 class="headline display-2 float-start align-center" style="width: 40%;">
-            Applying innovative technologies to solve critical global issues
-        </h1>
+        <div class="jumbotron">
+            <h1 class="headline display-2 float-start align-center" style="width: 40%;">
+                Applying innovative technologies to solve critical global issues
+            </h1>
+            <img src="{% static 'graphics/home_img.png' %}" alt="home_img" style="width: 45%; float: right">
+        </div>
     </div>
 
     <!-- <div id="slideshowHomePage" class="carousel slide" style="width:100vw" data-bs-ride="carousel">
