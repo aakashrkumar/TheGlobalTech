@@ -26,6 +26,9 @@
 }
 
 .project-card {
+    position: relative;
+    right: 0;
+    display: block;
     border: gray;
     border-radius: 25px;
     border: 2px solid #000000;
