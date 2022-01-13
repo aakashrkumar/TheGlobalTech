@@ -16,7 +16,7 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             {% for project in projects %}
-            {% if forloop.first == true % %}
+            {% if forloop.first == true %}
             <div class="carousel-item active">
                 <img class="d-block w-100" src="/static/media/{{ project.project_image }}" alt="{{project.project_name}}">
             </div>
