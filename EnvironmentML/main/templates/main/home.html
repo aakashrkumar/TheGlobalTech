@@ -4,7 +4,7 @@
 <!-- add headline to the bottom left-->
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
 <div class="">
-    <div id="slideshowHomePage" class="carousel slide" style="width:100vw; height: 100vh; float: left" data-bs-ride="carousel">
+    <div id="slideshowHomePage" class="carousel slide" style="width:100vw; height: 100vh; float: left; overflow-y:hidden" data-bs-ride="carousel">
         <div class="carousel-inner">
             <{% for project in projects %}
             {% if forloop.first %}
