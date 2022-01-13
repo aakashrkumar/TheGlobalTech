@@ -11,3 +11,7 @@
     height: 500px;
 }
 
+.vertical-center {
+    display: flex;
+    align-items: center;
+}
