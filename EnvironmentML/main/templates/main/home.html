@@ -14,11 +14,11 @@
         <div class="carousel-inner">
             <{% for project in projects %}
             {% if forloop.first %}
-            <div class="homepageslide carousel-item active">
+            <div class="carousel-item active homepageslide" style="width: 500px; height: 500px;">
                 <img class="d-block" src="/static/media/{{ project.project_image }}" style="width:100%;height: 100%; object-fit: cover;" alt="{{ project.project_name }}">
             </div>
             {% else %}
-            <div class="homepageslide carousel-item">
+            <div class="carousel-item homepageslide" style="width: 500px; height: 500px;">
                 <img class="d-block" src="/static/media/{{ project.project_image }}" style="width:100%;height: 100%; object-fit: cover;" alt="{{ project.project_name }}">
             </div>
             {% endif %}
