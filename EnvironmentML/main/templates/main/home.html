@@ -15,9 +15,12 @@
     </h1>
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
+            {% for project in projects %}
             <div class="carousel-item active">
-                <img class="d-block w-100" src="..." alt="First slide">
+                <img class="d-block w-100" src="/static/media/{{ project.project_image }}" alt="{{project.project_name}}">
             </div>
+            {% endfor %}
+
             <div class="carousel-item">
                 <img class="d-block w-100" src="..." alt="Second slide">
             </div>
@@ -50,6 +53,4 @@
             {% endfor %}
         </div-->
 </div>
-<script src="{% static 'js/home.js' %}"></script>
-<script>showSlides(1)</script>
 {% endblock %}
