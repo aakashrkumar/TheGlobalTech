@@ -1,3 +1,8 @@
 /* create headline class which shows text the left of screen if screen is large or center if screen is small */
 .homepage {
 }
+
+.homepageslide {
+    width: 500px;
+    height: 500px;
+}
