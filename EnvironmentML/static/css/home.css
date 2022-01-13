@@ -11,3 +11,27 @@
     width: 600px;
     height: 600px;
 }
+
+.firstcontent {
+    display: flex;
+    align-items: center;
+    height: min-content;
+    justify-content: space-between;
+}
+
+/* media query for small screens */
+@media screen and (max-width: 600px) {
+    .homepage {
+        text-align: center;
+    }
+
+    .headline {
+        font-size: 1.5em;
+    }
+
+    .homepageslide {
+        width: 100%;
+        height: 100%;
+    }
+}
+
