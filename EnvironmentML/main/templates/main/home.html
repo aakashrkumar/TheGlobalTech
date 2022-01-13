@@ -10,10 +10,6 @@
     <h1 class="headline">
         Applying innovative technologies to solve critical global issues
     </h1>
-    {% for project in projects %}
-    /static/media/{{ project.project_image }}
-    <br>
-    {% endfor %}
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <{% for project in projects %}
