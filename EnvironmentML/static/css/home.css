@@ -21,10 +21,6 @@
 
 /* media query for small screens */
 @media screen and (max-width: 1000px) {
-    .headline {
-        font-size: 1.5em;
-        text-align: center;
-    }
 
     .homepageslide {
         width: 300px;
