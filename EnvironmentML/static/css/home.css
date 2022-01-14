@@ -21,6 +21,9 @@
 
 /* media query for small screens */
 @media screen and (max-width: 1000px) {
+    .headline {
+        font-size: clamp(1.5vw, 1.5vw, 1.5vw);
+    }
 
     .homepageslide {
         width: 300px;
