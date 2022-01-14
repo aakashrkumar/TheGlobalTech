@@ -5,6 +5,7 @@
 .headline {
     font-weight: bold;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 40%;
 }
 
 .homepageslide {
@@ -22,7 +23,9 @@
 /* media query for small screens */
 @media screen and (max-width: 800px) {
     .headline {
+        width: 100%;
         font-size: 4.5vw;
+        text-align: center;
     }
 
     .homepageslide {
