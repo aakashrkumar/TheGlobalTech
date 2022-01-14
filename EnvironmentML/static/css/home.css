@@ -20,9 +20,9 @@
 }
 
 /* media query for small screens */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 700px) {
     .headline {
-        font-size: clamp(1.5vw, 1.5vw, 1.5vw);
+        font-size: clamp(2.5vw, 2.5vw, 2.5vw);
     }
 
     .homepageslide {
@@ -37,6 +37,22 @@
     }
 }
 
+@media screen and (min-width: 700px) {
+    .headline {
+        font-size: clamp(2.5vw, 2.5vw, 2.5vw);
+    }
+
+    .homepageslide {
+        width: 400px;
+        height: 400px;
+    }
+
+    .homepage-banner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
 
 @media screen and (min-width: 1000px) {
     .headline {
