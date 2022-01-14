@@ -37,7 +37,7 @@
     }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
     .headline {
         font-size: 4.5vw;
     }
