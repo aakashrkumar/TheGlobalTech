@@ -22,12 +22,12 @@
 /* media query for small screens */
 @media screen and (max-width: 800px) {
     .headline {
-        font-size: clamp(2.5vw, 2.5vw, 2.5vw);
+        font-size: 4.5vw;
     }
 
     .homepageslide {
-        width: 300px;
-        height: 300px;
+        width: 350px;
+        height: 350px;
     }
 
     .homepage-banner {
