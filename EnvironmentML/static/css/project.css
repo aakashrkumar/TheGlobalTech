@@ -48,6 +48,6 @@
 @media screen and (max-width: 800px) {
     .project-title {
         font-size: 6.5vw;
-        min-font-size: 3em;
+        min-font-size: 6em;
     }
 }
