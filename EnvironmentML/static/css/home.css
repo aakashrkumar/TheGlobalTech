@@ -39,7 +39,7 @@
 
 @media screen and (min-width: 700px) {
     .headline {
-        font-size: clamp(3.5vw, 3.5vw, 3.5vw);
+        font-size: 4.5vw;
     }
 
     .homepageslide {
