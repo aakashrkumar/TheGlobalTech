@@ -50,6 +50,10 @@
 }
 
 @media screen and (min-width: 1400px) {
+    .headline {
+        font-size: 6em;
+    }
+
     .homepageslide {
         width: 600px;
         height: 600px;
