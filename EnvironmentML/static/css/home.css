@@ -36,6 +36,10 @@
 
 
 @media screen and (min-width: 1000px) {
+    .headline {
+        font-size: 3em;
+    }
+
     .homepageslide {
         width: 500px;
         height: 500px;
