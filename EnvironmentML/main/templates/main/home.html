@@ -26,6 +26,9 @@
                     <div class="carousel-item homepageslide">
                         <img class="d-block" src="/static/media/{{ project.project_image }}" style="width:100%;height: 100%; object-fit: cover;"
                              alt="{{ project.project_name }}">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>{{ project.project_name }}</h5>
+                        </div>
                     </div>
                     {% endif %}
                     {% endfor %}>
