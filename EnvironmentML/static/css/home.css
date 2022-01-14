@@ -23,14 +23,14 @@
 /* media query for small screens */
 @media screen and (max-width: 800px) {
     .headline {
-        width: 100%;
+        width: 90%;
         font-size: 4.5vw;
         text-align: center;
     }
 
     .homepageslide {
-        width: 60vw;
-        height: 60vw;
+        width: 80vw;
+        height: 80vw;
     }
 
     .homepage-banner {
