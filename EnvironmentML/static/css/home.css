@@ -42,6 +42,23 @@
 
 @media screen and (min-width: 901px) {
     .headline {
+        font-size: 4.5vw;
+    }
+
+    .homepageslide {
+        width: 350px;
+        height: 350px;
+    }
+
+    .homepage-banner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .headline {
         font-size: 4em;
     }
 
