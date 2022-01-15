@@ -21,7 +21,7 @@
 }
 
 /* media query for small screens */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .headline {
         width: 90%;
         font-size: 6.5vw;
@@ -37,23 +37,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-    }
-}
-
-@media screen and (min-width: 801px) {
-    .headline {
-        font-size: 4.5vw;
-    }
-
-    .homepageslide {
-        width: 350px;
-        height: 350px;
-    }
-
-    .homepage-banner {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
     }
 }
 
