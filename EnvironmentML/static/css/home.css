@@ -5,12 +5,15 @@
 .headline {
     font-weight: bold;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    width: 40%;
 }
 
 .homepageslide {
     width: 600px;
     height: 600px;
+}
+
+.headline-container {
+    width: 40%;
 }
 
 .homepage-banner {
@@ -23,9 +26,12 @@
 /* media query for small screens */
 @media screen and (max-width: 900px) {
     .headline {
-        width: 90%;
         font-size: 6.5vw;
         text-align: center;
+    }
+
+    .headline-container {
+        width: 90%;
     }
 
     .homepageslide {
