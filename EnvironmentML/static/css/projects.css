@@ -19,6 +19,7 @@
 
 .image-cover-shadow {
     box-shadow: 0 0 0px 300px rgba(0, 0, 0, 0.5) inset;
+    z-index: 10;
 }
 
 .image-cover-shadow img {
