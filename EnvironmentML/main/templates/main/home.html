@@ -23,9 +23,9 @@
                     <{% for project in projects %}
                     {% if forloop.first %}
                     <div class="carousel-item active homepageslide">
-                        <img class="d-block" src="/static/media/{{ project.project_image }}" style="width:100%;height: 100%; object-fit: cover;"
+                        <img class="d-block image-cover-shadow" src="/static/media/{{ project.project_image }}" style="width:100%;height: 100%; object-fit: cover;"
                              alt="{{ project.project_name }}">
-                        <div class="carousel-caption d-none d-md-block image-cover-shadow" style="font-family: Roboto, sans-serif;">
+                        <div class="carousel-caption d-none d-md-block" style="font-family: Roboto, sans-serif;">
                             <h5>{{ project.project_name }}</h5>
                         </div>
                     </div>
