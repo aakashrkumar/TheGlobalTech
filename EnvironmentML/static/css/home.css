@@ -67,6 +67,17 @@
     }
 }
 
+.home-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.home-card {
+    max-width: 23rem;
+}
+
 @media screen and (min-width: 1000px) {
     .headline {
         font-size: 3.5em;
