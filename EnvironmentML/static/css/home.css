@@ -76,6 +76,7 @@
 
 .home-card {
     max-width: 23rem;
+    margin: 15px;
 }
 
 @media screen and (min-width: 1000px) {
