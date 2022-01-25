@@ -23,13 +23,8 @@
 }
 
 .image-cover-shadow img {
-    position: relative;
-    z-index: -1;
-}
-
-.image-cover-shadow * {
-    position: relative;
-    z-index: -1;
+    position: relative; !important;
+    z-index: -1; !important;
 }
 
 .project-card:hover {
