@@ -27,7 +27,7 @@
     z-index: -1;
 }
 
-.image-cover-shadow .carousel-item {
+.image-cover-shadow {
     position: relative;
     z-index: -1;
 }
