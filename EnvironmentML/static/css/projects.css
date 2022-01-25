@@ -18,11 +18,16 @@
 }
 
 .image-cover-shadow {
-    box-shadow: 0 0 0px 300px rgba(0, 0, 0, 0.5) inset;  !important
-    z-index: 10;
+    box-shadow: 0 0 0px 300px rgba(0, 0, 0, 0.5) inset;
+!important z-index: 10;
 }
 
 .image-cover-shadow img {
+    position: relative;
+    z-index: -1;
+}
+
+.image-cover-shadow .carousel-item {
     position: relative;
     z-index: -1;
 }
