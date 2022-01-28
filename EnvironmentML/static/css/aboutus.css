@@ -16,7 +16,7 @@
 }
 
 .image-cover-shadow {
-    box-shadow: 0 0 0px 300px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0 0 0px 300px rgba(0, 0, 0, 0.2) inset;
 }
 
 .image-cover-shadow img {
