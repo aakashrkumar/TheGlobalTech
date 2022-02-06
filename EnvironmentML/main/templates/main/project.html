@@ -10,7 +10,7 @@
     <br>
     <br>
     <br>
-    <h2 class="project-title">{{ project.project_name }}</h2>
+    <h2 class="paget-title">{{ project.project_name }}</h2>
     <p style="font-size:70%;margin-bottom: 0">Published {{ project.project_date.date }} by
         {% for author in project.project_authors.all %}
         {{author.first_name}} {{author.last_name}}{% if not forloop.last %}, {% endif %}
