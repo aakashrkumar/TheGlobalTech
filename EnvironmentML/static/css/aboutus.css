@@ -105,10 +105,11 @@
     .banner-image {
         width: 400px;
         height: 400px;
-        margin-left: 100px;
+        margin-left: 200px;
     }
 
     .banner-text {
         width: 30%;
+        font-size: 2em;
     }
 }
