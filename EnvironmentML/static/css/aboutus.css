@@ -1,3 +1,11 @@
+.banner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .authors {
     width: 100%;
     display: flex;
