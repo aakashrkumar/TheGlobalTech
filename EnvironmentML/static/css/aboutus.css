@@ -6,6 +6,10 @@
     flex-wrap: wrap;
 }
 
+.banner-main-text {
+    font-size: 2em;
+}
+
 .banner-text {
     width: 30%;
 }
@@ -110,6 +114,5 @@
 
     .banner-text {
         width: 30%;
-        font-size: 2em;
     }
 }
