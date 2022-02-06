@@ -16,10 +16,12 @@
     <hr>
     <br>
     {% for author in team %}
-    <div class="profile-card draw image-cover-shadow" style="overflow: hidden">
-        <img src="/static/media/{{ author.userprofile.avatar }}" class="" style="width: 100%; height: 100%; object-fit:cover;"/>
-        <div class="authorName">{{author.first_name}} {{author.last_name}}</div>
-        <div class="authorRole">{{author.userprofile.role}}</div>
+    <div class="authors">
+        <div class="profile-card draw image-cover-shadow" style="overflow: hidden">
+            <img src="/static/media/{{ author.userprofile.avatar }}" class="" style="width: 100%; height: 100%; object-fit:cover;"/>
+            <div class="authorName">{{author.first_name}} {{author.last_name}}</div>
+            <div class="authorRole">{{author.userprofile.role}}</div>
+        </div>
     </div>
     {% endfor %}
 </div>
