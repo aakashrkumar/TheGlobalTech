@@ -6,6 +6,11 @@
     flex-wrap: wrap;
 }
 
+.banner-image {
+    width: 300px;
+    height: 300px;
+}
+
 .authors {
     width: 100%;
     display: flex;
