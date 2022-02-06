@@ -88,7 +88,7 @@
     .banner-image {
         width: 400px;
         height: 400px;
-        margin-left: 0px;
+        margin: auto;
     }
 
     .banner-text {
