@@ -76,7 +76,7 @@
     font-weight: bold;
 }
 
-@media screen and (min-width: 901px) {
+@media screen and (max-width: 901px) {
     .banner-image {
         width: 400px;
         height: 400px;
@@ -90,23 +90,25 @@
 
 
 @media screen and (min-width: 1000px) {
-    .headline {
-        font-size: 3.5em;
+    .banner-image {
+        width: 400px;
+        height: 400px;
+        margin-left: 100px;
     }
 
-    .homepageslide {
-        width: 450px;
-        height: 450px;
+    .banner-text {
+        width: 30%;
     }
 }
 
 @media screen and (min-width: 1400px) {
-    .headline {
-        font-size: 4.5em;
+    .banner-image {
+        width: 400px;
+        height: 400px;
+        margin-left: 100px;
     }
 
-    .homepageslide {
-        width: 550px;
-        height: 550px;
+    .banner-text {
+        width: 30%;
     }
 }
