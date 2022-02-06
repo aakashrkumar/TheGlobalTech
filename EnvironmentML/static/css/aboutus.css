@@ -90,6 +90,10 @@
     .banner-text {
         width: 100%;
     }
+
+    .banner-main-text {
+        font-size: 2em;
+    }
 }
 
 
@@ -101,7 +105,11 @@
     }
 
     .banner-text {
-        width: 30%;
+        width: 40%;
+    }
+
+    .banner-main-text {
+        font-size: 2em;
     }
 }
 
@@ -113,6 +121,10 @@
     }
 
     .banner-text {
-        width: 30%;
+        width: 40%;
+    }
+
+    .banner-main-text {
+        font-size: 2em;
     }
 }
