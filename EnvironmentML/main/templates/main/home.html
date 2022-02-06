@@ -81,6 +81,15 @@
             </div>
         </div>
         <!-- Create a blue gradient with 100% width -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+            {% for project in projects|slice:"0:3"%}
+            {{ project.project_name }}
+            {% endfor %}
+        </div>
     </div>
 </div>
 {% endblock %}
