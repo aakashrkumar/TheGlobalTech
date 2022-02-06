@@ -6,6 +6,10 @@
     flex-wrap: wrap;
 }
 
+.banner-text {
+    width: 30%;
+}
+
 .banner-image {
     width: 300px;
     height: 300px;
@@ -70,4 +74,39 @@
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: bold;
+}
+
+@media screen and (min-width: 901px) {
+    .banner-image {
+        width: 400px;
+        height: 400px;
+        margin-left: 0px;
+    }
+
+    .banner-text {
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    .headline {
+        font-size: 3.5em;
+    }
+
+    .homepageslide {
+        width: 450px;
+        height: 450px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .headline {
+        font-size: 4.5em;
+    }
+
+    .homepageslide {
+        width: 550px;
+        height: 550px;
+    }
 }
