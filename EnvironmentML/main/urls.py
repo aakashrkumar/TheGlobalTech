@@ -22,4 +22,5 @@ urlpatterns = [
     path('projects/', projects.projects, name="projectspage"),
     path('about-us/', aboutus.aboutus, name="aboutuspage"),
     path("projects/<slug>/", projects.projectslug, name="singleslug"),
+    path('team/<slug>/', aboutus.team, name="teamslug"),
 ]
