@@ -1,5 +1,13 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
+from django import template
+
+register = template.Library()
+
+
+@register.filter
+def spaceUnderscore(value):
+    return value.replace(" ", "_")
 
 
 def aboutus(request):

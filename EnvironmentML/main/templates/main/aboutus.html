@@ -2,6 +2,7 @@
 {% block content %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/aboutus.css'%}">
+{% load spaceUnderscore %}
 <!-- add headline to the bottom left-->
 <div>
     <div class="container">
@@ -37,11 +38,13 @@
     <div class="container">
         <div class="authors">
             {% for author in team %}
-            <div class="profile-card draw image-cover-shadow" style="overflow: hidden">
-                <img src="/static/media/{{ author.userprofile.avatar }}" class="" style="width: 100%; height: 100%; object-fit:cover;"/>
-                <div class="authorName">{{author.first_name}} {{author.last_name}}</div>
-                <div class="authorRole">{{author.userprofile.role}}</div>
-            </div>
+            <a href="/team/{{author.username|spaceUnderscore }}">
+                <div class="profile-card draw image-cover-shadow" style="overflow: hidden">
+                    <img src="/static/media/{{ author.userprofile.avatar }}" class="" style="width: 100%; height: 100%; object-fit:cover;"/>
+                    <div class="authorName">{{author.first_name}} {{author.last_name}}</div>
+                    <div class="authorRole">{{author.userprofile.role}}</div>
+                </div>
+            </a>
             {% endfor %}
         </div>
     </div>
