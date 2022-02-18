@@ -1,9 +1,8 @@
 {% extends 'main/header.html' %}
 {% block content %}
 {% load static %}
-<head>
-    <link rel="stylesheet" href="{% static 'css/project.css'%}">
-</head>
+<link rel="stylesheet" href="{% static 'css/project.css'%}">
+{% load spaceUnderscore %}
 <!-- add headline to the bottom left-->
 <div class="article-container">
     <br>
@@ -23,11 +22,12 @@
     <hr>
     <br>
     {% for author in project.project_authors.all %}
-    <a href="/team/{{author.username}}"></a>
-    <div class="project-card draw image-cover-shadow" style="overflow: hidden">
-        <img src="/static/media/{{ author.userprofile.avatar }}" class="" style="width: 100%; height: 100%; object-fit:cover;"/>
-        <div class="authorInfo">{{author.first_name}} {{author.last_name}}</div>
-    </div>
+    <a href="/team/{{author.username|spaceUnderscore}}">
+        <div class="project-card draw image-cover-shadow" style="overflow: hidden">
+            <img src="/static/media/{{ author.userprofile.avatar }}" class="" style="width: 100%; height: 100%; object-fit:cover;"/>
+            <div class="authorInfo">{{author.first_name}} {{author.last_name}}</div>
+        </div>
+    </a>
     {% endfor %}
 </div>
 {% endblock %}
