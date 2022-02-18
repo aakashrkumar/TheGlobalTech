@@ -1,0 +1,15 @@
+{% extends 'main/header.html' %}
+{% block content %}
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/project.css'%}">
+</head>
+<!-- add headline to the bottom left-->
+<div class="article-container">
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2 class="page-title">{{ author.username }}</h2>
+</div>
+{% endblock %}

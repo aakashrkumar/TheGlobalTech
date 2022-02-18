@@ -10,4 +10,4 @@ def aboutus(request):
 def teamslug(request, slug):
     team = User.objects.all().filter(is_staff=True)
     author = User.objects.get(username=slug.replace('_', ' '))
-    return render(request, 'main/team.html', context={'team': team})
+    return render(request, 'main/authors.html', context={'team': team, 'author': author})
