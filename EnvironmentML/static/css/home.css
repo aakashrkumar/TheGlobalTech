@@ -101,6 +101,10 @@
         width: 450px;
         height: 450px;
     }
+
+    .navButtons {
+
+    }
 }
 
 @media screen and (min-width: 1400px) {
@@ -111,5 +115,9 @@
     .homepageslide {
         width: 550px;
         height: 550px;
+    }
+
+    .navButtons {
+
     }
 }
