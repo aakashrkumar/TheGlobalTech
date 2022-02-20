@@ -96,15 +96,15 @@
     }
 
     .banner-main-text {
-        font-size: 1em;
+        font-size: 1.5em;
     }
 }
 
 
 @media screen and (min-width: 1000px) {
     .banner-image {
-        width: 500px;
-        height: 500px;
+        width: 300px;
+        height: 300px;
         margin-left: 100px;
     }
 
@@ -116,6 +116,23 @@
         font-size: 2em;
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .banner-image {
+        width: 400px;
+        height: 400px;
+        margin-left: 100px;
+    }
+
+    .banner-text {
+        width: 40%;
+    }
+
+    .banner-main-text {
+        font-size: 2em;
+    }
+}
+
 
 @media screen and (min-width: 1400px) {
     .banner-image {
