@@ -115,6 +115,14 @@
     .banner-main-text {
         font-size: 2em;
     }
+
+    .banner {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
 @media screen and (min-width: 1200px) {
