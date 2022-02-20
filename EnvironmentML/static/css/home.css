@@ -46,7 +46,7 @@
 }
 
 /* media query for small screens */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     .headline {
         font-size: 7vw;
         text-align: center;
@@ -72,29 +72,8 @@
     }
 }
 
-@media screen and (min-width: 951px) {
-    .headline {
-        font-size: 4.5vw;
-    }
 
-    .homepageslide {
-        width: 350px;
-        height: 350px;
-    }
-
-    .homepage-banner {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .navButtons {
-        display: none;
-    }
-}
-
-
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1001px) {
     .headline {
         font-size: 3.5em;
     }
