@@ -92,11 +92,12 @@
     }
 
     .banner-text {
-        width: 100%;
+        width: 60%;
+        text-align:center;
     }
 
     .banner-main-text {
-        font-size: 1.5em;
+        font-size: 1em;
     }
 }
 
@@ -113,7 +114,7 @@
     }
 
     .banner-main-text {
-        font-size: 2em;
+        font-size: 1.2em;
     }
 
     .banner {
@@ -137,7 +138,7 @@
     }
 
     .banner-main-text {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 }
 
