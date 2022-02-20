@@ -83,6 +83,12 @@
         align-items: center;
         justify-content: space-between;
     }
+
+    .navButtons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 
