@@ -33,6 +33,18 @@
     justify-content: space-between;
 }
 
+.home-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.home-card {
+    max-width: 23rem;
+    margin: 15px;
+}
+
 /* media query for small screens */
 @media screen and (max-width: 900px) {
     .headline {
@@ -54,18 +66,10 @@
         align-items: center;
         justify-content: center;
     }
-}
 
-.home-cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.home-card {
-    max-width: 23rem;
-    margin: 15px;
+    .navButtons {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 901px) {
