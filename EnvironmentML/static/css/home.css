@@ -89,6 +89,14 @@
         justify-content: center;
         align-items: center;
     }
+
+    .projectsButton {
+        width: 50px;
+    }
+
+    .aboutUsButton {
+        width: 0.2vw;
+    }
 }
 
 
