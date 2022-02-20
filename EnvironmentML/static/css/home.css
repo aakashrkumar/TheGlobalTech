@@ -48,7 +48,7 @@
 /* media query for small screens */
 @media screen and (max-width: 900px) {
     .headline {
-        font-size: 6.5vw;
+        font-size: 6vw;
         text-align: center;
     }
 
