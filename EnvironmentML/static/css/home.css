@@ -103,7 +103,8 @@
     }
 
     .navButtons {
-
+        display: flex;
+        justify-content: left;
     }
 }
 
@@ -115,9 +116,5 @@
     .homepageslide {
         width: 550px;
         height: 550px;
-    }
-
-    .navButtons {
-
     }
 }
