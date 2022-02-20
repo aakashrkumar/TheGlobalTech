@@ -48,7 +48,7 @@
 /* media query for small screens */
 @media screen and (max-width: 900px) {
     .headline {
-        font-size: 6.5vw;
+        font-size: 7vw;
         text-align: center;
     }
 
@@ -57,8 +57,8 @@
     }
 
     .homepageslide {
-        width: 70vw;
-        height: 70vw;
+        width: 75vw;
+        height: 75vw;
     }
 
     .homepage-banner {
