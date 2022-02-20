@@ -84,7 +84,7 @@
     font-weight: bold;
 }
 
-@media screen and (max-width: 901px) {
+@media screen and (max-width: 1000px) {
     .banner-image {
         width: 400px;
         height: 400px;
@@ -101,7 +101,7 @@
 }
 
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1001px) {
     .banner-image {
         width: 300px;
         height: 300px;
