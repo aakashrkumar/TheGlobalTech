@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Project, UserProfile
+from .models import Project, UserProfile, Volunteers
 from tinymce.widgets import TinyMCE
 from django.db import models
 from django.contrib.auth.models import User
@@ -19,3 +19,4 @@ class ProjectAdmin(admin.ModelAdmin):
 
 admin.site.register(UserProfile)
 admin.site.register(Project, ProjectAdmin)
+admin.site.register(Volunteers)

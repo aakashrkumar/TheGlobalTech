@@ -35,3 +35,10 @@ class Volunteers(models.Model):
     verified = models.BooleanField(default=False)
     joined_on = models.DateTimeField('Date Joined')
     user = models.OneToOneField(User, verbose_name='User', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.user.username
+
+    # plural name of the model
+    class Meta:
+        verbose_name_plural = "Volunteers"
