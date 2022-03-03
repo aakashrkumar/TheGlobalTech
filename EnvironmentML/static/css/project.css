@@ -7,6 +7,10 @@
 .article-container {
     margin: 0 auto;
     width: 90%;
+    max-width: 1060px;
+}
+
+.text-container {
     max-width: 900px;
 }
 
