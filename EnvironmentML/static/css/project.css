@@ -1,5 +1,5 @@
-.paget-title {
-    font-size: 4.5em;
+.page-title {
+    font-size: 3em;
     font-weight: bold;
     margin-bottom: 0.1em;
 }
@@ -46,7 +46,7 @@
 }
 
 @media screen and (max-width: 800px) {
-    .paget-title {
+    .page-title {
         font-size: 6.5vw;
         min-font-size: 6em;
     }
