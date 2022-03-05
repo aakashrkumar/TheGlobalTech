@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # added
+    'filebrowser',
     "tinymce",
     "jquery",
     'main.apps.MainConfig',
@@ -103,26 +104,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# TINYMCE
-
-TINYMCE_JS_URL = 'http://192.168.1.30/tiny_mce/tiny_mce_src.js'
-TINYMCE_DEFAULT_CONFIG = {
-    "height": "320px",
-    "width": "960px",
-    "menubar": "file edit view insert format tools table help",
-    "plugins": "advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code "
-               "fullscreen insertdatetime media table paste code help wordcount spellchecker",
-    "toolbar": "undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft "
-               "aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor "
-               "backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | "
-               "fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | "
-               "a11ycheck ltr rtl | showcomments addcomment code",
-    "custom_undo_redo_levels": 10,
-    "language": "es_ES",  # To force a specific language instead of the Django current language.
-}
-TINYMCE_SPELLCHECKER = True
-TINYMCE_COMPRESSOR = True
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
@@ -147,3 +128,23 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 MEDIA_ROOT = "static/media"
 STATICFILES_DIRS = []
+
+# TINYMCE
+
+TINYMCE_DEFAULT_CONFIG = {
+    "height": "320px",
+    "width": "960px",
+    "menubar": "file edit view insert format tools table help",
+    "plugins": "advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code "
+               "fullscreen insertdatetime media table paste code help wordcount spellchecker",
+    "toolbar": "undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft "
+               "aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor "
+               "backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | "
+               "fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | "
+               "a11ycheck ltr rtl | showcomments addcomment code",
+    "custom_undo_redo_levels": 10,
+    "language": "es_ES",  # To force a specific language instead of the Django current language.
+}
+TINYMCE_SPELLCHECKER = True
+TINYMCE_COMPRESSOR = True
+TINYMCE_FILEBROWSER = True
