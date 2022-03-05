@@ -6,6 +6,7 @@ from modelcluster.fields import ParentalKey
 from wagtail.core.models import Page, Orderable
 from wagtail.core.fields import RichTextField
 from wagtail.admin.edit_handlers import FieldPanel, MultiFieldPanel, InlinePanel
+from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.search import index
 
 
@@ -51,8 +52,10 @@ class Volunteers(models.Model):
         verbose_name_plural = "Volunteers"
 
 
-class ArticlePage(Page):
+class BlogPage(Page):
+
     # Database fields
+
     body = RichTextField()
     date = models.DateField("Post date")
     feed_image = models.ForeignKey(
@@ -63,12 +66,14 @@ class ArticlePage(Page):
         related_name='+'
     )
 
+
     # Search index configuration
 
     search_fields = Page.search_fields + [
         index.SearchField('body'),
         index.FilterField('date'),
     ]
+
 
     # Editor panels configuration
 
@@ -80,9 +85,22 @@ class ArticlePage(Page):
 
     promote_panels = [
         MultiFieldPanel(Page.promote_panels, "Common page configuration"),
-        FieldPanel('feed_image'),
+        ImageChooserPanel('feed_image'),
     ]
 
+
     # Parent page / subpage type rules
+
     parent_page_types = ['blog.BlogIndex']
     subpage_types = []
+
+
+class BlogPageRelatedLink(Orderable):
+    page = ParentalKey(BlogPage, on_delete=models.CASCADE, related_name='related_links')
+    name = models.CharField(max_length=255)
+    url = models.URLField()
+
+    panels = [
+        FieldPanel('name'),
+        FieldPanel('url'),
+    ]
