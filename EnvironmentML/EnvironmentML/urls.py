@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from filebrowser.sites import site
 
-site.directory = "media/uploads"
+site.directory = "media/uploads/"
 
 urlpatterns = [
     path('admin/filebrowser/', site.urls),
