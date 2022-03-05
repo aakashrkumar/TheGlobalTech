@@ -55,5 +55,6 @@ class ArticlePageRelatedLink(Orderable):
     ]
 
 
+
 def load():
     pass
