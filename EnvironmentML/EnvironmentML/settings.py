@@ -105,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # TINYMCE
 
-TINYMCE_JS_URL = 'http://debug.example.org/tiny_mce/tiny_mce_src.js'
+TINYMCE_JS_URL = 'http://192.168.1.30/tiny_mce/tiny_mce_src.js'
 TINYMCE_DEFAULT_CONFIG = {
     "height": "320px",
     "width": "960px",
