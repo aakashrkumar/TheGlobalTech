@@ -129,5 +129,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 MEDIA_ROOT = "media/"
 STATICFILES_DIRS = []
 
-TINYMCE_JS_URL = 'https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js'
+TINYMCE_JS_URL = 'https://cdn.tiny.cloud/1/uejvbzkyochhqraxdqqe2ucomh9h26q4o3dd3j0jup8a8o3y/tinymce/5/tinymce.min.js'
 TINYMCE_COMPRESSOR = False
