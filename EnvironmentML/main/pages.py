@@ -95,6 +95,21 @@ class ProjectPage(Page):
         return type(parent) == ProjectsPage
 
 
+class AuthorPage(Page):
+    """
+    AuthorPage model
+    """
+    # define custom template file
+    template = "main/author.html"
+    author = User.objects.get(username=super().slug)
+
+    @classmethod
+    def can_create_at(cls, parent):
+        # You can only create one of these!
+        return super(AuthorPage, cls).can_create_at(parent) \
+               and not cls.objects.exists()
+
+
 class ProjectPageRelatedLink(Orderable):
     page = ParentalKey(ProjectPage, on_delete=models.CASCADE, related_name='related_links')
     name = models.CharField(max_length=255)

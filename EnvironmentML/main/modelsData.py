@@ -26,6 +26,17 @@ class UserProfile(models.Model):
     avatar = models.ImageField(upload_to="profiles")  # or whatever
     role = models.CharField(max_length=200, default="")
     bio = models.TextField(default="")
+    slug = models.CharField(max_length=300)
+
+    def save(self):
+        base_slug = self.user.user.first_name + "-" + self.user.user.last_name
+        counter = 1
+        slug = base_slug
+        while UserProfile.objects.filter(slug=slug).exists():
+            counter += 1
+            slug = f"{base_slug}-{counter}"
+        self.slug = slug
+        super(UserProfile, self).save()
 
     def __str__(self):
         return self.user.username
