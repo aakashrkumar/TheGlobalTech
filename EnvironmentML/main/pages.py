@@ -19,6 +19,12 @@ class HomePage(Page):
     template = "main/home.html"
     projects = Project.objects.all()
 
+    @classmethod
+    def can_create_at(cls, parent):
+        # You can only create one of these!
+        return super(HomePage, cls).can_create_at(parent) \
+               and not cls.objects.exists()
+
 
 class ProjectsPage(Page):
     """
@@ -27,6 +33,12 @@ class ProjectsPage(Page):
     # define custom template file
     template = "main/projects.html"
     projects = Project.objects.all()
+
+    @classmethod
+    def can_create_at(cls, parent):
+        # You can only create one of these!
+        return super(ProjectsPage, cls).can_create_at(parent) \
+               and not cls.objects.exists()
 
 
 class ArticlePage(Page):
