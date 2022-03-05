@@ -28,7 +28,7 @@ class UserProfile(models.Model):
     bio = models.TextField(default="")
     slug = models.CharField(max_length=300)
 
-    def save(self):
+    def save(self, *args, **kwargs):
         base_slug = self.user.user.first_name + "-" + self.user.user.last_name
         counter = 1
         slug = base_slug
@@ -36,7 +36,7 @@ class UserProfile(models.Model):
             counter += 1
             slug = f"{base_slug}-{counter}"
         self.slug = slug
-        super(UserProfile, self).save()
+        super(UserProfile, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.user.username
