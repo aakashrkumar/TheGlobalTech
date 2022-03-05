@@ -8,7 +8,7 @@ from wagtail.admin.edit_handlers import FieldPanel, MultiFieldPanel, InlinePanel
 from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.search import index
 
-from modelsData import Project
+from .modelsData import Project
 
 
 class HomePage(Page):
