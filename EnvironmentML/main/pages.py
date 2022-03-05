@@ -101,7 +101,7 @@ class AuthorPage(Page):
     """
     # define custom template file
     template = "main/author.html"
-    author = User.objects.get(username=super().slug)
+    author = User.objects.get(username=Page.slug)
 
     @classmethod
     def can_create_at(cls, parent):
