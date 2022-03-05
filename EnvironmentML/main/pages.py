@@ -10,6 +10,14 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.search import index
 
 
+class HomePage(Page):
+    """
+    Homepage model
+    """
+    # define custom template file
+    template = "main/home.html"
+
+
 class ArticlePage(Page):
     # Database fields
 
@@ -53,7 +61,6 @@ class ArticlePageRelatedLink(Orderable):
         FieldPanel('name'),
         FieldPanel('url'),
     ]
-
 
 
 def load():
