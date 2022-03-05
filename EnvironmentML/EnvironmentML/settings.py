@@ -145,16 +145,3 @@ TINYMCE_DEFAULT_CONFIG = {
     "custom_undo_redo_levels": 10,
     "language": "es_ES",  # To force a specific language instead of the Django current language.
 }
-TINYMCE_SPELLCHECKER = True
-TINYMCE_COMPRESSOR = True
-TINYMCE_FILEBROWSER = True
-TINYMCE_EXTRA_MEDIA = {
-    'css': {
-        'all': [
-            ...
-        ],
-    },
-    'js': [
-        ...
-    ],
-}
