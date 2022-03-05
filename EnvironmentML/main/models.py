@@ -84,5 +84,5 @@ class ArticlePage(Page):
     ]
 
     # Parent page / subpage type rules
-    parent_page_types = ['article.ArticleIndex']
+    parent_page_types = ['blog.BlogIndex']
     subpage_types = []
