@@ -40,6 +40,20 @@ class ProjectsPage(Page):
         return super(ProjectsPage, cls).can_create_at(parent) \
                and not cls.objects.exists()
 
+class AboutUSPage(Page):
+    """
+    ProjectsPage model
+    """
+    # define custom template file
+    template = "main/aboutus.html"
+    team = User.objects.all().filter(is_staff=True)
+
+    @classmethod
+    def can_create_at(cls, parent):
+        # You can only create one of these!
+        return super(AboutUSPage, cls).can_create_at(parent) \
+               and not cls.objects.exists()
+
 
 class ArticlePage(Page):
     # Database fields
