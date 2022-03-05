@@ -101,7 +101,14 @@ class AuthorPage(Page):
     """
     # define custom template file
     template = "main/author.html"
-    author = UserProfile.objects.get(username=Page.slug)
+
+    def save(self, *args, **kwargs):
+        """
+        Override the save method to set the author of the page to the current user.
+        """
+        # Set the author to the current user
+        self.author = UserProfile.objects.get(user=self.slug)
+        super(AuthorPage, self).save(*args, **kwargs)
 
     @classmethod
     def can_create_at(cls, parent):
