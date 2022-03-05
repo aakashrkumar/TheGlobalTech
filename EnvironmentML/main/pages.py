@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-
 from modelcluster.fields import ParentalKey
 
 from wagtail.core.models import Page, Orderable
@@ -9,6 +8,8 @@ from wagtail.admin.edit_handlers import FieldPanel, MultiFieldPanel, InlinePanel
 from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.search import index
 
+from modelsData import Project
+
 
 class HomePage(Page):
     """
@@ -16,6 +17,7 @@ class HomePage(Page):
     """
     # define custom template file
     template = "main/home.html"
+    projects = Project.objects.all().order_by('-project_date')
 
 
 class ArticlePage(Page):
