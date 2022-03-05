@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from filebrowser.sites import site
+from wagtail.admin import urls as wagtailadmin_urls
+from wagtail.core import urls as wagtail_urls
+from wagtail.documents import urls as wagtaildocs_urls
 
 site.directory = "uploads/"
 
@@ -24,5 +27,10 @@ urlpatterns = [
     path('grappelli/', include('grappelli.urls')),
     path('tinymce/', include('tinymce.urls')),
     path('admin/', admin.site.urls),
+    # wagtail
+    path('cms/', include(wagtailadmin_urls)),
+    path('documents/', include(wagtaildocs_urls)),
+    path('pages/', include(wagtail_urls)),
+    # end wagtail
     path('', include('main.urls')),
 ]
