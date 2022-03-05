@@ -89,12 +89,6 @@ class ArticlePage(Page):
     ]
 
 
-    # Parent page / subpage type rules
-
-    parent_page_types = ['main.ArticleIndex']
-    subpage_types = []
-
-
 class ArticlePageRelatedLink(Orderable):
     page = ParentalKey(ArticlePage, on_delete=models.CASCADE, related_name='related_links')
     name = models.CharField(max_length=255)
