@@ -40,6 +40,7 @@ class ProjectsPage(Page):
         return super(ProjectsPage, cls).can_create_at(parent) \
                and not cls.objects.exists()
 
+
 class AboutUSPage(Page):
     """
     ProjectsPage model
@@ -55,7 +56,7 @@ class AboutUSPage(Page):
                and not cls.objects.exists()
 
 
-class ArticlePage(Page):
+class ProjectPage(Page):
     # Database fields
 
     body = RichTextField()
@@ -88,9 +89,14 @@ class ArticlePage(Page):
         ImageChooserPanel('feed_image'),
     ]
 
+    @classmethod
+    def can_create_at(cls, parent):
+        # You can only create one of these!
+        return type(parent) == ProjectsPage
 
-class ArticlePageRelatedLink(Orderable):
-    page = ParentalKey(ArticlePage, on_delete=models.CASCADE, related_name='related_links')
+
+class ProjectPageRelatedLink(Orderable):
+    page = ParentalKey(ProjectPage, on_delete=models.CASCADE, related_name='related_links')
     name = models.CharField(max_length=255)
     url = models.URLField()
 
