@@ -17,7 +17,7 @@ class HomePage(Page):
     """
     # define custom template file
     template = "main/home.html"
-    projects = Project.objects.all().order_by('-project_date')
+    projects = Project.objects.all()
 
 
 class ArticlePage(Page):
