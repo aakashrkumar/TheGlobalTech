@@ -1,3 +1,8 @@
-{% load wagtailcore_tags %}
+{% extends "base.html" %}
+{% load static wagtailcore_tags %}
+{% block content %}
+{% load wagtailuserbar %}
+
 {{ page.body|richtext }}
-<a href="{% pageurl page.get_parent %}">Back to index</a>
+
+{% endblock %}
