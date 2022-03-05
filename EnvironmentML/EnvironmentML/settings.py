@@ -74,13 +74,6 @@ WSGI_APPLICATION = 'EnvironmentML.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-"""DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -109,6 +102,10 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# TINYMCE
+
+TINYMCE_JS_URL = 'http://debug.example.org/tiny_mce/tiny_mce_src.js'
 TINYMCE_DEFAULT_CONFIG = {
     "height": "320px",
     "width": "960px",
@@ -121,7 +118,10 @@ TINYMCE_DEFAULT_CONFIG = {
                "fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | "
                "a11ycheck ltr rtl | showcomments addcomment code",
     "custom_undo_redo_levels": 10,
+    "language": "es_ES",  # To force a specific language instead of the Django current language.
 }
+TINYMCE_SPELLCHECKER = True
+TINYMCE_COMPRESSOR = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
