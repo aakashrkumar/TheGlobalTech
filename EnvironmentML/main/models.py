@@ -44,5 +44,5 @@ class Volunteers(models.Model):
         verbose_name_plural = "Volunteers"
 
 
-from pages import *
+from .pages import *
 load()
