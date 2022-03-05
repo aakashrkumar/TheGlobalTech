@@ -130,7 +130,7 @@ MEDIA_ROOT = "static/media"
 STATICFILES_DIRS = []
 
 # TINYMCE
-
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 TINYMCE_DEFAULT_CONFIG = {
     "height": "320px",
     "width": "960px",
