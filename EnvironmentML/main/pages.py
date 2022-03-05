@@ -8,7 +8,7 @@ from wagtail.admin.edit_handlers import FieldPanel, MultiFieldPanel, InlinePanel
 from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.search import index
 
-from .modelsData import Project
+from .modelsData import *
 
 
 class HomePage(Page):
@@ -17,6 +17,15 @@ class HomePage(Page):
     """
     # define custom template file
     template = "main/home.html"
+    projects = Project.objects.all()
+
+
+class ProjectsPage(Page):
+    """
+    ProjectsPage model
+    """
+    # define custom template file
+    template = "main/projects.html"
     projects = Project.objects.all()
 
 
