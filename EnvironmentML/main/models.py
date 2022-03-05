@@ -52,7 +52,7 @@ class Volunteers(models.Model):
         verbose_name_plural = "Volunteers"
 
 
-class BlogPage(Page):
+class ArticlePage(Page):
 
     # Database fields
 
@@ -91,12 +91,12 @@ class BlogPage(Page):
 
     # Parent page / subpage type rules
 
-    parent_page_types = ['blog.BlogIndex']
+    parent_page_types = ['main.ArticleIndex']
     subpage_types = []
 
 
-class BlogPageRelatedLink(Orderable):
-    page = ParentalKey(BlogPage, on_delete=models.CASCADE, related_name='related_links')
+class ArticlePageRelatedLink(Orderable):
+    page = ParentalKey(ArticlePage, on_delete=models.CASCADE, related_name='related_links')
     name = models.CharField(max_length=255)
     url = models.URLField()
 
