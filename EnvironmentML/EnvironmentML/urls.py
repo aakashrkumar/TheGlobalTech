@@ -40,7 +40,6 @@ urlpatterns = [
     path('admin/', include(wagtailadmin_urls)),
     path('documents/', include(wagtaildocs_urls)),
     path('images/', include(wagtailimages_urls)),
-    path(r'', include(wagtail_content_import_urls)),
     path(r'', include(puput_urls)),
     path('', include(wagtail_urls)),
 ]
