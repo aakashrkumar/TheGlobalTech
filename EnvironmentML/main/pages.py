@@ -3,10 +3,13 @@ from django.contrib.auth.models import User
 from modelcluster.fields import ParentalKey
 
 from wagtail.core.models import Page, Orderable
-from wagtail.core.fields import RichTextField
+from wagtail.core.fields import RichTextField, StreamField
 from wagtail.admin.edit_handlers import FieldPanel, MultiFieldPanel, InlinePanel
 from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.search import index
+from wagtail.images.blocks import ImageChooserBlock
+
+from wagtail.core import blocks
 
 from .modelsData import *
 
@@ -58,9 +61,15 @@ class AboutUSPage(Page):
 
 class ProjectPage(Page):
     # Database fields
-
-    body = RichTextField()
+    project_authors = models.ManyToManyField(User, related_name='authors')
     date = models.DateField("Post date")
+
+    body = StreamField([
+        ('heading', blocks.CharBlock(form_classname="full title")),
+        ('paragraph', blocks.RichTextBlock()),
+        ('image', ImageChooserBlock()),
+    ])
+
     feed_image = models.ForeignKey(
         'wagtailimages.Image',
         null=True,
