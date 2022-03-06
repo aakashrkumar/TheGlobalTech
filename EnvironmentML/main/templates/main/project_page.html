@@ -1,6 +1,4 @@
 {% load wagtailcore_tags %}
 <article>
-    {% for block in page.body %}
-        <section>{% include_block block %}</section>
-    {% endfor %}
+   {% include_block page.body %}
 </article>
