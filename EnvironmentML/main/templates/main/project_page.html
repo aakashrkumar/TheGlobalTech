@@ -8,6 +8,8 @@
     {% for block in page.body %}
     {% if block.block_type == 'table' %}
     {% include_block block %}
+    {% elif block.block_type == 'richtext' %}
+    {{block|richtext}}
     {% else %}
     {{block}}
     {% endif %}
