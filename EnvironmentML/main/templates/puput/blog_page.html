@@ -20,7 +20,8 @@
             <div class="project-card draw image-cover-shadow" style="overflow: hidden">
                 {% if entry.header_image %}
                 <span>
-                    <img src="{{ entry.header_image.url }}" class="" style="width: 100%; height: 100%; object-fit:cover;"/>
+                    {% image entry.header_image fill-300x300 as header_image %}
+                    <img src="{{ header_image.url }}" class="" style="width: 100%; height: 100%; object-fit:cover;"/>
                     <div class="publishDate">Published on {{project.project_date.date}}</div>
                     <div class="projectInfo">{{project.project_name}}</div>
                 </span>
