@@ -179,4 +179,4 @@ TAGGIT_CASE_INSENSITIVE = True
 
 PUPUT_AS_PLUGIN = True
 WAGTAILCONTENTIMPORT_GOOGLE_OAUTH_CLIENT_CONFIG = '{"web":{"client_id":"143649260242-lm9g7net7n84s9uqhnrrgl9qkpbi4soa.apps.googleusercontent.com","project_id":"the-global-tech","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_secret":"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","redirect_uris":["https://theglobaltech.org"],"javascript_origins":["https://theglobaltech.org"]}}'
-WAGTAILCONTENTIMPORT_GOOGLE_PICKER_API_KEY = "AIzaSyD9TewnxSCwPzPox0FmXtdv7bLILqDUQt4"
+WAGTAILCONTENTIMPORT_GOOGLE_PICKER_API_KEY = "AIzaSyDRWVI29R3GAHC2-4ohConiy4gNR19f06Q"
