@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 from wagtail.admin import urls as wagtailadmin_urls
 from wagtail.core import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
@@ -37,3 +39,5 @@ urlpatterns = [
     path(r'', include(puput_urls)),
     path('', include(wagtail_urls)),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
