@@ -16,7 +16,8 @@
     <hr>
     <div class="projects-page">
         {% for entry in entries %}
-        <a href="/projects/{{project.slug}}">
+        {% entry_url entry blog_page as post_url %}
+        <a href="{{ post_url }}">
             <div class="project-card draw image-cover-shadow" style="overflow: hidden">
                 {% if entry.header_image %}
                 <span>
