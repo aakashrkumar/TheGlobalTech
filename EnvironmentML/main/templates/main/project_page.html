@@ -9,7 +9,7 @@
     {% if block.block_type == 'table' %}
     {% include_block block %}
     {% elif block.block_type == 'paragraph' %}
-    {{block|richtext}}
+    {{block|richtext}} a
     {% else %}
     {{block}}
     {% endif %}
