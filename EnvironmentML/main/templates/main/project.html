@@ -5,10 +5,6 @@
 {% load spaceUnderscore %}
 <!-- add headline to the bottom left-->
 <div class="article-container">
-    <br>
-    <br>
-    <br>
-    <br>
     <h2 class="page-title">{{ project.project_name }}</h2>
     <p style="font-size:80%;margin-bottom: 0">Published {{ project.project_date.date }} by
         {% for author in project.project_authors.all %}
