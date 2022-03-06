@@ -76,6 +76,7 @@ class ProjectPage(Page, ContentImportMixin):
         'wagtailimages.Image',
         null=True,
         blank=True,
+        required=True,
         on_delete=models.SET_NULL,
         related_name='+'
     )
