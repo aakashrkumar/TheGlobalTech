@@ -24,6 +24,8 @@
                 <div class="projectInfo">{{project.project_name}}</div>
             </div>
         </a>
+        {% empty %}
+        <span>{% trans 'No results found.' %}</span>
         {% endfor %}
     </div>
 </div>
