@@ -47,6 +47,11 @@ INSTALLED_APPS = [
     "tinymce",
     "jquery",
     # wagtail
+    "wagtail.contrib.table_block",
+    'wagtail.contrib.sitemaps',
+    'wagtail.contrib.routable_page',
+    'django_social_share',
+    'puput',
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.embeds',
@@ -63,11 +68,7 @@ INSTALLED_APPS = [
     'wagtail.core',
     'modelcluster',
     'taggit',
-    "wagtail.contrib.table_block",
-    'wagtail.contrib.sitemaps',
-    'wagtail.contrib.routable_page',
-    'django_social_share',
-    'puput',
+
     'colorful',
     # end wagtail
 ]
