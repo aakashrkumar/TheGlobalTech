@@ -70,7 +70,7 @@ class ProjectPage(Page, ContentImportMixin):
     project_authors = models.ManyToManyField(User, related_name='authors')
     date = models.DateField("Post date")
 
-    body = StreamField([CodeBlock(label='Any code', default_language='python'), CharBlock(), TableBlock(), RichTextBlock()])
+    body = StreamField([('code', CodeBlock(label='Any code', default_language='python')), ('heading', CharBlock()), ('table', TableBlock()), ('paragraph', RichTextBlock())])
 
     feed_image = models.ForeignKey(
         'wagtailimages.Image',
