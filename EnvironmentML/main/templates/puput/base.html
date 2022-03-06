@@ -1,5 +1,4 @@
 {% extends 'main/base.html' %}
-{% block content %}
 {% block blog_header %}
 <div class="about">
     {% if blog_page.header_image %}
@@ -78,8 +77,19 @@
         </div>
     </div>
 </div>
+<div class="footer">
+
+    <div class="footer_bottom">
+        <div class="copy">
+            <p>
+                Powered by <a href="http://www.djangoproject.com" rel="nofollow">Django</a>,
+                <a href="http://www.wagtail.io" rel="nofollow">Wagtail</a> and
+                <a href="http://github.com/APSL/puput" rel="nofollow">Puput</a>
+            </p>
+        </div>
+    </div>
+</div>
 {% block js %}
 <script src="{% static 'puput/js/jquery.min.js' %}"></script>
 <script src="{% static 'puput/js/puput.js' %}"></script>
 {% endblock js %}
-{% endblock %}
