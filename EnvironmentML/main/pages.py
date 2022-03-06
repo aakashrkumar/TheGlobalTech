@@ -12,6 +12,7 @@ from wagtail.images.blocks import ImageChooserBlock
 from wagtail.core import blocks
 
 from .modelsData import *
+from mapper import MyMapper
 
 
 class HomePage(Page):
@@ -61,6 +62,7 @@ class AboutUSPage(Page):
 
 class ProjectPage(Page):
     # Database fields
+    mapper_class = MyMapper()
     project_authors = models.ManyToManyField(User, related_name='authors')
     date = models.DateField("Post date")
 

@@ -27,6 +27,7 @@ from wagtail.images import urls as wagtailimages_urls
 from puput import urls as puput_urls
 from wagtail.api.v2.router import WagtailAPIRouter
 from wagtail.images.api.v2.views import ImagesAPIViewSet
+from wagtail_content_import import urls as wagtail_content_import_urls
 
 api_router = WagtailAPIRouter("wagtailapi_v2")
 api_router.register_endpoint("images", ImagesAPIViewSet)
@@ -39,6 +40,7 @@ urlpatterns = [
     path('admin/', include(wagtailadmin_urls)),
     path('documents/', include(wagtaildocs_urls)),
     path('images/', include(wagtailimages_urls)),
+    path(r'', include(wagtail_content_import_urls)),
     path(r'', include(puput_urls)),
     path('', include(wagtail_urls)),
 ]
