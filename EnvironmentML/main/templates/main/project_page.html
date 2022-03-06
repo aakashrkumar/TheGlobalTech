@@ -1,7 +1,10 @@
+{% extends 'main/base.html' %}
+{% block content %}
 {% load static wagtailcore_tags %}
 <link rel="stylesheet" href="{% static 'css/project.css'%}">
 {% load spaceUnderscore %}
 <!-- add headline to the bottom left-->
 <div class="article-container">
-        {% include_block page.body %}
+    {% include_block page.body %}
 </div>
+{% endblock %}
