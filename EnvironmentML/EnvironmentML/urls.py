@@ -25,13 +25,11 @@ from puput import urls as puput_urls
 site.directory = "uploads/"
 
 urlpatterns = [
-    path('admin/filebrowser/', site.urls),
-    path('grappelli/', include('grappelli.urls')),
     path('tinymce/', include('tinymce.urls')),
-    path('admin/', admin.site.urls),
+    path('django-admin/', admin.site.urls),
     # wagtail
 
-    path('cms/', include(wagtailadmin_urls)),
+    path('admin/', include(wagtailadmin_urls)),
     path('documents/', include(wagtaildocs_urls)),
     path('images/', include(wagtailimages_urls)),
     path(r'', include(puput_urls)),
