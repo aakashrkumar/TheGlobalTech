@@ -137,5 +137,29 @@ class AuthorPage(Page):
         return type(parent) == AboutUSPage
 
 
-def load():
-    pass
+class PrivacyPolicyPage(Page):
+    """
+    PrivacyPolicy model
+    """
+
+    template = "main/privacypolicy.html"
+
+    @classmethod
+    def can_create_at(cls, parent):
+        # You can only create one of these!
+        return super(PrivacyPolicyPage, cls).can_create_at(parent) \
+               and not cls.objects.exists()
+
+
+class TermsPage(Page):
+    """
+    Terms model
+    """
+
+    template = "main/terms.html"
+
+    @classmethod
+    def can_create_at(cls, parent):
+        # You can only create one of these!
+        return super(TermsPage, cls).can_create_at(parent) \
+               and not cls.objects.exists()
