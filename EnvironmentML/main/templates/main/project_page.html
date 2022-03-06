@@ -9,7 +9,7 @@
     {% if block.block_type == 'table' %}
     {% include_block block %}
     {% else %}
-    {{block|richtext}}
+    {{block}}
     {% endif %}
     {% endfor %}
 </div>
