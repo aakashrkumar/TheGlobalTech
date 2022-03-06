@@ -91,13 +91,13 @@ class ProjectPage(Page, ContentImportMixin):
 
     content_panels = Page.content_panels + [
         FieldPanel('date'),
+        ImageChooserPanel('feed_image'),
         FieldPanel('body', classname="full"),
         InlinePanel('related_links', label="Related links"),
     ]
 
     promote_panels = [
         MultiFieldPanel(Page.promote_panels, "Common page configuration"),
-        ImageChooserPanel('feed_image'),
     ]
 
     @classmethod
