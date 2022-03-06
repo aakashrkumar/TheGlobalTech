@@ -12,7 +12,7 @@ from wagtail.images.blocks import ImageChooserBlock
 from wagtail.core import blocks
 
 from .modelsData import *
-from mapper import MyMapper
+from .mapper import MyMapper
 
 
 class HomePage(Page):
