@@ -27,7 +27,6 @@ from wagtail.images import urls as wagtailimages_urls
 from puput import urls as puput_urls
 from wagtail.api.v2.router import WagtailAPIRouter
 from wagtail.images.api.v2.views import ImagesAPIViewSet
-from wagtail_content_import import urls as wagtail_content_import_urls
 
 api_router = WagtailAPIRouter("wagtailapi_v2")
 api_router.register_endpoint("images", ImagesAPIViewSet)
