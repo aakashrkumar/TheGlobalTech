@@ -72,7 +72,7 @@ class ProjectPage(Page, ContentImportMixin):
 
     body = StreamField([('code', CodeBlock(label='Any code', default_language='python')), ('heading', CharBlock()), ('table', TableBlock()), ('paragraph', RichTextBlock())])
 
-    feed_image = models.ForeignKey(
+    project_image = models.ForeignKey(
         'wagtailimages.Image',
         null=True,
         blank=True,
@@ -91,7 +91,7 @@ class ProjectPage(Page, ContentImportMixin):
 
     content_panels = Page.content_panels + [
         FieldPanel('date'),
-        ImageChooserPanel('feed_image'),
+        ImageChooserPanel('project_image'),
         FieldPanel('body', classname="full"),
         InlinePanel('related_links', label="Related links"),
     ]
