@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from modelcluster.fields import ParentalKey
+from wagtail.core.blocks import CharBlock, RichTextBlock
 
 from wagtail.core.models import Page, Orderable
 from wagtail.core.fields import RichTextField, StreamField
@@ -11,6 +12,7 @@ from wagtail.images.blocks import ImageChooserBlock
 
 from wagtail.core import blocks
 from wagtail_content_import.models import ContentImportMixin
+from wagtailcodeblock.blocks import CodeBlock
 
 from .modelsData import *
 from .mapper import MyMapper, BaseStreamBlock
@@ -68,7 +70,7 @@ class ProjectPage(Page, ContentImportMixin):
     project_authors = models.ManyToManyField(User, related_name='authors')
     date = models.DateField("Post date")
 
-    body = RichTextField(features=['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'bold', 'italic', 'link', 'ol', 'ul', 'image', 'embed', 'hr', 'document-link', 'code'])
+    body = StreamField([CodeBlock(label='Any code', default_language='python'), CharBlock(), TableBlock(), RichTextBlock()])
 
     feed_image = models.ForeignKey(
         'wagtailimages.Image',
