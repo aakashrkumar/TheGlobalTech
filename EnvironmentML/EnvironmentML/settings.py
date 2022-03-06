@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
+from puput import PUPUT_APPS
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -54,6 +55,11 @@ INSTALLED_APPS = [
     'wagtail.core',
     'modelcluster',
     'taggit',
+    'wagtail.contrib.sitemaps',
+    'wagtail.contrib.routable_page',
+    'django_social_share',
+    'puput',
+    'colorful',
     # end wagtail
     'main.apps.MainConfig',
 ]
@@ -148,3 +154,4 @@ STATICFILES_DIRS = []
 
 # wagtail
 WAGTAIL_SITE_NAME = 'TheGlobalTech'
+PUPUT_AS_PLUGIN = True
