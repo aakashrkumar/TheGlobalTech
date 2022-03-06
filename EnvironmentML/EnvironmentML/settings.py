@@ -183,4 +183,4 @@ WAGTAILCONTENTIMPORT_GOOGLE_OAUTH_CLIENT_CONFIG = {"web": {"client_id": "1436492
                                                            "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
                                                            "client_secret": "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", "redirect_uris": ["https://theglobaltech.org"],
                                                            "javascript_origins": ["https://theglobaltech.org"]}}
-GOOGLE_PICKER_API_KEY = "AIzaSyD9TewnxSCwPzPox0FmXtdv7bLILqDUQt4"
+WAGTAILCONTENTIMPORT_GOOGLE_PICKER_API_KEY = "AIzaSyD9TewnxSCwPzPox0FmXtdv7bLILqDUQt4"
