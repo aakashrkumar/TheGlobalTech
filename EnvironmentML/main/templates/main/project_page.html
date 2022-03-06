@@ -5,7 +5,7 @@
 <!-- add headline to the bottom left-->
 <div class="container" style="background-color: #FFFFFF; box-shadow: #111111">
     <div class="article-container" style="min-height: 90vh">
-        {% include_block page.body %}
+        {{ page.body|richtext }}
     </div>
 </div>
 {% endblock %}
