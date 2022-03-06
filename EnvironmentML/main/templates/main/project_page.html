@@ -1,0 +1,10 @@
+{% extends 'main/base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/project.css'%}">
+{% load spaceUnderscore %}
+<!-- add headline to the bottom left-->
+<div class="article-container">
+    {{ tableblock self.body|richtext }}
+</div>
+{% endblock %}
