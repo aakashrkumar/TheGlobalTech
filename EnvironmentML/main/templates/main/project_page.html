@@ -1,6 +1,8 @@
 {% load static i18n wagtailcore_tags wagtailimages_tags wagtailroutablepage_tags wagtailuserbar puput_tags %}
 <body>
 <article>
+    {% block content %}
     {% include_block page.body %}
+    {% endblock content %}
 </article>
 </body>
