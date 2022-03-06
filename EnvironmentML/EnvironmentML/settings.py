@@ -15,10 +15,7 @@ from pathlib import Path
 # REALLY BAD METHOD
 import django
 from django.utils.encoding import force_str
-from django.urls import re_path
-
 django.utils.encoding.force_text = force_str
-django.conf.urls = re_path
 # TILL HERE
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
