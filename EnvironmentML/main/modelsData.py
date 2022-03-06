@@ -29,7 +29,7 @@ class UserProfile(models.Model):
     slug = models.CharField(max_length=300)
 
     def save(self, *args, **kwargs):
-        base_slug = self.user.user.first_name + "-" + self.user.user.last_name
+        base_slug = self.user.first_name + "-" + self.user.last_name
         counter = 1
         slug = base_slug
         while UserProfile.objects.filter(slug=slug).exists():
