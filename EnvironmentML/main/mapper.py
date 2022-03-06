@@ -5,6 +5,7 @@ from wagtail.images.blocks import ImageChooserBlock
 from wagtail.core.blocks import CharBlock, RichTextBlock, StreamBlock
 from wagtail.contrib.table_block.blocks import TableBlock
 
+
 class MyMapper(StreamFieldMapper):
     html = RichTextConverter('paragraph')
     image = ImageConverter('image')
