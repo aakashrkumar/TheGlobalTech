@@ -95,6 +95,17 @@ class ProjectPage(Page):
         return type(parent) == ProjectsPage
 
 
+class ProjectPageRelatedLink(Orderable):
+    page = ParentalKey(ProjectPage, on_delete=models.CASCADE, related_name='related_links')
+    name = models.CharField(max_length=255)
+    url = models.URLField()
+
+    panels = [
+        FieldPanel('name'),
+        FieldPanel('url'),
+    ]
+
+
 class AuthorPage(Page):
     """
     AuthorPage model
@@ -113,19 +124,7 @@ class AuthorPage(Page):
     @classmethod
     def can_create_at(cls, parent):
         # You can only create one of these!
-        return super(AuthorPage, cls).can_create_at(parent) \
-               and not cls.objects.exists()
-
-
-class ProjectPageRelatedLink(Orderable):
-    page = ParentalKey(ProjectPage, on_delete=models.CASCADE, related_name='related_links')
-    name = models.CharField(max_length=255)
-    url = models.URLField()
-
-    panels = [
-        FieldPanel('name'),
-        FieldPanel('url'),
-    ]
+        return type(parent) == AboutUSPage
 
 
 def load():
