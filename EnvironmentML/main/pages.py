@@ -68,7 +68,7 @@ class ProjectPage(Page, ContentImportMixin):
     project_authors = models.ManyToManyField(User, related_name='authors')
     date = models.DateField("Post date")
 
-    body = RichTextField(features=['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'bold', 'italic', 'link', 'ol', 'ul', 'image', 'embed', 'hr', 'document-link'])
+    body = RichTextField(features=['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'bold', 'italic', 'link', 'ol', 'ul', 'image', 'embed', 'hr', 'document-link', 'code'])
 
     feed_image = models.ForeignKey(
         'wagtailimages.Image',
