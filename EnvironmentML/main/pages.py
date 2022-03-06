@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 from modelcluster.fields import ParentalKey
-from wagtail.core.blocks import RawHTMLBlock
 
 from wagtail.core.models import Page, Orderable
 from wagtail.core.fields import RichTextField, StreamField
@@ -63,12 +62,13 @@ class AboutUSPage(Page):
                and not cls.objects.exists()
 
 
-class ProjectPage(Page):
+class ProjectPage(Page, ContentImportMixin):
     # Database fields
+    mapper_class = MyMapper
     project_authors = models.ManyToManyField(User, related_name='authors')
     date = models.DateField("Post date")
 
-    body = StreamField([('html', RawHTMLBlock())])
+    body = StreamField(BaseStreamBlock())
 
     feed_image = models.ForeignKey(
         'wagtailimages.Image',
