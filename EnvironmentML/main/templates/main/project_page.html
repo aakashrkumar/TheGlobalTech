@@ -8,7 +8,7 @@
     {% for block in page.body %}
     {% if block.block_type == 'table' %}
     {% include_block block %}
-    {% elif block.block_type == 'richtext' %}
+    {% elif block.block_type == 'paragraph' %}
     {{block|safe}}
     {% else %}
     {{block}}
