@@ -43,7 +43,7 @@ class ProjectsPage(Page):
 
 class AboutUSPage(Page):
     """
-    ProjectsPage model
+    AboutUSPage model
     """
     # define custom template file
     template = "main/aboutus.html"
