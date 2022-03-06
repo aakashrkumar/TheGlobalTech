@@ -112,6 +112,7 @@ class AuthorPage(Page):
     """
     # define custom template file
     template = "main/author.html"
+    author = ""
 
     def save(self, *args, **kwargs):
         """
