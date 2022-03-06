@@ -9,7 +9,7 @@ class MyMapper(StreamFieldMapper):
     html = RichTextConverter('paragraph')
     image = ImageConverter('image')
     heading = TextConverter('heading')
-    table = TableConverter('my_table_block')
+    table = TableConverter('table')
 
 
 class BaseStreamBlock(StreamBlock):
