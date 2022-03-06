@@ -10,6 +10,7 @@ from wagtail.search import index
 from wagtail.images.blocks import ImageChooserBlock
 
 from wagtail.core import blocks
+from wagtail_content_import.models import ContentImportMixin
 
 from .modelsData import *
 from .mapper import MyMapper
@@ -60,7 +61,7 @@ class AboutUSPage(Page):
                and not cls.objects.exists()
 
 
-class ProjectPage(Page):
+class ProjectPage(Page, ContentImportMixin):
     # Database fields
     mapper_class = MyMapper
     project_authors = models.ManyToManyField(User, related_name='authors')
