@@ -13,7 +13,7 @@ from wagtail.core import blocks
 from wagtail_content_import.models import ContentImportMixin
 
 from .modelsData import *
-from .mapper import MyMapper
+from .mapper import MyMapper, BaseStreamBlock
 from wagtail.contrib.table_block.blocks import TableBlock
 
 
@@ -68,12 +68,7 @@ class ProjectPage(Page, ContentImportMixin):
     project_authors = models.ManyToManyField(User, related_name='authors')
     date = models.DateField("Post date")
 
-    body = StreamField([
-        ('heading', blocks.CharBlock(form_classname="full title")),
-        ('paragraph', blocks.RichTextBlock()),
-        ('image', ImageChooserBlock()),
-        ('table', TableBlock())
-    ])
+    body = BaseStreamBlock()
 
     feed_image = models.ForeignKey(
         'wagtailimages.Image',

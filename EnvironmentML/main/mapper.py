@@ -16,7 +16,7 @@ class BaseStreamBlock(StreamBlock):
     """
     Define the custom blocks that `StreamField` will utilize
     """
-    my_heading_block = CharBlock()
-    my_paragraph_block = RichTextBlock()
-    my_image_block = ImageChooserBlock()
-    my_table_block = TableBlock()
+    heading = CharBlock()
+    paragraph = RichTextBlock()
+    image = ImageChooserBlock()
+    table = TableBlock()
