@@ -6,13 +6,7 @@
 <!-- add headline to the bottom left-->
 <div class="article-container">
     {% for block in page.body %}
-    {% if block.block_type == 'table' %}
-    {% include_block block %}
-    {% elif block.block_type == 'paragraph' %}
-    {{block|richtext}} a
-    {% else %}
-    {{block}}
-    {% endif %}
+     {% include_block block %}
     {% endfor %}
 </div>
 {% endblock %}
