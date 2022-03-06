@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'main.apps.MainConfig',
     # added
     "tinymce",
     "jquery",
@@ -65,7 +66,6 @@ INSTALLED_APPS = [
     'puput',
     'colorful',
     # end wagtail
-    'main.apps.MainConfig',
 ]
 
 MIDDLEWARE = [
