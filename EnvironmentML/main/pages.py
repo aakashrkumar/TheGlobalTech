@@ -75,8 +75,7 @@ class ProjectPage(Page, ContentImportMixin):
     project_image = models.ForeignKey(
         'wagtailimages.Image',
         null=True,
-        blank=True,
-        required=True,
+        blank=False,
         on_delete=models.SET_NULL,
         related_name='+'
     )
