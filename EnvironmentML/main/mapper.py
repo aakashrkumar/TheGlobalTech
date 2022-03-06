@@ -6,9 +6,9 @@ from wagtail.core.blocks import CharBlock, RichTextBlock, StreamBlock
 from wagtail.contrib.table_block.blocks import TableBlock
 
 class MyMapper(StreamFieldMapper):
-    html = RichTextConverter('my_paragraph_block')
-    image = ImageConverter('my_image_block')
-    heading = TextConverter('my_heading_block')
+    html = RichTextConverter('paragraph')
+    image = ImageConverter('image')
+    heading = TextConverter('heading')
     table = TableConverter('my_table_block')
 
 

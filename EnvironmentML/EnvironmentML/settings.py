@@ -15,6 +15,7 @@ from pathlib import Path
 # REALLY BAD METHOD
 import django
 from django.utils.encoding import force_str
+
 django.utils.encoding.force_text = force_str
 # TILL HERE
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -62,6 +63,7 @@ INSTALLED_APPS = [
     'wagtail.core',
     'modelcluster',
     'taggit',
+    "wagtail.contrib.table_block",
     'wagtail.contrib.sitemaps',
     'wagtail.contrib.routable_page',
     'django_social_share',

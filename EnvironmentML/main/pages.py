@@ -14,6 +14,7 @@ from wagtail_content_import.models import ContentImportMixin
 
 from .modelsData import *
 from .mapper import MyMapper
+from wagtail.contrib.table_block.blocks import TableBlock
 
 
 class HomePage(Page):
@@ -71,6 +72,7 @@ class ProjectPage(Page, ContentImportMixin):
         ('heading', blocks.CharBlock(form_classname="full title")),
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
+        ('table', TableBlock())
     ])
 
     feed_image = models.ForeignKey(
