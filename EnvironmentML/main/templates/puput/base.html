@@ -2,13 +2,11 @@
 {% load static i18n wagtailcore_tags wagtailimages_tags wagtailroutablepage_tags wagtailuserbar puput_tags %}
 <div>
     {% wagtailuserbar %}
-    <div class="container container-blog">
+    <div class="container">
         <div class="row">
-            <div class="col-sm-8 col-md-9">
                 {% block content %}{% endblock content %}
                 {% block extra_content %}{% endblock extra_content %}
             </div>
-
             <div class="col-sm-4 col-md-3">
                 <div class="blog_sidebar">
                     <div class="rss-sitemap">
