@@ -15,6 +15,7 @@ from pathlib import Path
 # REALLY BAD METHOD
 import django
 from django.utils.encoding import force_str
+
 django.utils.encoding.force_text = force_str
 # TILL HERE
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -157,5 +158,20 @@ MEDIA_ROOT = "media/"
 STATICFILES_DIRS = []
 
 # wagtail
-WAGTAIL_SITE_NAME = 'TheGlobalTech'
+WAGTAIL_SITE_NAME = 'The Global Tech'
+TAGGIT_CASE_INSENSITIVE = True
+# Replace the search backend
+# WAGTAILSEARCH_BACKENDS = {
+#  'default': {
+#    'BACKEND': 'wagtail.search.backends.elasticsearch5',
+#    'INDEX': 'myapp'
+#  }
+# }
+
+# Wagtail email notifications from address
+# WAGTAILADMIN_NOTIFICATION_FROM_EMAIL = 'wagtail@myhost.io'
+
+# Wagtail email notification format
+# WAGTAILADMIN_NOTIFICATION_USE_HTML = True
+
 PUPUT_AS_PLUGIN = True
