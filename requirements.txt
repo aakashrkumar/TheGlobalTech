@@ -4,3 +4,4 @@ Pillow
 mysqlclient
 wagtail~=2.16.1
 puput~=1.1.3
+wagtailcodeblock
