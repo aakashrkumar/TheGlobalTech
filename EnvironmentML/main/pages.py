@@ -68,7 +68,7 @@ class ProjectPage(Page):
     project_authors = models.ManyToManyField(User, related_name='authors')
     date = models.DateField("Post date")
 
-    body = RawHTMLBlock()
+    body = StreamField([RawHTMLBlock()])
 
     feed_image = models.ForeignKey(
         'wagtailimages.Image',
