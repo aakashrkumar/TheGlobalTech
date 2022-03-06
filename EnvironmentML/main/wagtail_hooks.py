@@ -1,87 +1,65 @@
-import wagtail.admin.rich_text.editors.draftail.features as draftail_features
-from wagtail.admin.rich_text.converters.html_to_contentstate import (
-    InlineStyleElementHandler
-)
+import re
+
 from wagtail.core import hooks
+import wagtail.admin.rich_text.editors.draftail.features as draftail_features
+from wagtail.admin.rich_text.converters import html_to_contentstate
+from wagtail.admin.rich_text.converters.html_to_contentstate import (
+    BlockElementHandler, KEEP_WHITESPACE, WHITESPACE_RE
+)
+
+# Regex that matches nothing
+NOTHING_RE = re.compile('a^')
 
 
-@hooks.register("register_rich_text_features")
-def register_code_styling(features):
-    """Add the <code> to the richtext editor and page."""
+class PreformattedTextElementHandler(BlockElementHandler):
+    """
+    BlockElementHandler that preserves all whitespace.
+    """
 
-    # Step 1
-    feature_name = "code"
-    type_ = "CODE"
-    tag = "code"
+    def handle_starttag(self, name, attrs, state, contentstate):
+        super().handle_starttag(name, attrs, state, contentstate)
+        # Keep all whitespace while rendering this block
+        html_to_contentstate.WHITESPACE_RE = NOTHING_RE
+        state.leading_whitespace = KEEP_WHITESPACE
 
-    # Step 2
+    def handle_endtag(self, name, state, contentstate):
+        # Reset whitespace handling to normal behaviour
+        html_to_contentstate.WHITESPACE_RE = WHITESPACE_RE
+        super().handle_endtag(name, state, contentstate)
+
+
+@hooks.register('register_rich_text_features')
+def register_code_block_feature(features):
+    """
+    Register the `code-block` feature, which uses the
+    `code-block` Draft.js block type and store it as
+    HTML within a `<pre class="code">` tag.
+    """
+    feature_name = 'code-block'
+    feature_type = 'code-block'
+
     control = {
-        "type": type_,
-        "label": "</>",
-        "description": "Code"
+        'type': feature_type,
+        'label': '{}',
+        'description': 'Code',
     }
 
-    # Step 3
     features.register_editor_plugin(
-        "draftail", feature_name, draftail_features.InlineStyleFeature(control)
+        'draftail', feature_name, draftail_features.BlockFeature(control)
     )
 
-    # Step 4
-    db_conversion = {
-        "from_database_format": {tag: InlineStyleElementHandler(type_)},
-        "to_database_format": {"style_map": {type_: {"element": tag}}}
-    }
-
-    # Step 5
-    features.register_converter_rule("contentstate", feature_name, db_conversion)
-
-    # Step 6. This is optional
-    # This will register this feature with all richtext editors by default
-    features.default_features.append(feature_name)
-
-
-@hooks.register("register_rich_text_features")
-def register_centertext_feature(features):
-    """Creates centered text in our richtext editor and page."""
-
-    # Step 1
-    feature_name = "center"
-    type_ = "CENTERTEXT"
-    tag = "div"
-
-    # Step 2
-    control = {
-        "type": type_,
-        "label": "Center",
-        "description": "Center Text",
-        "style": {
-            "display": "block",
-            "text-align": "center",
+    features.register_converter_rule('contentstate', feature_name, {
+        'from_database_format': {
+            'pre': PreformattedTextElementHandler(feature_type),
         },
-    }
+        'to_database_format': {
+            'block_map': {
+                feature_type: {
+                    'element': 'pre',
+                    'props': {'class': 'code'},
+                },
+            },
+        },
+    })
 
-    # Step 3
-    features.register_editor_plugin(
-        "draftail", feature_name, draftail_features.InlineStyleFeature(control)
-    )
-
-    # Step 4
-    db_conversion = {
-        "from_database_format": {tag: InlineStyleElementHandler(type_)},
-        "to_database_format": {
-            "style_map": {
-                type_: {
-                    "element": tag,
-                    "props": {
-                        "class": "d-block text-center"
-                    }
-                }
-            }
-        }
-    }
-
-    # Step 5
-    features.register_converter_rule("contentstate", feature_name, db_conversion)
-
-    # Step 6, This is optional.
     features.default_features.append(feature_name)
