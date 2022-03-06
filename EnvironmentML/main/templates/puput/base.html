@@ -1,4 +1,6 @@
+{% load static i18n wagtailcore_tags wagtailimages_tags wagtailroutablepage_tags wagtailuserbar puput_tags %}
 {% extends 'main/base.html' %}
+
 <head>
     <title>
         {% block title %}
@@ -36,6 +38,7 @@
         <link rel="stylesheet" href="{% static 'puput/css/puput.css' %}"/>
     {% endblock %}
 </head>
+<body>
 {% block blog_header %}
     <div class="about">
         {% if blog_page.header_image %}
@@ -130,3 +133,5 @@
     <script src="{% static 'puput/js/jquery.min.js' %}"></script>
     <script src="{% static 'puput/js/puput.js' %}"></script>
 {% endblock js %}
+</body>
+</html>/
