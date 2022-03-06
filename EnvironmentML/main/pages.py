@@ -119,7 +119,7 @@ class AuthorPage(Page):
         Override the save method to set the author of the page to the current user.
         """
         # Set the author to the current user
-        self.author = UserProfile.objects.get(user=self.slug)
+        self.author = UserProfile.objects.get(slug=self.slug)
         super(AuthorPage, self).save(*args, **kwargs)
 
     @classmethod
