@@ -15,14 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from filebrowser.sites import site
 from wagtail.admin import urls as wagtailadmin_urls
 from wagtail.core import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
 from wagtail.images import urls as wagtailimages_urls
 from puput import urls as puput_urls
+from wagtail.api.v2.router import WagtailAPIRouter
+from wagtail.images.api.v2.views import ImagesAPIViewSet
 
-site.directory = "uploads/"
+api_router = WagtailAPIRouter("wagtailapi_v2")
+api_router.register_endpoint("images", ImagesAPIViewSet)
 
 urlpatterns = [
     path('tinymce/', include('tinymce.urls')),
