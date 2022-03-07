@@ -54,7 +54,6 @@
 }
 
 .image-cover-shadow img {
-    position: relative;
     z-index: -1;
 }
 
