@@ -18,9 +18,9 @@
 }
 
 .image-cover-shadow {
-    box-shadow: 0 0 0px 30px rgba(0, 0, 0, 0.3) inset;
+    /*box-shadow: 0 0 0px 30px rgba(0, 0, 0, 0.3) inset;
     !important z-index: 10;
-}
+*/}
 
 .project-card:hover {
     border: 2px solid dodgerblue;
