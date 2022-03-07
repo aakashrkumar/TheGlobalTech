@@ -23,7 +23,6 @@
 }
 
 .image-cover-shadow img {
-    position: relative; !important;
     z-index: -1; !important;
 }
 
