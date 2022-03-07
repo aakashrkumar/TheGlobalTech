@@ -66,7 +66,7 @@ class AboutUSPage(Page):
 class ProjectPage(Page, ContentImportMixin):
     # Database fields
     mapper_class = MyMapper
-    project_authors = InlinePanel('django.User')
+    # project_authors = InlinePanel('django.User')
     date = models.DateField("Post date")
 
     body = StreamField([
