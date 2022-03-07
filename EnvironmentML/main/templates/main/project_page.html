@@ -13,7 +13,7 @@
         <br>
         <p>Authors</p>
         <hr>
-        {% for author in page.authors %}
+        {% for author in page.authors.all %}
         {{author.first_name}} {{author.last_name}}
         {% if not forloop.last %}, {% endif %}
         {% endfor %}
