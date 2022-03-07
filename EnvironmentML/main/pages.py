@@ -19,7 +19,8 @@ from .modelsData import *
 from .mapper import MyMapper, BaseStreamBlock
 from wagtail.contrib.table_block.blocks import TableBlock
 from modelcluster.fields import ParentalKey, ParentalManyToManyField
-from django_select2 import forms as s2forms
+
+from widgets import *
 
 
 class HomePage(Page):
@@ -93,13 +94,14 @@ class ProjectPage(Page, ContentImportMixin):
     search_fields = Page.search_fields + [
         index.SearchField('body'),
         index.FilterField('date'),
+        index.FilterField('project_authors'),
     ]
 
     # Editor panels configuration
 
     content_panels = Page.content_panels + [
         FieldPanel('date'),
-        FieldPanel('project_authors', widget=forms.SelectMultiple),
+        FieldPanel('project_authors', widget=AuthorWidget),
         ImageChooserPanel('project_image'),
         FieldPanel('body', classname="full"),
         InlinePanel('related_links', label="Related links"),
