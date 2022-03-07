@@ -40,12 +40,12 @@
 
 .authorInfo {
     position: absolute;
-    bottom: 8px;
+    top: 8px;
     left: 8px;
     text-decoration: none;
     color: white;
     font-family: "Roboto", sans-serif;
-    font-size: 16px;
+    font-size: 12/px;
     font-weight: bold;
 }
 
