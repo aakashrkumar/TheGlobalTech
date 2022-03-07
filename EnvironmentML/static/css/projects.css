@@ -18,8 +18,8 @@
 }
 
 .image-cover-shadow {
-    box-shadow: 0 0 0px 300px rgba(0, 0, 0, 0.3) inset;
-!important z-index: 10;
+    box-shadow: 0 0 0px 30px rgba(0, 0, 0, 0.3) inset;
+    !important z-index: 10;
 }
 
 .project-card:hover {
