@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from modelcluster.fields import ParentalKey
+from modelcluster.fields import ParentalKey, ParentalManyToManyField
 from wagtail.core.blocks import CharBlock, RichTextBlock
 
 from wagtail.core.models import Page, Orderable
@@ -17,6 +17,7 @@ from wagtailcodeblock.blocks import CodeBlock
 from .modelsData import *
 from .mapper import MyMapper, BaseStreamBlock
 from wagtail.contrib.table_block.blocks import TableBlock
+from modelcluster.fields import ParentalKey, ParentalManyToManyField
 
 
 class HomePage(Page):
@@ -67,10 +68,15 @@ class AboutUSPage(Page):
 class ProjectPage(Page, ContentImportMixin):
     # Database fields
     mapper_class = MyMapper
-    project_authors = models.ManyToManyField(User, related_name='authors')
+    project_authors = ParentalManyToManyField('main.UserProfile')
     date = models.DateField("Post date")
 
-    body = StreamField([('code', CodeBlock(label='Any code', default_language='python')), ('heading', CharBlock()), ('table', TableBlock()), ('paragraph', RichTextBlock())])
+    body = StreamField([
+        ('code', CodeBlock(label='Any code', default_language='python')),
+        ('heading', CharBlock()),
+        ('table', TableBlock()),
+        ('paragraph', RichTextBlock())
+    ])
 
     project_image = models.ForeignKey(
         'wagtailimages.Image',
