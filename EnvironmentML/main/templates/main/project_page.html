@@ -10,6 +10,13 @@
         {% image page.project_image fill-1000x500-c100 as project_image %}
         <img src="{{project_image.url}}" style="width:100%; max-height:20vh; object-fit: contain; margin: 20px 20px">
         {% include_block page.body %}
+        <br>
+        <p>Authors</p>
+        <hr>
+        {{for author in page.authors}}
+        {{author.first_name}} {{author.last_name}}
+        {% if not forloop.last %}, {% endif %}
+        {{endfor}}
     </div>
     <br>
 </div>
