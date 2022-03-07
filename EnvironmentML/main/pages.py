@@ -66,7 +66,6 @@ class AboutUSPage(Page):
 class ProjectPage(Page, ContentImportMixin):
     # Database fields
     mapper_class = MyMapper
-    authors = ParentalManyToManyField('main.UserProfile')
     date = models.DateField("Post date")
 
     body = StreamField([
@@ -110,6 +109,15 @@ class ProjectPage(Page, ContentImportMixin):
     def can_create_at(cls, parent):
         # You can only create one of these!
         return type(parent) == ProjectsPage
+
+
+class Authors(Orderable):
+    page = ParentalKey(ProjectPage, on_delete=models.CASCADE, related_name='authors')
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    panels = [
+        FieldPanel('user'),
+    ]
 
 
 class ProjectPageRelatedLink(Orderable):
