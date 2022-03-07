@@ -15,7 +15,7 @@
         <hr>
         {% for author in page.authors.all %}
         <a href="/team/{{author.user.userprofile.slug}}">
-            <div class="project-card draw image-cover-shadow" style="">
+            <div class="project-card draw " style="overflow: hidden">
                 <img src="/media/{{ author.user.userprofile.avatar }}" class="" style="width: 100%; height: 100%; object-fit:cover;"/>
                 <div class="authorInfo">{{author.user.first_name}} {{author.user.last_name}}</div>
             </div>
