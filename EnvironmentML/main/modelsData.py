@@ -39,7 +39,7 @@ class UserProfile(models.Model):
         super(UserProfile, self).save(*args, **kwargs)
 
     def __str__(self):
-        return self.user.username
+        return self.user.first_name + " " + self.user.last_name
 
 
 class Volunteers(models.Model):
@@ -48,7 +48,7 @@ class Volunteers(models.Model):
     user = models.OneToOneField(User, verbose_name='User', on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.user.username
+        return self.user.first_name + " " + self.user.last_name
 
     # plural name of the model
     class Meta:
