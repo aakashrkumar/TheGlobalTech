@@ -96,7 +96,7 @@ class ProjectPage(Page, ContentImportMixin):
 
     content_panels = Page.content_panels + [
         FieldPanel('date'),
-        FieldPanel('project_authors', widget=AuthorsWidget(UserProfile)),
+        FieldPanel('project_authors', widget=AuthorsWidget),
         ImageChooserPanel('project_image'),
         FieldPanel('body', classname="full"),
         InlinePanel('related_links', label="Related links"),
