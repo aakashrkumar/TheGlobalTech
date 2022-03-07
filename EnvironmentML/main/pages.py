@@ -66,7 +66,7 @@ class AboutUSPage(Page):
 class ProjectPage(Page, ContentImportMixin):
     # Database fields
     mapper_class = MyMapper
-    project_authors = ParentalManyToManyField('main.UserProfile', related_name='project_authors', on_delete=models.SET_NULL, blank=True, null=True)
+    project_authors = ParentalManyToManyField('main.UserProfile', related_name='project_authors')
     date = models.DateField("Post date")
 
     body = StreamField([
