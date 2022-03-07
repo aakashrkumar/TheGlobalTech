@@ -14,8 +14,12 @@
         <p>Authors</p>
         <hr>
         {% for author in page.authors.all %}
-        {{author.user.first_name}} {{author.user.last_name}}
-        {% if not forloop.last %}, {% endif %}
+        <a href="/team/{{author.user.username|spaceUnderscore}}">
+            <div class="project-card draw image-cover-shadow" style="overflow: hidden">
+                <img src="/static/media/{{ author.userprofile.avatar }}" class="" style="width: 100%; height: 100%; object-fit:cover;"/>
+                <div class="authorInfo">{{author.first_name}} {{author.last_name}}</div>
+            </div>
+        </a>
         {% endfor %}
     </div>
     <br>
