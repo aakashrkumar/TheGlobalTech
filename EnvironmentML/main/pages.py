@@ -1,4 +1,5 @@
 from django.db import models
+from django import forms
 from django.contrib.auth.models import User
 from modelcluster.fields import ParentalKey, ParentalManyToManyField
 from wagtail.core.blocks import CharBlock, RichTextBlock
@@ -97,9 +98,11 @@ class ProjectPage(Page, ContentImportMixin):
 
     content_panels = Page.content_panels + [
         FieldPanel('date'),
+        FieldPanel('categories', widget=forms.CheckboxSelectMultiple),
         ImageChooserPanel('project_image'),
         FieldPanel('body', classname="full"),
         InlinePanel('related_links', label="Related links"),
+
     ]
 
     promote_panels = [
