@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     # added
     "tinymce",
     "jquery",
-    'django_select2 ',
+    'django_select2',
     # wagtail
     "wagtail.contrib.table_block",
     'wagtail.contrib.sitemaps',
