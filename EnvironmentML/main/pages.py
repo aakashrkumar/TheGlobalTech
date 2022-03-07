@@ -112,8 +112,8 @@ class ProjectPage(Page, ContentImportMixin):
 
 
 class Authors(Orderable):
-    page = ParentalKey(ProjectPage, on_delete=models.CASCADE, related_name='authors')
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    page = ParentalKey(ProjectPage, on_delete=models.SET_NULL, related_name='authors')
+    user = models.ForeignKey(User, on_delete=models.SET_NULL)
 
     panels = [
         FieldPanel('user'),
