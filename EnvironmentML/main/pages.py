@@ -89,13 +89,13 @@ class ProjectPage(Page, ContentImportMixin):
     search_fields = Page.search_fields + [
         index.SearchField('body'),
         index.FilterField('date'),
-        index.FilterField('project_authors'),
     ]
 
     # Editor panels configuration
 
     content_panels = Page.content_panels + [
         FieldPanel('date'),
+        InlinePanel('project_authors', label="Authors"),
         ImageChooserPanel('project_image'),
         FieldPanel('body', classname="full"),
         InlinePanel('related_links', label="Related links"),
