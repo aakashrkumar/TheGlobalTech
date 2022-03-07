@@ -66,7 +66,7 @@ class AboutUSPage(Page):
 class ProjectPage(Page, ContentImportMixin):
     # Database fields
     mapper_class = MyMapper
-    authors = ParentalManyToManyField('main.UserProfile', related_name='project_authors')
+    project_authors = ParentalManyToManyField('main.UserProfile')
     date = models.DateField("Post date")
 
     body = StreamField([
@@ -95,7 +95,7 @@ class ProjectPage(Page, ContentImportMixin):
 
     content_panels = Page.content_panels + [
         FieldPanel('date'),
-        InlinePanel('authors', label="Authors"),
+        InlinePanel('project_authors', label="Authors"),
         ImageChooserPanel('project_image'),
         FieldPanel('body', classname="full"),
         InlinePanel('related_links', label="Related links"),
