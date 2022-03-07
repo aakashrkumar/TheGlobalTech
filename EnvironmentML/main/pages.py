@@ -116,7 +116,7 @@ class Authors(Orderable):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     panels = [
-        FieldPanel('user', label="Author"),
+        FieldPanel('user'),
     ]
 
 
