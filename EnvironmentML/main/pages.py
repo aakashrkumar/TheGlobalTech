@@ -1,7 +1,3 @@
-from django.db import models
-from django import forms
-from django.contrib.auth.models import User
-from modelcluster.fields import ParentalKey, ParentalManyToManyField
 from wagtail.core.blocks import CharBlock, RichTextBlock
 
 from wagtail.core.models import Page, Orderable
@@ -11,7 +7,6 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.search import index
 from wagtail.images.blocks import ImageChooserBlock
 
-from wagtail.core import blocks
 from wagtail_content_import.models import ContentImportMixin
 from wagtailcodeblock.blocks import CodeBlock
 
@@ -20,7 +15,7 @@ from .mapper import MyMapper, BaseStreamBlock
 from wagtail.contrib.table_block.blocks import TableBlock
 from modelcluster.fields import ParentalKey, ParentalManyToManyField
 
-from widgets import *
+from .widgets import *
 
 
 class HomePage(Page):
@@ -101,7 +96,7 @@ class ProjectPage(Page, ContentImportMixin):
 
     content_panels = Page.content_panels + [
         FieldPanel('date'),
-        FieldPanel('project_authors', widget=AuthorWidget),
+        FieldPanel('project_authors', widget=AuthorWidget  ),
         ImageChooserPanel('project_image'),
         FieldPanel('body', classname="full"),
         InlinePanel('related_links', label="Related links"),
