@@ -22,10 +22,6 @@
 !important z-index: 10;
 }
 
-.image-cover-shadow img {
-    z-index: -1; !important;
-}
-
 .project-card:hover {
     border: 2px solid dodgerblue;
 }
