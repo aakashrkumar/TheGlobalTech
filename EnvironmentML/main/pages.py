@@ -19,6 +19,7 @@ from .modelsData import *
 from .mapper import MyMapper, BaseStreamBlock
 from wagtail.contrib.table_block.blocks import TableBlock
 from modelcluster.fields import ParentalKey, ParentalManyToManyField
+from django_select2 import forms as s2forms
 
 
 class HomePage(Page):

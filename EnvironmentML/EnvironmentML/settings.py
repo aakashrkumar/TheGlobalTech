@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     # added
     "tinymce",
     "jquery",
+    'django_select2 ',
     # wagtail
     "wagtail.contrib.table_block",
     'wagtail.contrib.sitemaps',
@@ -118,6 +119,18 @@ DATABASES = {
         'PORT': '3306',
     }
 }
+
+CACHES = {
+    # … default cache config and others
+    "select2": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/2",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+SELECT2_CACHE_BACKEND = "select2"
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
