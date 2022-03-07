@@ -31,7 +31,7 @@
 }
 
 .image-cover-shadow img {
-    position: absolute;
+    position: relative;
     z-index: -1;
 }
 
