@@ -2,11 +2,16 @@
     min-height: 100vh;
 }
 
+h1 {
+    font-weight: 300;
+    position: relative;
+}
+
 body {
     margin: 0;
     padding: 0;
     background-color: #F9F9F9;
-    font-family: Helvetica, sans-serif;
+    font-family: 'Lato', sans-serif;
     height: 100%;
     width: 100%;
     overflow-x: hidden;
