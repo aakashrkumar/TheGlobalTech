@@ -3,14 +3,14 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/project.css'%}">
 {% if page.project_image %}
-{% image page.project_image fill-2560x1000 as image %}
+{% image page.project_image fill-2560x1300 as image %}
 <div class="container-fluid banner-project-image" style="background-image:url('{{ image.url }}')">
     <div class="container">
         <div class="row">
             <div class="col-md-7">
                 <h1>{{ page.title }}</h1>
                 {% if page.subtitle %}
-                <p class="stand-first">{{ page.subtitle }}</p>
+                <p class="banner-subtitle">{{ page.subtitle }}</p>
                 {% endif %}
             </div>
         </div>
