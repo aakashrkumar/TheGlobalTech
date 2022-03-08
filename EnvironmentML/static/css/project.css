@@ -40,7 +40,7 @@
 
 .authorInfo {
     position: absolute;
-    top: 8px;
+    bottom: 8px;
     left: 8px;
     text-decoration: none;
     color: white;
