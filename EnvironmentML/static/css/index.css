@@ -5,13 +5,14 @@
 h1 {
     font-weight: 300;
     position: relative;
+    font-family: 'Lato', sans-serif;
 }
 
 body {
     margin: 0;
     padding: 0;
     background-color: #F9F9F9;
-    font-family: 'Lato', sans-serif;
+    font-family: Calibri, sans-serif;
     height: 100%;
     width: 100%;
     overflow-x: hidden;
