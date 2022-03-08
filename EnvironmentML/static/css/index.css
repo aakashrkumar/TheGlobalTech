@@ -2,47 +2,15 @@
     min-height: 100vh;
 }
 
-h1 {
-    font-weight: 300;
-    font-family: 'Lato', sans-serif;
-    position: relative;
-}
-
 body {
     margin: 0;
     padding: 0;
     background-color: #F9F9F9;
-    font-size: 19px;
-    font-family: Calibri, serif;
+    font-family: 'Alegreya', serif;
     height: 100%;
     width: 100%;
     overflow-x: hidden;
     min-height: 100vh;
-}
-
-@media (min-width: 768px) {
-    h1 {
-        font-size: 60px;
-    }
-
-    .stand-first {
-        font-size: 26px;
-    }
-
-    .intro {
-        font-size: 30px;
-        margin: 0 0 60px;
-    }
-
-    p {
-        margin: 0 0 30px;
-    }
-}
-
-@media (min-width: 768px) {
-    body {
-        font-size: 22px;
-    }
 }
 
 /* enable smooth scrolling */
