@@ -17,6 +17,9 @@
             crossorigin="anonymous"></script>
     <script src="{% static 'js/index.js' %}"></script>
 
+    {% load wagtailfontawesome %}
+    {% fontawesome_css %}
+
     <script src="{% static 'tinymce/tinymce.min.js' %}"></script>
     <script>
         tinyMCE.init({
