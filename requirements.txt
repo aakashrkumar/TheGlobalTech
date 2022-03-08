@@ -8,3 +8,4 @@ wagtailcodeblock
 wagtailfontawesome
 wagtail
 wagtail-content-import
+django-jquery
