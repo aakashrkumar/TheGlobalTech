@@ -2,6 +2,32 @@
 {% load static wagtailcore_tags wagtailimages_tags %}
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/project.css'%}">
+{% if page.image %}
+{% image page.image fill-1920x600 as image %}
+<div class="container-fluid banner-project-image" style="background-image:url('{{ image.url }}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h1>{{ page.title }}</h1>
+                {% if page.subtitle %}
+                <p class="stand-first">{{ page.subtitle }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-7">
+            <h1>{{ page.title }}</h1>
+            {% if page.subtitle %}
+            <p class="stand-first">{{ page.subtitle }}</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endif %}
 <!-- add headline to the bottom left-->
 <div class="article-container shadow" style="background-color: #FFFFFF;">
     <br>
