@@ -2,8 +2,8 @@
 {% load static wagtailcore_tags wagtailimages_tags %}
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/project.css'%}">
-{% if page.image %}
-{% image page.image fill-1920x600 as image %}
+{% if page.project_image %}
+{% image page.project_image fill-1920x600 as image %}
 <div class="container-fluid banner-project-image" style="background-image:url('{{ image.url }}')">
     <div class="container">
         <div class="row">
