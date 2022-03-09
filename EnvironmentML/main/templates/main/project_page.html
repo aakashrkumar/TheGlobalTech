@@ -14,7 +14,8 @@
                 {% endif %}
                 <hr>
                 {% for author in page.authors %}
-                <p class="banner-author">{{ author.user.first_name }} {{ author.user.last_name }}</p>
+                By
+                <a class="banner-author">{{ author.user.first_name }} {{ author.user.last_name }}</a>
                 {% if not forloop.last %}, {% endif %}
                 {% endfor %}
             </div>
