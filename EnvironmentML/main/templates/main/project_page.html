@@ -12,6 +12,11 @@
                 {% if page.subtitle %}
                 <p class="banner-subtitle">{{ page.subtitle }}</p>
                 {% endif %}
+                <hr>
+                {% for author in page.authors %}
+                <p class="banner-author">{{ author.user.first_name }} {{ author.user.last_name }}</p>
+                {% if not forloop.last %}, {% endif %}
+                {% endfor %}
             </div>
         </div>
     </div>
