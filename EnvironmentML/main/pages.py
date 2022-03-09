@@ -114,7 +114,7 @@ class ProjectPage(Page, ContentImportMixin):
         FieldPanel('date'),
         InlinePanel('authors', label="Authors"),
         ImageChooserPanel('project_image'),
-        FieldPanel('body', classname="full"),
+        StreamFieldPanel('body', classname="full"),
         InlinePanel('related_links', label="Related links"),
         FieldPanel('tags'),
     ]
