@@ -1,4 +1,4 @@
-from wagtail.core.blocks import CharBlock, RichTextBlock
+from wagtail.core.blocks import CharBlock, RichTextBlock, StructBlock
 
 from wagtail.core.models import Page, Orderable
 from wagtail.core.fields import RichTextField, StreamField
@@ -186,6 +186,14 @@ class AuthorPage(Page):
         return type(parent) == AboutUSPage
 
 
+class InfoBlock(StructBlock):
+    title = CharBlock()
+    body = RichTextBlock()
+
+    class Meta:
+        icon = 'title'
+
+
 class HomePage(Page):
     """
     Homepage model
@@ -193,6 +201,10 @@ class HomePage(Page):
     # define custom template file
     template = "main/home.html"
     projectPages = ProjectPage.objects.filter(live=True).order_by('-date')
+
+    info_structs = StreamField([
+        ('info_block', InfoBlock())
+    ])
 
     @classmethod
     def can_create_at(cls, parent):
