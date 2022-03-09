@@ -19,17 +19,31 @@ from modelcluster.fields import ParentalKey, ParentalManyToManyField
 from modelcluster.contrib.taggit import ClusterTaggableManager
 
 
-class HomePage(Page):
+class PrivacyPolicyPage(Page):
     """
-    Homepage model
+    PrivacyPolicy model
     """
-    # define custom template file
-    template = "main/home.html"
+
+    template = "main/privacypolicy.html"
 
     @classmethod
     def can_create_at(cls, parent):
         # You can only create one of these!
-        return super(HomePage, cls).can_create_at(parent) \
+        return super(PrivacyPolicyPage, cls).can_create_at(parent) \
+               and not cls.objects.exists()
+
+
+class TermsPage(Page):
+    """
+    Terms model
+    """
+
+    template = "main/terms.html"
+
+    @classmethod
+    def can_create_at(cls, parent):
+        # You can only create one of these!
+        return super(TermsPage, cls).can_create_at(parent) \
                and not cls.objects.exists()
 
 
@@ -172,29 +186,16 @@ class AuthorPage(Page):
         return type(parent) == AboutUSPage
 
 
-class PrivacyPolicyPage(Page):
+class HomePage(Page):
     """
-    PrivacyPolicy model
+    Homepage model
     """
-
-    template = "main/privacypolicy.html"
+    # define custom template file
+    template = "main/home.html"
+    projectPages = ProjectPage.objects.filter(live=True).order_by('-date')
 
     @classmethod
     def can_create_at(cls, parent):
         # You can only create one of these!
-        return super(PrivacyPolicyPage, cls).can_create_at(parent) \
-               and not cls.objects.exists()
-
-
-class TermsPage(Page):
-    """
-    Terms model
-    """
-
-    template = "main/terms.html"
-
-    @classmethod
-    def can_create_at(cls, parent):
-        # You can only create one of these!
-        return super(TermsPage, cls).can_create_at(parent) \
+        return super(HomePage, cls).can_create_at(parent) \
                and not cls.objects.exists()
