@@ -13,11 +13,11 @@ from wagtailcodeblock.blocks import CodeBlock
 from .modelsData import *
 from .mapper import MyMapper, BaseStreamBlock
 from wagtail.contrib.table_block.blocks import TableBlock
-from modelcluster.fields import ParentalKey, ParentalManyToManyField
 from taggit.models import Tag, TaggedItemBase
-from modelcluster.contrib.taggit import ClusterTaggableManager
 
-from .widgets import *
+
+from modelcluster.fields import ParentalKey, ParentalManyToManyField
+from modelcluster.contrib.taggit import ClusterTaggableManager
 
 
 class HomePage(Page):
@@ -102,6 +102,7 @@ class ProjectPage(Page, ContentImportMixin):
         related_name='+'
     )
 
+    tags = ClusterTaggableManager(through=ProjectPageTag, blank=True)
 
     # Search index configuration
 
@@ -119,6 +120,7 @@ class ProjectPage(Page, ContentImportMixin):
         ImageChooserPanel('project_image'),
         FieldPanel('body', classname="full"),
         InlinePanel('related_links', label="Related links"),
+        FieldPanel('tags'),
     ]
 
     promote_panels = [
