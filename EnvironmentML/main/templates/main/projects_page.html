@@ -23,7 +23,6 @@
     {% endif %}
 
     <div class="row row-eq-height project-list">
-        {% if posts %}
         {% for project in page.projectPages %}
         <li class="col-xs-12 col-sm-6 col-md-3 project-list-item">
             <a href="{% pageurl project %}">
@@ -44,10 +43,6 @@
             </a>
         </li>
         {% endfor %}
-        {% else %}
-        <div class="col-md-12">
-            <p>No projects found</p>
-        </div>
         {% endif %}
     </div>
 </div>
