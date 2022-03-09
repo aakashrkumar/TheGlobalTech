@@ -2,7 +2,7 @@ from wagtail.core.blocks import CharBlock, RichTextBlock, StructBlock
 
 from wagtail.core.models import Page, Orderable
 from wagtail.core.fields import RichTextField, StreamField
-from wagtail.admin.edit_handlers import FieldPanel, MultiFieldPanel, InlinePanel
+from wagtail.admin.edit_handlers import FieldPanel, MultiFieldPanel, InlinePanel, StreamFieldPanel
 from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.search import index
 from wagtail.images.blocks import ImageChooserBlock
@@ -205,6 +205,10 @@ class HomePage(Page):
     info_structs = StreamField([
         ('info_block', InfoBlock())
     ])
+
+    content_panels = Page.content_panels + [
+        StreamFieldPanel('info_structs'),
+    ]
 
     @classmethod
     def can_create_at(cls, parent):
