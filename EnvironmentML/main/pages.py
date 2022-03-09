@@ -63,6 +63,15 @@ class AboutUSPage(Page):
                and not cls.objects.exists()
 
 
+class ProjectPageTag(TaggedItemBase):
+    """
+    This model allows us to create a many-to-many relationship between
+    the BlogPage object and tags. There's a longer guide on using it at
+    https://docs.wagtail.org/en/stable/reference/pages/model_recipes.html#tagging
+    """
+    content_object = ParentalKey('ProjectPage', related_name='tagged_items', on_delete=models.CASCADE)
+
+
 class ProjectPage(Page, ContentImportMixin):
     # Database fields
     mapper_class = MyMapper
@@ -98,14 +107,17 @@ class ProjectPage(Page, ContentImportMixin):
     ]
 
     # Editor panels configuration
+    tags = ClusterTaggableManager(through=ProjectPageTag, blank=True)
 
     content_panels = Page.content_panels + [
         FieldPanel('subtitle', classname="full"),
+        FieldPanel('introduction', classname="full"),
         FieldPanel('date'),
         InlinePanel('authors', label="Authors"),
         ImageChooserPanel('project_image'),
         FieldPanel('body', classname="full"),
         InlinePanel('related_links', label="Related links"),
+        FieldPanel('tags'),
     ]
 
     promote_panels = [
