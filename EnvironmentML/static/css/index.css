@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #F9F9F9;
+    font-size: 26px;
     font-family: Times, Calibri, serif;
     height: 100%;
     width: 100%;
@@ -13,6 +14,11 @@ body {
     min-height: 100vh;
 }
 
+@media (min-width: 768px) {
+    body {
+        font-size: 22px;
+    }
+}
 
 /* enable smooth scrolling */
 html {
