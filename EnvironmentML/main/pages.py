@@ -79,6 +79,11 @@ class ProjectPage(Page, ContentImportMixin):
     # Database fields
     mapper_class = MyMapper
     date = models.DateField("Post date")
+    subtitle = models.CharField(blank=True, max_length=255)
+    introduction = models.TextField(
+        help_text='Text to describe the page',
+        blank=False
+    )
 
     body = StreamField([
         ('code', CodeBlock(label='Any code', default_language='python')),
@@ -107,6 +112,7 @@ class ProjectPage(Page, ContentImportMixin):
     # Editor panels configuration
 
     content_panels = Page.content_panels + [
+        FieldPanel('subtitle', classname="full"),
         FieldPanel('date'),
         InlinePanel('authors', label="Authors"),
         ImageChooserPanel('project_image'),
