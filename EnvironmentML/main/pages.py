@@ -193,6 +193,12 @@ class InfoBlock(StructBlock):
     class Meta:
         icon = 'title'
 
+    def get_context(self, value, parent_context=None):
+        ctx = super().get_context(value, parent_context=parent_context)
+        ctx['title'] = value['title']
+        ctx['body'] = value['body']
+        return ctx
+
 
 class HomePage(Page):
     """
