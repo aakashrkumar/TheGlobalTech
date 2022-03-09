@@ -174,7 +174,7 @@ class ProjectsPage(Page):
         context = super(ProjectsPage, self).get_context(request)
         context['posts'] = ProjectPage.objects.descendant_of(
             self).live().order_by(
-            '-date_published')
+            '-date')
         return context
 
     @route(r'^tags/$', name='tag_archive')
