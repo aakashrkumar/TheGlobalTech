@@ -59,7 +59,7 @@
         <br>
         <div class="home-cards">
             {% for info_block in page.info_structs %}
-            <div class="card text-black bg-white mb-3 shadow-sm home-card" style="width: 300px; height: 300px">
+            <div class="card text-black bg-white mb-3 shadow-sm home-card" style="width: 400px; height: 400px">
                 <h3 class="card-title" style="text-align: center; font-weight: bold; margin-top: 10px">{{ info_block.value.title }}</h3>
                 <div class="card-body text-muted card-text" style="text-align: justify; font-size: 24px">
                         {{ info_block.value.body|richtext }}
