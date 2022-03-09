@@ -47,21 +47,6 @@ class TermsPage(Page):
                and not cls.objects.exists()
 
 
-class ProjectsPage(Page):
-    """
-    ProjectsPage model
-    """
-    # define custom template file
-    template = "main/projects.html"
-    projects = Project.objects.all()
-
-    @classmethod
-    def can_create_at(cls, parent):
-        # You can only create one of these!
-        return super(ProjectsPage, cls).can_create_at(parent) \
-               and not cls.objects.exists()
-
-
 class AboutUSPage(Page):
     """
     AboutUSPage model
@@ -142,6 +127,21 @@ class ProjectPage(Page, ContentImportMixin):
     def can_create_at(cls, parent):
         # You can only create one of these!
         return type(parent) == ProjectsPage
+
+
+class ProjectsPage(Page):
+    """
+    ProjectsPage model
+    """
+    # define custom template file
+    template = "main/projects.html"
+    projectPages = ProjectPage.objects.all().filter(live=True).order_by('-date')
+
+    @classmethod
+    def can_create_at(cls, parent):
+        # You can only create one of these!
+        return super(ProjectsPage, cls).can_create_at(parent) \
+               and not cls.objects.exists()
 
 
 class Authors(Orderable):
