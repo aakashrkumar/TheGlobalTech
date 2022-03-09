@@ -13,6 +13,7 @@ body {
     min-height: 100vh;
 }
 
+
 /* enable smooth scrolling */
 html {
     scroll-behavior: smooth;
