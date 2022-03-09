@@ -78,7 +78,9 @@ class ProjectPageTag(TaggedItemBase):
 class ProjectPage(Page, ContentImportMixin):
     # Database fields
     mapper_class = MyMapper
+
     date = models.DateField("Post date")
+
     subtitle = models.CharField(blank=True, max_length=255)
     introduction = models.TextField(
         help_text='Text to describe the page',
