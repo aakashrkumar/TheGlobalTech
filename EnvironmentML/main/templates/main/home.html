@@ -24,8 +24,9 @@
                 <div class="carousel-inner">
                     <{% for project in page.projects %}
                     {% if forloop.first %}
+                    {% image project.project_image fill-400x400 as project_image %}
                     <div class="carousel-item active homepageslide ">
-                        <img class="d-block" src="/media/{{ project.project_image }}" style="width:100%;height: 100%; object-fit: cover;"
+                        <img class="d-block" src="{{ project_image.url }}" style="width:100%;height: 100%; object-fit: cover;"
                              alt="{{ project.project_name }}">
                         <!--div class="carousel-caption d-none d-md-block" style="font-family: Roboto, sans-serif;">
                             <h5>{{ project.project_name }}</h5>
@@ -33,7 +34,7 @@
                     </div>
                     {% else %}
                     <div class="carousel-item homepageslide">
-                        <img class="d-block" src="/media/{{ project.project_image }}" style="width:100%;height: 100%; object-fit: cover;"
+                        <img class="d-block" src="{{ project_image.url }}" style="width:100%;height: 100%; object-fit: cover;"
                              alt="{{ project.project_name }}">
                         <!--div class="carousel-caption d-none d-md-block">
                             <h5>{{ project.project_name }}</h5>
@@ -95,7 +96,8 @@
             {% for project in page.projectPages|slice:"0:3"%}
             <a href="/projects/{{project.slug}}/">
                 <div class="project-card draw image-cover-shadow" style="overflow: hidden">
-                    <img src="/media/{{ project.project_image }}" class="" style="width: 100%; height: 100%; object-fit:cover;"/>
+                    {% image project.project_image fill-400x400 as project_image %}
+                    <img src="{{ project_image.url }}" class="" style="width: 100%; height: 100%; object-fit:cover;"/>
                     <div class="publishDate">Published on {{project.project_date.date}}</div>
                     <div class="projectInfo">{{project.project_name}}</div>
                 </div>
