@@ -129,21 +129,6 @@ class ProjectPage(Page, ContentImportMixin):
         return type(parent) == ProjectsPage
 
 
-class ProjectsPage(Page):
-    """
-    ProjectsPage model
-    """
-    # define custom template file
-    template = "main/projects.html"
-    projectPages = ProjectPage.objects.all().filter(live=True).order_by('-date')
-
-    @classmethod
-    def can_create_at(cls, parent):
-        # You can only create one of these!
-        return super(ProjectsPage, cls).can_create_at(parent) \
-               and not cls.objects.exists()
-
-
 class Authors(Orderable):
     page = ParentalKey(ProjectPage, on_delete=models.SET_NULL, related_name='authors', null=True)
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
@@ -162,6 +147,21 @@ class ProjectPageRelatedLink(Orderable):
         FieldPanel('name'),
         FieldPanel('url'),
     ]
+
+
+class ProjectsPage(Page):
+    """
+    ProjectsPage model
+    """
+    # define custom template file
+    template = "main/projects_page.html"
+    projectPages = ProjectPage.objects.all().filter(live=True).order_by('-date')
+
+    @classmethod
+    def can_create_at(cls, parent):
+        # You can only create one of these!
+        return super(ProjectsPage, cls).can_create_at(parent) \
+               and not cls.objects.exists()
 
 
 class AuthorPage(Page):

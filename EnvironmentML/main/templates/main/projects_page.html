@@ -15,7 +15,7 @@
     {% endif %}
 
     {% if page.get_child_tags %}
-    <ul class="blog-tags tags list-inline">
+    <ul class="project-tags tags list-inline">
         {% for tag in page.get_child_tags %}
         <li><a href="{{ tag.url }}">{{ tag }}</a></li>
         {% endfor %}
