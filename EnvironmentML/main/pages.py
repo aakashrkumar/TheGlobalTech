@@ -1,3 +1,6 @@
+from django.contrib import messages
+from django.shortcuts import redirect, render
+from wagtail.contrib.routable_page.models import route
 from wagtail.core.blocks import CharBlock, RichTextBlock, StructBlock
 
 from wagtail.core.models import Page, Orderable
@@ -156,12 +159,63 @@ class ProjectsPage(Page):
     # define custom template file
     template = "main/projects_page.html"
     projectPages = ProjectPage.objects.all().filter(live=True).order_by('-date')
+    subpage_types = ['ProjectPage']
 
     @classmethod
     def can_create_at(cls, parent):
         # You can only create one of these!
         return super(ProjectsPage, cls).can_create_at(parent) \
                and not cls.objects.exists()
+
+    def children(self):
+        return self.get_children().specific().live()
+
+    def get_context(self, request):
+        context = super(ProjectsPage, self).get_context(request)
+        context['posts'] = ProjectPage.objects.descendant_of(
+            self).live().order_by(
+            '-date_published')
+        return context
+
+    @route(r'^tags/$', name='tag_archive')
+    @route(r'^tags/([\w-]+)/$', name='tag_archive')
+    def tag_archive(self, request, tag=None):
+
+        try:
+            tag = Tag.objects.get(slug=tag)
+        except Tag.DoesNotExist:
+            if tag:
+                msg = 'There are no projects tagged with "{}"'.format(tag)
+                messages.add_message(request, messages.INFO, msg)
+            return redirect(self.url)
+
+        posts = self.get_posts(tag=tag)
+        context = {
+            'tag': tag,
+            'posts': posts
+        }
+        return render(request, 'main/projects_page.html', context)
+
+    def serve_preview(self, request, mode_name):
+        # Needed for previews to work
+        return self.serve(request)
+
+    # Returns the child BlogPage objects for this BlogPageIndex.
+    # If a tag is used then it will filter the posts by tag.
+    def get_posts(self, tag=None):
+        posts = ProjectPage.objects.live().descendant_of(self)
+        if tag:
+            posts = posts.filter(tags=tag)
+        return posts
+
+    # Returns the list of Tags for all child posts of this BlogPage.
+    def get_child_tags(self):
+        tags = []
+        for post in self.get_posts():
+            # Not tags.append() because we don't want a list of lists
+            tags += post.get_tags
+        tags = sorted(set(tags))
+        return tags
 
 
 class AuthorPage(Page):
