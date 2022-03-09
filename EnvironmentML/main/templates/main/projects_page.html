@@ -22,25 +22,23 @@
     </ul>
     {% endif %}
 
-    <div class="row row-eq-height blog-list">
+    <div class="row row-eq-height project-list">
         {% if posts %}
-        {% for blog in posts %}
-        <li class="col-xs-12 col-sm-6 col-md-3 blog-list-item">
-            <a href="{% pageurl blog %}">
+        {% for project in page.projectPages %}
+        <li class="col-xs-12 col-sm-6 col-md-3 project-list-item">
+            <a href="{% pageurl project %}">
                 <div class="image">
-                    {% image blog.image fill-850x450-c50 as image %}
+                    {% image project.project_image fill-850x450-c50 as image %}
                     <img src="{{ image.url }}" width="{{ image.width }}" height="{{ image.height }}" alt="{{ image.alt }}" class=""/>
                 </div>
                 <div class="text">
-                    <h2 class="blog-list-title">{{ blog.title }}</h2>
-                    <p>{{ blog.introduction|truncatewords:15 }}</p>
+                    <h2 class="project-list-title">{{ project.title }}</h2>
+                    <p>{{ project.introduction|truncatewords:15 }}</p>
                 </div>
                 <div class="small footer">
-                    {% if blog.date_published %}
-                    {{ blog.date_published }} by
-                    {% endif %}
-                    {% for author in blog.authors %}
-                    {{ author }}{% if not forloop.last %}, {% endif %}
+                    {{ project.date_published }} by
+                    {% for author in project.authors %}
+                    {{ author.user.first_name }} {{ author.user.last_name }} {% if not forloop.last %}, {% endif %}
                     {% endfor %}
                 </div>
             </a>
