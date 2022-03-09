@@ -96,12 +96,12 @@
 }
 
 .project-list-item:hover img {
-    opacity: 0.3;
+    opacity: 1;
 }
 
 .project-list-item .image {
     overflow: hidden;
-    background-color: #c9fff1;
+    background-color: #afeee7;
     flex: 1 0 auto;
 }
 
