@@ -15,7 +15,6 @@ from .mapper import MyMapper, BaseStreamBlock
 from wagtail.contrib.table_block.blocks import TableBlock
 from taggit.models import Tag, TaggedItemBase
 
-
 from modelcluster.fields import ParentalKey, ParentalManyToManyField
 from modelcluster.contrib.taggit import ClusterTaggableManager
 
@@ -26,8 +25,6 @@ class HomePage(Page):
     """
     # define custom template file
     template = "main/home.html"
-    projectPage = ParentalKey('ProjectPage', related_name='home_page', on_delete=models.SET_NULL, null=True)
-    content_panels = Page.content_panels + [projectPage]
 
     @classmethod
     def can_create_at(cls, parent):
@@ -66,8 +63,6 @@ class AboutUSPage(Page):
                and not cls.objects.exists()
 
 
-
-
 class ProjectPage(Page, ContentImportMixin):
     # Database fields
     mapper_class = MyMapper
@@ -95,7 +90,6 @@ class ProjectPage(Page, ContentImportMixin):
         related_name='+'
     )
 
-
     # Search index configuration
 
     search_fields = Page.search_fields + [
@@ -122,7 +116,6 @@ class ProjectPage(Page, ContentImportMixin):
     def can_create_at(cls, parent):
         # You can only create one of these!
         return type(parent) == ProjectsPage
-
 
 
 class Authors(Orderable):
