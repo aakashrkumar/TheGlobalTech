@@ -13,7 +13,7 @@
                 <p class="banner-subtitle">{{ page.subtitle }}</p>
                 {% endif %}
                 <hr>
-                {% for author in page.authors %}
+                {% for author in page.authors.all %}
                 By
                 <a class="banner-author">{{ author.user.first_name }} {{ author.user.last_name }}</a>
                 {% if not forloop.last %}, {% endif %}
