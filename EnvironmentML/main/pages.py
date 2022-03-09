@@ -131,6 +131,21 @@ class ProjectPage(Page, ContentImportMixin):
         # You can only create one of these!
         return type(parent) == ProjectsPage
 
+    @property
+    def get_tags(self):
+        """
+        Similar to the authors function above we're returning all the tags that
+        are related to the blog post into a list we can access on the template.
+        We're additionally adding a URL to access BlogPage objects with that tag
+        """
+        tags = self.tags.all()
+        for tag in tags:
+            tag.url = '/' + '/'.join(s.strip('/') for s in [
+                self.get_parent().url,
+                'tags',
+                tag.slug
+            ])
+        return tags
 
 class Authors(Orderable):
     page = ParentalKey(ProjectPage, on_delete=models.SET_NULL, related_name='authors', null=True)
