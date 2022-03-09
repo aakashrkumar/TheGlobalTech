@@ -66,13 +66,6 @@ class AboutUSPage(Page):
                and not cls.objects.exists()
 
 
-class ProjectPageTag(TaggedItemBase):
-    """
-    This model allows us to create a many-to-many relationship between
-    the ProjectPage object and tags. There's a longer guide on using it at
-    https://docs.wagtail.org/en/stable/reference/pages/model_recipes.html#tagging
-    """
-    content_object = ParentalKey('ProjectPage', related_name='tagged_items', on_delete=models.SET_NULL, null=True)
 
 
 class ProjectPage(Page, ContentImportMixin):
@@ -102,7 +95,6 @@ class ProjectPage(Page, ContentImportMixin):
         related_name='+'
     )
 
-    tags = ClusterTaggableManager(through=ProjectPageTag, blank=True)
 
     # Search index configuration
 
@@ -120,7 +112,6 @@ class ProjectPage(Page, ContentImportMixin):
         ImageChooserPanel('project_image'),
         FieldPanel('body', classname="full"),
         InlinePanel('related_links', label="Related links"),
-        FieldPanel('tags'),
     ]
 
     promote_panels = [
@@ -132,21 +123,6 @@ class ProjectPage(Page, ContentImportMixin):
         # You can only create one of these!
         return type(parent) == ProjectsPage
 
-    @property
-    def get_tags(self):
-        """
-        Similar to the authors function above we're returning all the tags that
-        are related to the blog post into a list we can access on the template.
-        We're additionally adding a URL to access BlogPage objects with that tag
-        """
-        tags = self.tags.all()
-        for tag in tags:
-            tag.url = '/' + '/'.join(s.strip('/') for s in [
-                self.get_parent().url,
-                'tags',
-                tag.slug
-            ])
-        return tags
 
 
 class Authors(Orderable):
