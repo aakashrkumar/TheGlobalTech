@@ -102,7 +102,6 @@ class ProjectPage(Page, ContentImportMixin):
         related_name='+'
     )
 
-    tags = ClusterTaggableManager(through=ProjectPageTag, blank=True)
 
     # Search index configuration
 
@@ -120,7 +119,6 @@ class ProjectPage(Page, ContentImportMixin):
         ImageChooserPanel('project_image'),
         FieldPanel('body', classname="full"),
         InlinePanel('related_links', label="Related links"),
-        FieldPanel('tags'),
     ]
 
     promote_panels = [
