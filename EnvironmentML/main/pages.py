@@ -125,6 +125,8 @@ class ProjectPage(Page, ContentImportMixin):
     promote_panels = [
         MultiFieldPanel(Page.promote_panels, "Common page configuration"),
     ]
+    subpage_types = []
+    parent_page_types = ['ProjectsPage']
 
     @classmethod
     def can_create_at(cls, parent):
