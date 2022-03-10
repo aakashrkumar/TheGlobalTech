@@ -58,6 +58,7 @@
 a, a:focus, a:visited {
     color: #4DB4D7;
     text-decoration: none;
+    display: inline;
 }
 
 a:hover {
@@ -93,10 +94,6 @@ a.btn-sm {
     font-size: 10px;
     line-height: normal;
     padding: 6px 8px;
-}
-
-h1 {
-    display: inline;
 }
 
 
