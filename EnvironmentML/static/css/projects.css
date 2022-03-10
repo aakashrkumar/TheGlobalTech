@@ -95,6 +95,11 @@ a.btn-sm {
     padding: 6px 8px;
 }
 
+h1 {
+    display: inline;
+}
+
+
 /* New */
 .project-tags > li {
     border-right: 1px solid rgba(0, 0, 0, 0.1);
