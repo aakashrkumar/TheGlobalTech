@@ -233,7 +233,6 @@ class ProjectsPage(RoutablePageMixin, Page):
     # Returns the list of Tags for all child posts of this BlogPage.
     def get_child_tags(self):
         tags = []
-        tags += Tag.objects.all()
         for post in ProjectPage.objects.live():
             # Not tags.append() because we don't want a list of lists
             tags += post.get_tags
