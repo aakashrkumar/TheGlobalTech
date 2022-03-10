@@ -104,7 +104,10 @@ a.btn-sm {
     margin-left: -6px;
     padding: 4px 18px;
     text-transform: uppercase;
-    float: left;
+}
+
+.project-tags li {
+    display: inline;
 }
 
 .project-tags > li:first-child {
