@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{% static 'css/project.css'%}">
 {% if page.project_image %}
 {% image page.project_image fill-2560x1300 as image %}
-<div class="container-fluid banner-project-image" style="background-image:url('{{ image.url }}')">
+<div class="container-fluid banner-project-image" style="background-image:url('{{ image.url }}'); {{ image.background_position_style }}">
     <div class="container">
         <div class="row">
             <div class="col-md-7">
@@ -16,7 +16,8 @@
                     <hr>
                     {% for author in page.authors.all %}
                     By
-                    <a class="banner-author" href="/team/{{ author.user.userprofile.slug }}">{{ author.user.first_name }} {{ author.user.last_name }}</a>{% if not forloop.last %}, {% endif %}
+                    <a class="banner-author" href="/team/{{ author.user.userprofile.slug }}">{{ author.user.first_name }} {{ author.user.last_name }}</a>{% if not forloop.last %},
+                    {% endif %}
                     {% endfor %}
                 </div>
             </div>
