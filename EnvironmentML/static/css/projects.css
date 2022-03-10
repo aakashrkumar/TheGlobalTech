@@ -56,9 +56,6 @@
 }
 
 /* New */
-li {
-    float: left;
-}
 
 a, a:focus, a:visited {
     color: #4DB4D7;
@@ -107,6 +104,7 @@ a.btn-sm {
     margin-left: -6px;
     padding: 4px 18px;
     text-transform: uppercase;
+    float: left;
 }
 
 .project-tags > li:first-child {
