@@ -74,9 +74,6 @@
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.tags {
-    display: inline-block;
-}
 
 @media (min-width: 1025px) {
     .project-list li:first-of-type, .projectpage-listing li:first-of-type,
@@ -178,3 +175,12 @@ span.outline {
     display: inline-block;
     margin-right: 30px;
 }
+
+span.outline {
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.8em;
+    padding: 3px 6px;
+    text-transform: uppercase;
+}
+
