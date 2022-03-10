@@ -28,7 +28,7 @@
             <a href="{% pageurl project %}">
                 <div class="image">
                     {% image project.project_image fill-850x450-c100 as image %}
-                    <img src="{{ image.url }}" width="{{ image.width }}" height="{{ image.height }}" alt="{{ image.alt }}"
+                    <img src="{{ image.url }}" alt="{{ image.alt }}"
                          {% if image.focal_point %}
                          data-focus-x="{{ image.focal_point.centroid.x }}"
                          data-focus-y="{{ image.focal_point.centroid.y }}"
