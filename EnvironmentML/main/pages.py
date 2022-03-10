@@ -234,9 +234,9 @@ class ProjectsPage(RoutablePageMixin, Page):
     def get_child_tags(self):
         tags = []
         tags += Tag.objects.all()
-        #for post in self.get_all_posts():
-        #    # Not tags.append() because we don't want a list of lists
-       #     tags += post.get_tags
+        for post in ProjectPage.objects.live():
+            # Not tags.append() because we don't want a list of lists
+            tags += post.get_tags
         tags = sorted(set(tags))
         return tags
 
