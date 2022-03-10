@@ -57,7 +57,7 @@
 
 
 /* New */
-.project-tags {
+.project-tags > li {
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     font-size: 0.9em;
     margin-left: -6px;
