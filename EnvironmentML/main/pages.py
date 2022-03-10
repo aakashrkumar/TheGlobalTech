@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.shortcuts import redirect, render
-from wagtail.contrib.routable_page.models import route
+from wagtail.contrib.routable_page.models import route, RoutablePageMixin
 from wagtail.core.blocks import CharBlock, RichTextBlock, StructBlock
 
 from wagtail.core.models import Page, Orderable
@@ -169,7 +169,7 @@ class ProjectPageRelatedLink(Orderable):
     ]
 
 
-class ProjectsPage(Page):
+class ProjectsPage(RoutablePageMixin, Page):
     """
     ProjectsPage model
     """
