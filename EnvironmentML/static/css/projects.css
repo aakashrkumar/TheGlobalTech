@@ -74,8 +74,8 @@
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.project-tags li ul {
-    list-style: none;
+.tags {
+    display: inline-block;
 }
 
 @media (min-width: 1025px) {
