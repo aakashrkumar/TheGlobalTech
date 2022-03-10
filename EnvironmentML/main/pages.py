@@ -225,10 +225,14 @@ class ProjectsPage(RoutablePageMixin, Page):
             posts = posts.filter(tags=tag)
         return posts
 
+    def get_all_posts(self):
+        posts = ProjectPage.objects.live()
+        return posts
+
     # Returns the list of Tags for all child posts of this BlogPage.
     def get_child_tags(self):
         tags = []
-        for post in self.get_posts():
+        for post in self.get_all_posts():
             # Not tags.append() because we don't want a list of lists
             tags += post.get_tags
         tags = sorted(set(tags))
