@@ -83,6 +83,10 @@
     }
 }
 
+.project-list {
+    text-decoration: none;
+}
+
 .project-list-item {
     display: flex;
     flex-direction: column;
