@@ -9,20 +9,20 @@
     <br>
     <h1>Projects</h1>
     <br>
-    {% if tag %}
-    <div class="row">
-        <div class="col-md-12">
-            <p>Viewing all projects by <span class="outline">{{ tag }}</span></p>
-        </div>
-    </div>
-    {% endif %}
-
     {% if page.get_child_tags %}
     <ul class="project-tags tags list-inline">
         {% for tag in page.get_child_tags %}
         <li><a href="{{ tag.url }}">{{ tag }}</a></li>
         {% endfor %}
     </ul>
+    {% endif %}
+
+    {% if tag %}
+    <div class="row">
+        <div class="col-md-12">
+            <p>Viewing all projects by <span class="outline">{{ tag }}</span></p>
+        </div>
+    </div>
     {% endif %}
 
     <div class="row row-eq-height project-list">
