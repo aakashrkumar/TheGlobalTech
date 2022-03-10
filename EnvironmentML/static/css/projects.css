@@ -55,10 +55,14 @@
     justify-content: left;
 }
 
+/* New */
+li {
+    float: left;
+}
+
 a, a:focus, a:visited {
     color: #4DB4D7;
     text-decoration: none;
-    display: inline;
 }
 
 a:hover {
@@ -97,7 +101,6 @@ a.btn-sm {
 }
 
 
-/* New */
 .project-tags > li {
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     font-size: 0.9em;
