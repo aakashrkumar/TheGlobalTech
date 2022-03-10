@@ -74,7 +74,7 @@
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.project-tags li {
+.project-tags li ul {
     list-style: none;
 }
 
