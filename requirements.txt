@@ -9,3 +9,4 @@ wagtailfontawesome
 wagtail
 wagtail-content-import
 django-jquery
+django-allauth
