@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.apple',
+    'allauth.socialaccount.providers.github',
     'allauth.socialaccount.providers.google',
     # end allauth
     'wagtailfontawesome',
@@ -217,3 +218,31 @@ WAGTAILCONTENTIMPORT_GOOGLE_OAUTH_CLIENT_CONFIG = '{"web":{"client_id":"14364926
 WAGTAIL_CODE_BLOCK_LINE_NUMBERS = True
 WAGTAIL_CODE_BLOCK_THEME = 'okaidia'
 WAGTAILEMBEDS_RESPONSIVE_HTML = True
+# auth
+SOCIALACCOUNT_PROVIDERS = {
+    "github": {
+        # For each provider, you can choose whether or not the
+        # email address(es) retrieved from the provider are to be
+        # interpreted as verified.
+        "VERIFIED_EMAIL": True
+    },
+    "google": {
+        # For each OAuth based provider, either add a ``SocialApp``
+        # (``socialaccount`` app) containing the required client
+        # credentials, or list them here:
+        "APP": {
+            "client_id": "143649260242-lm9g7net7n84s9uqhnrrgl9qkpbi4soa.apps.googleusercontent.com",
+            "secret": "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",
+            "key": "AIzaSyBIw_uanFCGfkxhLRuaPTtAPFkXry74C3I"
+        },
+        # These are provider-specific settings that can only be
+        # listed here:
+        "SCOPE": [
+            "profile",
+            "email",
+        ],
+        "AUTH_PARAMS": {
+            "access_type": "online",
+        }
+    }
+}
