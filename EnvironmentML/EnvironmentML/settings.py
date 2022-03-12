@@ -246,3 +246,5 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
+
+SITE = 1
