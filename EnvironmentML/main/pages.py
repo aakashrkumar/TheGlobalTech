@@ -93,7 +93,7 @@ class ProjectPage(Page, ContentImportMixin):
         ('paragraph',
          RichTextBlock(classname="full",
                        features=['h1', 'h2', 'h3', 'h4', 'h5', 'code', 'bold', 'italic', 'link', 'ol', 'ul', 'hr', 'document-link', 'image', 'embed', 'blockquote',
-                                 'superscript', 'subscript', 'strikethrough', 'preformatted', 'clean', 'full-width', 'align-left', 'align-center', 'align-right']),
+                                 'superscript', 'subscript', 'strikethrough']),
          )]
     )
 
