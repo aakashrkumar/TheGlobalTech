@@ -44,7 +44,6 @@
         {% include_block page.body %}
         <br>
         <p>Authors</p>
-        <hr>
         {% for author in page.authors.all %}
         <a href="/team/{{author.user.userprofile.slug}}">
             <div class="project-card draw image-cover-shadow" style="overflow: hidden">
@@ -57,7 +56,6 @@
         <div style="min-height: 120px; min-width: 100%"></div>
         Tags
         <hr>
-        <br>
         {% for tag in page.get_tags %}
         <a href="{{ tag.url }}" class="btn btn-sm">{{ tag }}</a>
         {% endfor %}
