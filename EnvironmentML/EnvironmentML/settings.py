@@ -272,5 +272,3 @@ EMAIL_PORT = 465
 EMAIL_HOST_USER = 'apikey'
 EMAIL_HOST_PASSWORD = "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"
 DEFAULT_FROM_EMAIL = 'no-reply@theglobaltech.org'
-
-# send_mail("test", "text", "no-reply@theglobaltech.org", ["aakashinthesky@gmail.com"], fail_silently=False)
