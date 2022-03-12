@@ -42,7 +42,6 @@
     <div style="min-height: 90vh; margin:0px 30px; overflow:hidden">
         {% image page.project_image fill-1000x500-c100 as project_image %}
         {% include_block page.body %}
-        <br>
         <p>Authors</p>
         {% for author in page.authors.all %}
         <a href="/team/{{author.user.userprofile.slug}}">
