@@ -1,4 +1,4 @@
 /.idea/
 *.sqlite3
 uwsgi_params
-*.service
+*.service"sendgrid.env" 
