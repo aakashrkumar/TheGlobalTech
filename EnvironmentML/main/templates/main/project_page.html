@@ -52,7 +52,6 @@
         {% endfor %}
         {% if page.get_tags %}
         <div style="min-height: 120px; min-width: 100%"></div>
-        Tags
         <hr>
         {% for tag in page.get_tags %}
         <a href="{{ tag.url }}" class="btn btn-sm">{{ tag }}</a>
