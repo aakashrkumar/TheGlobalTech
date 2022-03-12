@@ -267,8 +267,10 @@ ACCOUNT_USERNAME_MIN_LENGTH = 3
 
 # smtp
 EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_USE_TLS = True
+EMAIL_USE_SSL = True
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = "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"
+EMAIL_HOST_PASSWORD = "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"
 DEFAULT_FROM_EMAIL = 'no-reply@theglobaltech.org'
+
+# send_mail("test", "text", "no-reply@theglobaltech.org", ["aakashinthesky@gmail.com"], fail_silently=False)
