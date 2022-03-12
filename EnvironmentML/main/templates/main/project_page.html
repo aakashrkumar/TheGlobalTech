@@ -53,6 +53,14 @@
             </div>
         </a>
         {% endfor %}
+        {% if page.get_tags %}
+        Tagged with:
+        <br/>
+        {% for tag in page.get_tags %}
+        <a href="{{ tag.url }}" class="btn btn-sm">{{ tag }}</a>
+        {% endfor %}
+        {% endif %}
+
     </div>
     <br>
 </div>
