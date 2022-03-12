@@ -6,6 +6,7 @@ from wagtail.core.blocks import CharBlock, RichTextBlock, StructBlock
 from wagtail.core.models import Page, Orderable
 from wagtail.core.fields import RichTextField, StreamField
 from wagtail.admin.edit_handlers import FieldPanel, MultiFieldPanel, InlinePanel, StreamFieldPanel
+from wagtail.embeds.blocks import EmbedBlock
 from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.search import index
 from wagtail.images.blocks import ImageChooserBlock
@@ -94,8 +95,9 @@ class ProjectPage(Page, ContentImportMixin):
          RichTextBlock(classname="full",
                        features=['h1', 'h2', 'h3', 'h4', 'h5', 'code', 'bold', 'italic', 'link', 'ol', 'ul', 'hr', 'document-link', 'image', 'embed', 'blockquote',
                                  'superscript', 'subscript', 'strikethrough']),
-         )]
-    )
+         ),
+        ('embed', EmbedBlock(width='100%')),
+    ])
 
     project_image = models.ForeignKey(
         'wagtailimages.Image',
