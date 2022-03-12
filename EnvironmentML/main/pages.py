@@ -90,7 +90,8 @@ class ProjectPage(Page, ContentImportMixin):
         ('code', CodeBlock(label='Any code', default_language='python')),
         ('heading', CharBlock()),
         ('table', TableBlock()),
-        ('paragraph', RichTextBlock())
+        ('paragraph',
+         RichTextBlock(classname="full", features=['h1', 'h2', 'h3', 'h4', 'h5', 'code', 'bold', 'italic', 'link', 'ol', 'ul', 'hr', 'document-link', 'image', 'embed'])),
     ])
 
     project_image = models.ForeignKey(
