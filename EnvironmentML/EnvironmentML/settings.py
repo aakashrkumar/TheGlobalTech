@@ -247,4 +247,4 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-SITE = 1
+SITE_ID  = 1
