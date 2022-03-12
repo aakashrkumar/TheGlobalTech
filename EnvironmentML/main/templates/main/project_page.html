@@ -53,6 +53,7 @@
             </div>
         </a>
         {% endfor %}
+        <div style="min-height: 100px; min-width: 100%"></div>
         {% if page.get_tags %}
         Tagged with:
         <br>
@@ -60,7 +61,6 @@
         <a href="{{ tag.url }}" class="btn btn-sm">{{ tag }}</a>
         {% endfor %}
         {% endif %}
-
     </div>
     <br>
 </div>
