@@ -96,7 +96,7 @@ class ProjectPage(Page, ContentImportMixin):
                        features=['h1', 'h2', 'h3', 'h4', 'h5', 'code', 'bold', 'italic', 'link', 'ol', 'ul', 'hr', 'document-link', 'image', 'embed', 'blockquote',
                                  'superscript', 'subscript', 'strikethrough']),
          ),
-        ('embed', EmbedBlock()),
+        ('embed', EmbedBlock(max_width=600, max_height=400)),
     ])
 
     project_image = models.ForeignKey(
