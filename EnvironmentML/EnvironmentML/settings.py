@@ -48,7 +48,13 @@ INSTALLED_APPS = [
     "tinymce",
     "jquery",
     'django_select2',
-    'django-allauth'
+    # all auth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.apple',
+    'allauth.socialaccount.providers.google',
+    # end allauth
     'wagtailfontawesome',
     # wagtail
     "wagtail.contrib.table_block",
