@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "tinymce",
     "jquery",
     'django_select2',
+    'django-allauth'
     'wagtailfontawesome',
     # wagtail
     "wagtail.contrib.table_block",
