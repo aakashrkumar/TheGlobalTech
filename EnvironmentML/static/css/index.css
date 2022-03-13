@@ -12,7 +12,7 @@ body {
     width: 100%;
     overflow-x: hidden;
     min-height: 100vh;
-    line-height: 1.4;
+    line-height: 1.4; !important;
 }
 
 @media (min-width: 768px) {
