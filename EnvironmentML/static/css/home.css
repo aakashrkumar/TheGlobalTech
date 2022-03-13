@@ -30,7 +30,7 @@
     display: flex;
     align-items: center;
     height: min-content;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .home-cards {
