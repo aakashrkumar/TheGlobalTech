@@ -76,7 +76,7 @@
 }
 
 .project-card:hover {
-    border: 2px solid dodgerblue;
+    border: 2px solid var(--blue);
 }
 
 .authorInfo {
