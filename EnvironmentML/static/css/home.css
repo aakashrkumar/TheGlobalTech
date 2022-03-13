@@ -3,7 +3,7 @@
     background-image: url("/static/graphics/banner.jpg");
     background-position: bottom center, top left, center center;
     background-repeat: repeat-x, repeat, no-repeat;
-    background-size: 3200px 460px, auto, cover;
+    background-size: cover;
     color: rgba(255, 255, 255, 0.8);
     position: relative;
     text-align: center;
