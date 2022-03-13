@@ -1,9 +1,5 @@
 .home-header {
-    background-attachment: fixed, fixed, fixed;
-    background-image: url("/static/graphics/banner.jpg");
-    background-position: bottom center, top left, center center;
-    background-repeat: repeat-x, repeat, no-repeat;
-    background-size: cover;
+    background: linear-gradient(to bottom, #00fff8 0%, #3636fc 100%);
     height: 20vh;
     position: relative;
     text-align: center;
