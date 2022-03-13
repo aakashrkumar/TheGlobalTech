@@ -101,5 +101,6 @@
 @media screen and (max-width: 800px) {
     .article-body {
         width: 100%;
+        margin: 0 0;
     }
 }
