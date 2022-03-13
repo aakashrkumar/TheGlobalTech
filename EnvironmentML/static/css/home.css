@@ -1,5 +1,5 @@
 .home-header {
-    background-attachment: scroll, scroll, scroll;
+    background-attachment: fixed, fixed, fixed;
     background-image: url("/static/graphics/banner.jpg");
     background-position: bottom center, top left, center center;
     background-repeat: repeat-x, repeat, no-repeat;
