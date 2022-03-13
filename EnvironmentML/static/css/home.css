@@ -1,8 +1,102 @@
-.home-header {
-    background: linear-gradient(to bottom left, #00fff8 0%, #3636fc 100%);
-    height: 20vh;
+/* create headline class which shows text the left of screen if screen is large or center if screen is small */
+.homepage {
+}
+
+.headline {
+    font-weight: bold;
+    font-family: Calibri, sans-serif;
+}
+
+.homepageslide {
+    width: 600px;
+    height: 600px;
+}
+
+.headline-container {
+    width: 40%;
+}
+
+.image-cover-shadow {
+    box-shadow: 0 0 0px 300px rgba(0, 0, 0, 0.3) inset;
+!important z-index: 10;
+}
+
+.image-cover-shadow img {
     position: relative;
-    text-align: center;
-    padding: 6em 0 12em 0;
-    color: white;
+    z-index: -1;
+}
+
+.homepage-banner {
+    display: flex;
+    align-items: center;
+    height: min-content;
+    justify-content: center;
+    width: 100%;
+}
+
+.home-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.home-card {
+    max-width: 23rem;
+    margin: 15px;
+}
+
+/* media query for small screens */
+@media screen and (max-width: 1000px) {
+    .headline {
+        font-size: 7vw;
+        text-align: center;
+    }
+
+    .headline-container {
+        width: 90%;
+    }
+
+    .homepageslide {
+        width: 75vw;
+        height: 75vw;
+    }
+
+    .homepage-banner {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navButtons {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 1001px) {
+    .headline {
+        font-size: 2.5em;
+    }
+
+    .homepageslide {
+        width: 450px;
+        height: 450px;
+    }
+
+    .navButtons {
+        display: flex;
+        justify-content: left;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .headline {
+        font-size: 3.5em;
+    }
+
+    .homepageslide {
+        width: 550px;
+        height: 550px;
+    }
 }

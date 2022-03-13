@@ -1,12 +1,115 @@
 {% extends 'main/base.html' %}
 {% block content %}
 {% load static wagtailcore_tags wagtailimages_tags %}
-<link rel="stylesheet" href="{% static 'css/home.css'%}">
 <!-- add headline to the bottom left-->
-<section class="home-header">
-    <h1 class="display-2">The Global Tech</h1>
-    <div class="display-4" style="">
-        Applying innovative technologies to solve critical global issues
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<link rel="stylesheet" href="{% static 'css/projects.css' %}">
+<div class="">
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="homepage-banner">
+            <div class="headline-container">
+                <div class="display-4 headline" style="">
+                    Applying innovative technologies to solve critical global issues
+                </div>
+                <div class="navButtons">
+                    <a href="/about-us" class="btn btn-lg btn-primary active aboutUsButton" style="background-color: #0076BE; margin-right: 15px" role="button" aria-pressed="true">Learn
+                        More</a>
+                    <a href="/projects" class="btn btn-lg btn-primary active projectsButton" style="background-color: #0076BE" role="button" aria-pressed="true">Projects</a>
+                </div>
+            </div>
+            <div id="slideshowHomePage" class="carousel slide" style="width:min-content;" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    {% for project in page.projectPages %}
+                    {% image project.project_image fill-1000x1000 as project_image %}
+                    {% if forloop.first %}
+                    <div class="carousel-item active homepageslide ">
+                        <img class="d-block" src="{{ project_image.url }}" style="width:100%;height: 100%; object-fit: cover;"
+                             alt="{{ project.title }}"
+                             {% if project_image.focal_point %}
+                             data-focus-x="{{ project_image.focal_point.centroid.x }}"
+                             data-focus-y="{{ project_image.focal_point.centroid.y }}"
+                             data-focus-width="{{ project_image.focal_point.width }}"
+                             data-focus-height="{{ project_image.focal_point.height }}"
+                             {% endif %}
+                        >
+                        <!--div class="carousel-caption d-none d-md-block" style="font-family: Roboto, sans-serif;">
+                            <h5>{{ project.project_name }}</h5>
+                        </div-->
+                    </div>
+                    {% else %}
+                    <div class="carousel-item homepageslide">
+                        <img class="d-block" src="{{ project_image.url }}" style="width:100%;height: 100%; object-fit: cover;"
+                             alt="{{ project.title }}"
+                             {% if project_image.focal_point %}
+                             data-focus-x="{{ project_image.focal_point.centroid.x }}"
+                             data-focus-y="{{ project_image.focal_point.centroid.y }}"
+                             data-focus-width="{{ project_image.focal_point.width }}"
+                             data-focus-height="{{ project_image.focal_point.height }}"
+                             {% endif %}
+                        >
+                        <!--div class="carousel-caption d-none d-md-block">
+                            <h5>{{ project.project_name }}</h5>
+                        </div-->
+                    </div>
+                    {% endif %}
+                    {% endfor %}>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#slideshowHomePage" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#slideshowHomePage" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="home-cards">
+            {% for info_block in page.info_structs %}
+            <div class="card text-black bg-white mb-3 shadow-sm home-card" style="width: 400px; height: 400px">
+                <h3 class="card-title" style="text-align: center; font-weight: bold; margin-top: 10px">{{ info_block.value.title }}</h3>
+                <div class="card-body text-muted card-text" style="text-align: justify; font-size: 24px">
+                    {{ info_block.value.body|richtext }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- Create a blue gradient with 100% width -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2 class="text-center">Recent Projects</h2>
+        <div class="projects-page">
+            {% for project in page.projectPages|slice:"0:3"%}
+            <a href="/projects/{{project.slug}}/">
+                <div class="project-card draw image-cover-shadow" style="overflow: hidden">
+                    {% image project.project_image fill-1000x1000 as project_image %}
+                    <img src="{{ project_image.url }}" class="" style="width: 100%; height: 100%; object-fit:cover;"
+                         {% if project_image.focal_point %}
+                         data-focus-x="{{ project_image.focal_point.centroid.x }}"
+                         data-focus-y="{{ project_image.focal_point.centroid.y }}"
+                         data-focus-width="{{ project_image.focal_point.width }}"
+                         data-focus-height="{{ project_image.focal_point.height }}"
+                         {% endif %}
+                    />
+                    <div class="publishDate">Published on {{project.date}}</div>
+                    <div class="projectInfo">{{project.title}}</div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
-</section>
+</div>
 {% endblock %}
