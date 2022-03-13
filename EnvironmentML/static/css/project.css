@@ -97,12 +97,9 @@
     }
 }
 
-.article-body {
-    margin: 0px 30px;
-}
 
 @media screen and (max-width: 800px) {
     .article-body {
-        margin: 0px 0px;
+        width: 100%;
     }
 }
