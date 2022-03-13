@@ -5,13 +5,15 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #F9F9F9;
+    background-color: #EEEEEE;
     font-size: 20px;
     font-family: Roboto, Calibri, sans-serif;
     height: 100%;
     width: 100%;
     overflow-x: hidden;
     min-height: 100vh;
+    line-height: 1.4;
+
 }
 
 @media (min-width: 768px) {
