@@ -5,7 +5,7 @@
     background-repeat: repeat-x, repeat, no-repeat;
     background-size: cover;
     height: 20vh;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 1);
     position: relative;
     text-align: center;
 }
