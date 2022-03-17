@@ -1,8 +1,7 @@
 .home-header {
     position: relative;
     background: linear-gradient(to bottom, var(--lightblue), var(--blue));
-    /* disable bg scroll*/
-    background-attachment: local;
+    background-attachment: fixed;
     min-height: 80vh;
 }
 
