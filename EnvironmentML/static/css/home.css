@@ -1,5 +1,5 @@
 .home-header {
-    display: flex;
+    display: block;
     position: relative;
     background: linear-gradient(to bottom, var(--lightblue), var(--blue));
     background-attachment: fixed;
