@@ -1,11 +1,9 @@
 .home-header {
-    display: block;
     position: relative;
     background: linear-gradient(to bottom, var(--lightblue), var(--blue));
     background-attachment: fixed;
     min-height: 80vh;
-    align-content: center;
-    justify-content: center;
+    text-align: center;
 }
 
 svg {
