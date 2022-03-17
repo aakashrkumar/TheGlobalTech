@@ -14,15 +14,3 @@ svg {
 header::after polygon {
     fill: white;
 }
-
-@media (max-width: 699px) {
-    .svg--lg {
-        display: none;
-    }
-}
-
-@media (min-width: 700px) {
-    .svg--sm {
-        display: none;
-    }
-}
