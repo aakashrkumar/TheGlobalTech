@@ -1,4 +1,5 @@
 .home-header {
     transform: skew(15deg, 15deg);
     background: linear-gradient(to bottom, var(--lightblue), var(--blue));
+    min-height: 10vh;
 }
