@@ -12,5 +12,5 @@ svg {
 }
 
 header::after polygon {
-    fill: white;
+    fill: var(--background);
 }
