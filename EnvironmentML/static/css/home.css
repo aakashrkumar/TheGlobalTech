@@ -3,7 +3,6 @@
     background: linear-gradient(to bottom, var(--lightblue), var(--blue));
     background-attachment: fixed;
     min-height: 80vh;
-    text-align: center;
 }
 
 svg {
