@@ -1,6 +1,6 @@
 .home-header {
     background: linear-gradient(to bottom, var(--lightblue), var(--blue));
-    min-height: 10vh;
+    min-height: 300px;
 }
 
 svg {
