@@ -1,7 +1,7 @@
 .home-header {
     position: relative;
     background: linear-gradient(to bottom, var(--lightblue), var(--blue));
-    min-height: 30vh;
+    min-height: 50vh;
 }
 
 svg {
