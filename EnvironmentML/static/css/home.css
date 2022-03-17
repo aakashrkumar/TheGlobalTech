@@ -1,5 +1,23 @@
 .home-header {
-    transform: skew(-15deg, 15deg);
     background: linear-gradient(to bottom, var(--lightblue), var(--blue));
     min-height: 10vh;
+}
+
+svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}
+
+@media (max-width: 699px) {
+    .svg--lg {
+        display: none;
+    }
+}
+
+@media (min-width: 700px) {
+    .svg--sm {
+        display: none;
+    }
 }
