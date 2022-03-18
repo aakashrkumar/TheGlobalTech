@@ -19,10 +19,7 @@ section::after polygon {
 
 .header-content {
     text-align: center;
-    align-content: center;
 }
 
 .headline {
-    align-self: center;
-    max-width: clamp(500px, 30%, 60%);
 }
