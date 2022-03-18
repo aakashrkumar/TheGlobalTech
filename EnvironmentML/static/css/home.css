@@ -12,6 +12,10 @@ svg {
     height: 10vw;
 }
 
-header::after polygon {
+section::after polygon {
     fill: var(--background);
+}
+
+header-content {
+
 }
