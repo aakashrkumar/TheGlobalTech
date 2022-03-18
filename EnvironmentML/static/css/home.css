@@ -27,5 +27,5 @@ section::after polygon {
 
 .logo {
     padding: 0.55em 0.6em;
-    width: clamp(80px, 150px, 10%);
+    width: clamp(100px, 150px, 10%);
 }
