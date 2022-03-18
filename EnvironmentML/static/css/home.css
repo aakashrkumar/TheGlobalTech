@@ -16,6 +16,7 @@ section::after polygon {
     fill: var(--background);
 }
 
-header-content {
+.header-content {
+    text-align: center;
 
 }
