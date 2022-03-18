@@ -22,4 +22,5 @@ section::after polygon {
 }
 
 .headline {
+    font-weight: bold;
 }
