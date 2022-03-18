@@ -21,3 +21,7 @@ section::after polygon {
     text-align: center;
 
 }
+
+.headline {
+    max-width: clamp(500px, 30%, 60%);
+}
