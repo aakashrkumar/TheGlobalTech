@@ -24,3 +24,8 @@ section::after polygon {
 .headline {
     font-weight: bold;
 }
+
+.logo {
+    padding: 0.55em 0.6em;
+    width: clamp(50px, 100px, 10%);
+}
