@@ -16,7 +16,7 @@
                         <a class="banner-author" href="/team/{{ author.user.userprofile.slug }}">{{ author.user.first_name }} {{ author.user.last_name }}</a>{% if not forloop.last %},{% endif %} {% endfor %}
                         <span class="date">{{page.date}}</span></p>
                     {% image page.image original as project_image %}
-                    <img class="img-fluid" src="{{ project_image.url }}" style="width:100%; object-fit: cover;"
+                    <img class="img-fluid" src="{{ project_image.url }}" style="object-fit: cover;"
                          alt="{{ project.title }}"
                          {% if project_image.focal_point %}
                          data-focus-x="{{ project_image.focal_point.centroid.x }}"
