@@ -46,6 +46,11 @@
     margin: 15px;
 }
 
+.article-list {
+    color: #313437;
+}
+
+
 /* media query for small screens */
 @media screen and (max-width: 1000px) {
     .headline {
@@ -100,3 +105,5 @@
         height: 550px;
     }
 }
+
+
