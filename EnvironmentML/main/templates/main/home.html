@@ -71,16 +71,32 @@
         <br>
         <br>
         <br>
-        <div class="home-cards">
-            {% for info_block in page.info_structs %}
-            <div class="card text-black bg-white mb-3 shadow-sm home-card" style="width: 400px; height: 400px">
-                <h3 class="card-title" style="text-align: center; font-weight: bold; margin-top: 10px">{{ info_block.value.title }}</h3>
-                <div class="card-body text-muted card-text" style="text-align: justify; font-size: 24px">
-                    {{ info_block.value.body|richtext }}
+        <section class="features-boxed">
+            <div class="container">
+                <div class="intro"></div>
+                <h2 class="text-center">Our Mission</h2>
+                <div class="row justify-content-center features">
+                    <div class="col-sm-6 col-md-5 col-lg-4 item">
+                        <div class="box"><i class="fa fa-globe icon"></i>
+                            <h3 class="name">Climate Change</h3>
+                            <p class="description"> Through applying advanced technologies, we aim to reduce the adverse impacts of climate change.<br/></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-5 col-lg-4 item">
+                        <div class="box"><i class="fas fa-code-branch icon"></i>
+                            <h3 class="name">Artificial Intelligence</h3>
+                            <p class="description">We develop Artificial Intelligence applications to solve the critical global issues present in the world today.<br/></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-5 col-lg-4 item">
+                        <div class="box"><i class="fa fa-code icon"></i>
+                            <h3 class="name">Open Source</h3>
+                            <p class="description">Our technology is open-source and accessible to everyone to solve global issues.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            {% endfor %}
-        </div>
+        </section>
         <!-- Create a blue gradient with 100% width -->
         <br>
         <br>
