@@ -5,14 +5,17 @@
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
 <link href="{% static 'css/project_page.css' %}" rel="stylesheet">
-
 <section class="article-clean" style="background: #f9f9f9;">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
                 <div class="intro">
                     <h1 class="text-center">{{page.title}}</h1>
-                    <p class="text-center"><span class="by">by</span> <a href="#">Aakash Kumar</a><span class="date">{{page.date}}</span></p><img class="img-fluid" src="assets/img/desk.jpg">
+                    <p class="text-center"><span class="by">by</span>
+                        {% for author in page.authors.all %}
+                        <a class="banner-author" href="/team/{{ author.user.userprofile.slug }}">{{ author.user.first_name }} {{ author.user.last_name }}</a>
+                        {% if not forloop.last %},{% endif %} {% endfor %}
+                        <span class="date">{{page.date}}</span></p>
                 </div>
                 <div class="text">
                     {% include_block page.body %}
