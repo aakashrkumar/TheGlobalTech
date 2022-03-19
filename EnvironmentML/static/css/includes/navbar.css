@@ -1,7 +1,6 @@
 .navbar {
     background-color: rgba(255, 255, 255, 0.00);
     transition: background-color 0.5s ease;
-    transition: 0.5s ease;
 }
 
 .nav-link {
@@ -10,4 +9,5 @@
 
 .scrolled {
     background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
