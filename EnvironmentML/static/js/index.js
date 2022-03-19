@@ -50,7 +50,7 @@ $(window).scroll(function () {
     }
 });
 
-$(window).scroll(function () {
+$(window).load(function () {
     var $this = $(this);
     if ($this.scrollTop() >= 10) {
         $(".navbar").addClass("scrolled");
