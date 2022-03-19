@@ -1,15 +1,16 @@
 function fadeInPage() {
-    if (!window.AnimationEvent) {
-        return;
-    }
-    var fader = document.getElementById('page-fader');
-    fader.classList.add('fade-out');
     var $this = $(this);
     if ($this.scrollTop() >= 10) {
         $(".navbar").addClass("scrolled");
     } else {
         $(".navbar").removeClass("scrolled");
     }
+    if (!window.AnimationEvent) {
+        return;
+    }
+    var fader = document.getElementById('page-fader');
+    fader.classList.add('fade-out');
+
 }
 
 document.addEventListener('DOMContentLoaded', function () {
