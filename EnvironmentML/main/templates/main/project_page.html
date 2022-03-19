@@ -1,5 +1,8 @@
 {% extends 'main/base.html' %}
 {% load static wagtailcore_tags wagtailimages_tags %}
+<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
 <link href="{% static 'css/project_page.css' %}" rel="stylesheet">
 {% block content %}
 <section class="article-clean" style="background: #f9f9f9;">
@@ -10,7 +13,7 @@
                     <h1 class="text-center">{{page.title}}</h1>
                     <p class="text-center"><span class="by">by</span>
                         {% for author in page.authors.all %}
-                        <a href="/team/{{ author.user.userprofile.slug }}">{{ author.user.first_name }} {{ author.user.last_name }}</a>{% if not forloop.last%},{% endif %} {%endfor %}
+                        <a href="/team/{{ author.user.userprofile.slug }}">{{ author.user.first_name }} {{ author.user.last_name }}</a>{% if not forloop.last%},{% endif %} {% endfor %}
                         <span class="date">{{page.date}}</span>
                     </p>
                 </div>
