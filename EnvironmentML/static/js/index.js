@@ -4,6 +4,12 @@ function fadeInPage() {
     }
     var fader = document.getElementById('page-fader');
     fader.classList.add('fade-out');
+    var $this = $(this);
+    if ($this.scrollTop() >= 10) {
+        $(".navbar").addClass("scrolled");
+    } else {
+        $(".navbar").removeClass("scrolled");
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -50,11 +56,3 @@ $(window).scroll(function () {
     }
 });
 
-$(window).load(function () {
-    var $this = $(this);
-    if ($this.scrollTop() >= 10) {
-        $(".navbar").addClass("scrolled");
-    } else {
-        $(".navbar").removeClass("scrolled");
-    }
-});
