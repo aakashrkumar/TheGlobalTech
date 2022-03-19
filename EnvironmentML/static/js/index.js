@@ -43,7 +43,7 @@ window.addEventListener('pageshow', function (event) {
 
 $(window).scroll(function () {
     var $this = $(this);
-    if ($this.scrollTop() >= 150) {
+    if ($this.scrollTop() >= 10) {
         $(".navbar").addClass("scrolled");
     } else {
         $(".navbar").removeClass("scrolled");
