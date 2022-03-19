@@ -10,4 +10,5 @@ wagtail
 wagtail-content-import
 django-jquery
 django-allauth
+django-select2
 sendgrid
