@@ -10,23 +10,12 @@
                     <h1 class="text-center">{{page.title}}</h1>
                     <p class="text-center"><span class="by">by</span>
                         {% for author in page.authors.all %}
-                        <a class="banner-author" href="/team/{{ author.user.userprofile.slug }}">{{ author.user.first_name }} {{ author.user.last_name }}</a>{% if not forloop.last %}, {% endif %} {% endfor %}
+                        <a class="banner-author" href="/team/{{ author.user.userprofile.slug }}">{{ author.user.first_name }} {{ author.user.last_name }}</a>{% if not forloop.last
+                        %}, {% endif %} {% endfor %}
                         <span class="date">{{Date}}</span></p><img class="img-fluid" src="desk.jpg"/>
                 </div>
                 <div class="text">
-                    <p>Sed lobortis mi. Suspendisse vel placerat ligula. <span style="text-decoration: underline;">Vivamus</span> ac sem lac. Ut vehicula rhoncus elementum. Etiam
-                        quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-                        cubilia Curae.</p>
-                    <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac lacus. <strong>Ut vehicula rhoncus</strong> elementum. Etiam quis tristique lectus.
-                        Aliquam in arcu eget velit <em>pulvinar dict</em> vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
-                    <h2>Aliquam In Arcu </h2>
-                    <p>Suspendisse vel placerat ligula. Vivamus ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum
-                        vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
-                    <figure class="figure d-block"><img class="figure-img" src="beach.jpg"/>
-                        <figcaption class="figure-caption">Caption</figcaption>
-                    </figure>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse vel placerat ligula. Vivamus ac sem lac. Ut vehicula
-                        rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                    {% include_block page.body %}
                 </div>
             </div>
         </div>
