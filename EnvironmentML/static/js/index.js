@@ -39,3 +39,14 @@ window.addEventListener('pageshow', function (event) {
     var fader = document.getElementById('page-fader');
     fader.classList.remove('fade-in');
 });
+
+
+$(window).scroll(function () {
+    var $this = $(this);
+    if ($this.scrollTop() >= 150) {
+        $(".navbar").addClass("scrolled");
+    } else {
+        $(".navbar").removeClass("scrolled");
+    }
+    ;
+});
