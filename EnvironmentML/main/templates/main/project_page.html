@@ -11,7 +11,7 @@
                     <p class="text-center"><span class="by">by</span>
                         {% for author in page.authors.all %}
                         <a href="/team/{{ author.user.userprofile.slug }}">{{ author.user.first_name }} {{ author.user.last_name }}</a>{% if not forloop.last%},{% endif %} {%endfor %}
-                        <span class="date">{{page.date_published}}</span>
+                        <span class="date">{{page.date}}</span>
                     </p>
                 </div>
                 <div class="text">
