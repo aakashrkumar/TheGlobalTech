@@ -289,12 +289,20 @@ class HomePage(Page):
     # define custom template file
     template = "main/home.html"
     projectPages = ProjectPage.objects.filter(live=True).order_by('-date')
+    home_image = models.ForeignKey(
+        'wagtailimages.Image',
+        null=True,
+        blank=False,
+        on_delete=models.SET_NULL,
+        related_name='+'
+    )
 
     info_structs = StreamField([
         ('info_block', InfoBlock())
     ])
 
     content_panels = Page.content_panels + [
+        ImageChooserPanel('home_image'),
         StreamFieldPanel('info_structs'),
     ]
 
