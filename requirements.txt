@@ -12,4 +12,4 @@ django-jquery
 django-allauth
 django-select2
 sendgrid
-Wand
+python-wand
