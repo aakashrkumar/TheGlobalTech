@@ -7,8 +7,11 @@
         <div class="row">
             <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
                 <div class="intro">
-                    <h1 class="text-center">{{Title}}</h1>
-                    <p class="text-center"><span class="by">by</span><a href="#">{{Authors}}</a><span class="date">{{Date}}</span></p><img class="img-fluid" src="desk.jpg"/>
+                    <h1 class="text-center">{{page.title}}</h1>
+                    <p class="text-center"><span class="by">by</span>
+                        {% for author in page.authors.all %}
+                        <a class="banner-author" href="/team/{{ author.user.userprofile.slug }}">{{ author.user.first_name }} {{ author.user.last_name }}</a>{% if not forloop.last %}, {% endif %} {% endfor %}
+                        <span class="date">{{Date}}</span></p><img class="img-fluid" src="desk.jpg"/>
                 </div>
                 <div class="text">
                     <p>Sed lobortis mi. Suspendisse vel placerat ligula. <span style="text-decoration: underline;">Vivamus</span> ac sem lac. Ut vehicula rhoncus elementum. Etiam
