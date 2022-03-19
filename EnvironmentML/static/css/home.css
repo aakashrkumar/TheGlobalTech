@@ -254,6 +254,6 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(to bottom, #0076BE, #95D8EB);
+  background: linear-gradient(to top, #0076BE, #95D8EB);
 }
 
