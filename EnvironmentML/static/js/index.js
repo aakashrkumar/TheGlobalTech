@@ -48,5 +48,4 @@ $(window).scroll(function () {
     } else {
         $(".navbar").removeClass("scrolled");
     }
-    ;
 });

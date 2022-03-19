@@ -37,22 +37,21 @@
         {% include "main/includes/footer.html" %}
         <svg id="page-fader"></svg>
 
-
-        <script src="{% static 'js/index.js' %}"></script>
-        <script>
-            fadeInPage();
-        </script>
-        <script src="https://kit.fontawesome.com/4d87a12c6b.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/4d87a12c6b.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
                 crossorigin="anonymous"></script>
         <script src="{% static 'tinymce/tinymce.min.js' %}"></script>
+        <script src="{% static 'js/index.js' %}"></script>
         <script>
             tinyMCE.init({
                 force_br_newlines: true,
                 force_p_newlines: true,
                 forced_root_block: '' // Needed for 3.x
             });
+        </script>
+        <script>
+            fadeInPage();
         </script>
     </body>
 </html>
