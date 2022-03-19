@@ -105,6 +105,7 @@ class ProjectPage(Page, ContentImportMixin):
         on_delete=models.SET_NULL,
         related_name='+'
     )
+    show_image_on_page = models.BooleanField(default=True)
 
     # Search index configuration
 
@@ -122,6 +123,7 @@ class ProjectPage(Page, ContentImportMixin):
         FieldPanel('date'),
         InlinePanel('authors', label="Authors"),
         ImageChooserPanel('project_image'),
+        FieldPanel('show_image_on_page'),
         StreamFieldPanel('body'),
         InlinePanel('related_links', label="Related links"),
         FieldPanel('tags'),
