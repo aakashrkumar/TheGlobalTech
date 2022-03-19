@@ -107,7 +107,7 @@
                             />
                         </a>
                         <h3 class="name">{{project.title}}</h3>
-                        <p class="description">{{project.subtitle}}</p>
+                        <p class="description">{{ project.introduction|truncatewords:15 }}</p>
                         <a class="action" href="/projects/{{project.slug}}/"><i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                     {% endfor %}
