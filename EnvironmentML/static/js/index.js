@@ -49,3 +49,12 @@ $(window).scroll(function () {
         $(".navbar").removeClass("scrolled");
     }
 });
+
+$(window).scroll(function () {
+    var $this = $(this);
+    if ($this.scrollTop() >= 10) {
+        $(".navbar").addClass("scrolled");
+    } else {
+        $(".navbar").removeClass("scrolled");
+    }
+});
