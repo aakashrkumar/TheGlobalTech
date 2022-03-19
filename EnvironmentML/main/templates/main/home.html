@@ -92,12 +92,25 @@
                     <h2 class="text-center">Latest Projects</h2>
                     <p class="text-center">Our latest projects</p>
                 </div>
-                        {% for project in page.projectPages|slice:"0:3"%}
-    <div class="row articles">
-                    <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="desk.jpg"/></a>
-                        <h3 class="name">Article Title</h3>
-                        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a class="action" href="#"><i class="fa fa-arrow-circle-right"></i></a>
+                <div class="row articles">
+                    {% for project in page.projectPages|slice:"0:3"%}
+                    <div class="col-sm-6 col-md-4 item">
+                        <a href="/projects/{{project.slug}}/">
+                            {% image project.project_image fill-1000x1000 as project_image %}
+                            <img src="{{ project_image.url }}" class="img-fluid" style="width: 100%; height: 100%; object-fit:cover;"
+                                 {% if project_image.focal_point %}
+                                 data-focus-x="{{ project_image.focal_point.centroid.x }}"
+                                 data-focus-y="{{ project_image.focal_point.centroid.y }}"
+                                 data-focus-width="{{ project_image.focal_point.width }}"
+                                 data-focus-height="{{ project_image.focal_point.height }}"
+                                 {% endif %}
+                            />
+                        </a>
+                        <h3 class="name">{{project.title}}</h3>
+                        <p class="description">project.subtitle</p>
+                        <a class="action" href="/projects/{{project.slug}}/"><i class="fa fa-arrow-circle-right"></i></a>
                     </div>
+                    {% endfor %}
                     <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="building.jpg"/></a>
                         <h3 class="name">Article Title</h3>
                         <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a class="action" href="#"><i class="fa fa-arrow-circle-right"></i></a>
