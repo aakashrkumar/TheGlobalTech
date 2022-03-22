@@ -30,7 +30,7 @@
         <li class="col-xs-12 col-sm-6 col-md-3 project-list-item">
             <a href="{% pageurl project %}">
                 <div class="image">
-                    {% image project.project_image original as image %}
+                    {% image project.project_image original format-webp as image %}
                     <img src="{{ image.url }}" alt="{{ image.alt }}"
                          {% if image.focal_point %}
                          data-focus-x="{{ image.focal_point.centroid.x }}"
