@@ -58,8 +58,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.github',
     'allauth.socialaccount.providers.google',
     # end allauth
-    'wagtailfontawesome',
     # wagtail
+    'wagtailfontawesome',
     "wagtail.contrib.table_block",
     'wagtail.contrib.sitemaps',
     'wagtail.contrib.routable_page',
