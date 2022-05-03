@@ -1,7 +1,7 @@
 .article-clean {
     color: #000000;
     font-family: 'Lora', serif;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .article-clean .intro {
@@ -20,7 +20,7 @@
 
 .article-clean .intro p {
     color: #000000;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .article-clean .intro p .by {
