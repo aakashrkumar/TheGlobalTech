@@ -64,7 +64,6 @@ INSTALLED_APPS = [
     'wagtail.contrib.sitemaps',
     'wagtail.contrib.routable_page',
     'django_social_share',
-    'puput',
     'wagtailcodeblock',
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
