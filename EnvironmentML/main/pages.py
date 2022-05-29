@@ -4,12 +4,10 @@ from wagtail.contrib.routable_page.models import route, RoutablePageMixin
 from wagtail.core.blocks import CharBlock, RichTextBlock, StructBlock
 
 from wagtail.core.models import Page, Orderable
-from wagtail.core.fields import RichTextField, StreamField
-from wagtail.admin.edit_handlers import FieldPanel, MultiFieldPanel, InlinePanel, StreamFieldPanel
+from wagtail.core.fields import StreamField
+from wagtail.admin.edit_handlers import FieldPanel, MultiFieldPanel, InlinePanel
 from wagtail.embeds.blocks import EmbedBlock
-from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.search import index
-from wagtail.images.blocks import ImageChooserBlock
 
 from wagtail_content_import.models import ContentImportMixin
 from wagtailcodeblock.blocks import CodeBlock
@@ -122,9 +120,9 @@ class ProjectPage(Page, ContentImportMixin):
         FieldPanel('introduction'),
         FieldPanel('date'),
         InlinePanel('authors', label="Authors"),
-        ImageChooserPanel('project_image'),
+        FieldPanel('project_image'),
         FieldPanel('show_image_on_page'),
-        StreamFieldPanel('body'),
+        FieldPanel('body'),
         InlinePanel('related_links', label="Related links"),
         FieldPanel('tags'),
     ]
@@ -302,8 +300,8 @@ class HomePage(Page):
     ])
 
     content_panels = Page.content_panels + [
-        ImageChooserPanel('home_image'),
-        StreamFieldPanel('info_structs'),
+        FieldPanel('home_image'),
+        FieldPanel('info_structs'),
     ]
 
     @classmethod
