@@ -3,10 +3,8 @@ django-tinymce
 Pillow
 mysqlclient
 wagtail
-puput
 wagtailcodeblock
 wagtailfontawesome
-wagtail
 wagtail-content-import
 django-jquery
 django-allauth
