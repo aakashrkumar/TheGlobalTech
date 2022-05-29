@@ -24,7 +24,6 @@ from wagtail.admin import urls as wagtailadmin_urls
 from wagtail.core import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
 from wagtail.images import urls as wagtailimages_urls
-from puput import urls as puput_urls
 from wagtail.api.v2.router import WagtailAPIRouter
 from wagtail.images.api.v2.views import ImagesAPIViewSet
 
@@ -41,7 +40,6 @@ urlpatterns = [
     path('images/', include(wagtailimages_urls)),
     path("select2/", include("django_select2.urls")),
     path('', include('allauth.urls')),
-    path(r'', include(puput_urls)),
     path('', include(wagtail_urls)),
 ]
 
