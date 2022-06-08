@@ -10,7 +10,7 @@
                     <h1 class="text-center">{{page.title}}</h1>
                     <p class="text-center"><span class="by">by</span>
                         {% for author in page.authors.all %}
-                        <a class="banner-author" href="/team/{{ author.userprofile.slug }}">{{ author.userprofile }} </a>{% if not forloop.last %},{% endif %} {% endfor %}
+                        <a class="banner-author" href="/team/{{ author.userprofile.slug }}">{{ author.userprofile.first_name }} </a>{% if not forloop.last %},{% endif %} {% endfor %}
                         <span class="date">{{page.date}}</span></p>
                     {% if page.show_image_on_page %}
                     {% image page.project_image original format-webp as project_image %}
