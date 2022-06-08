@@ -25,7 +25,7 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, verbose_name='User', on_delete=models.CASCADE)
     avatar = models.ImageField(upload_to="profiles")  # or whatever
     role = models.CharField(max_length=200, default="")
-    bio = models.TextField(default="")
+    info = models.TextField(default="")
     slug = models.CharField(max_length=300)
 
     def save(self, *args, **kwargs):
