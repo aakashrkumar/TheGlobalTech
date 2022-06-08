@@ -48,7 +48,7 @@
                 <div class="small footer">
                     {{ project.date_published }} by
                     {% for author in project.authors.all %}
-                    {{ author.user.first_name }} {{ author.user.last_name }}{% if not forloop.last %}, {% endif %}
+                    {{ author.user.user.first_name }} {{ author.user.user.last_name }}{% if not forloop.last %}, {% endif %}
                     {% endfor %}
                 </div>
             </a>
