@@ -1,7 +1,7 @@
 from wagtail.contrib.modeladmin.options import (
     ModelAdmin, ModelAdminGroup, modeladmin_register)
 
-from EnvironmentML.main.modelsData import UserProfile
+from .modelsData import UserProfile
 
 INSTALLED_APPS = (
     'wagtail.contrib.styleguide',
