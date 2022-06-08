@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     "wagtail.contrib.table_block",
     'wagtail.contrib.sitemaps',
     'wagtail.contrib.routable_page',
+    'wagtail.contrib.styleguide',
     'django_social_share',
     'wagtailcodeblock',
     'wagtail.contrib.forms',
