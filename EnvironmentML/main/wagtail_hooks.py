@@ -16,7 +16,7 @@ class UserProfileAdmin(ModelAdmin):
     add_to_settings_menu = True
     exclude_from_explorer = False
 
-    list_display = ("first_name",)
+    list_display = ("user",)
 
 
 class AccountModelAdminGroup(ModelAdminGroup):
