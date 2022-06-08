@@ -32,7 +32,7 @@ class UserProfile(models.Model):
         base_url = self.user.first_name.lower() + "-" + self.user.last_name.lower()
         counter = 1
         url = base_url
-        while UserProfile.objects.filter(url=url).exists():
+        while UserProfile.objects.filter(url=url).filter(~Q(user__id=self.user.id)).exists():
             counter += 1
             url = f"{base_url}-{counter}"
         self.url = url
