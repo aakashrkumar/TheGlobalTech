@@ -16,8 +16,8 @@ class UserProfileAdmin(ModelAdmin):
     add_to_settings_menu = True
     exclude_from_explorer = False
 
-    list_display = ("user__first_name", "user__last_name", "user__email", "avatar")
-    search_fields = ("user__first_name", "user__last_name", "user__email")
+    list_display = ("first_name")
+    search_fields = ("first_name")
 
 
 class AccountModelAdminGroup(ModelAdminGroup):
