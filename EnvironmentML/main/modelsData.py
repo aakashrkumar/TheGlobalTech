@@ -23,10 +23,10 @@ class Project(models.Model):
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, verbose_name='User', on_delete=models.CASCADE)
-    avatar = models.ImageField(upload_to="profiles")  # or whatever
+    profile = models.ImageField(upload_to="profiles")  # or whatever
     role = models.CharField(max_length=200, default="")
     info = models.TextField(default="")
-    slug = models.CharField(max_length=300)
+    url = models.CharField(max_length=300)
 
     def save(self, *args, **kwargs):
         base_slug = self.user.first_name.lower() + "-" + self.user.last_name.lower()
