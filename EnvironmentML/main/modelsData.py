@@ -1,8 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-
 # Create your models here.
+from django.db.models import Q
 
 
 class Project(models.Model):
@@ -32,7 +32,7 @@ class UserProfile(models.Model):
         base_url = self.user.first_name.lower() + "-" + self.user.last_name.lower()
         counter = 1
         url = base_url
-        while UserProfile.objects.filter(url=url).exists():
+        while UserProfile.objects.filter(url=url).filter(~Q(user=self.user)).exists():
             counter += 1
             url = f"{base_url}-{counter}"
         self.url = url
