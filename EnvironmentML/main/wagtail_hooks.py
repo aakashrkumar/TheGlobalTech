@@ -16,7 +16,7 @@ class UserProfileAdmin(ModelAdmin):
     add_to_settings_menu = True
     exclude_from_explorer = False
 
-    list_display = ("first_name", "last_name", "email", "profile", "info")
+    list_display = ("first_name", "last_name", "email", "profile")
     list_filter = ("first_name")
     search_fields = ("first_name", "last_name", "email")
 
