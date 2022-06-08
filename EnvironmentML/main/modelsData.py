@@ -29,13 +29,13 @@ class UserProfile(models.Model):
     url = models.CharField(max_length=300)
 
     def save(self, *args, **kwargs):
-        base_slug = self.user.first_name.lower() + "-" + self.user.last_name.lower()
+        base_url = self.user.first_name.lower() + "-" + self.user.last_name.lower()
         counter = 1
-        slug = base_slug
-        while UserProfile.objects.filter(slug=slug).exists():
+        url = base_url
+        while UserProfile.objects.filter(url=url).exists():
             counter += 1
-            slug = f"{base_slug}-{counter}"
-        self.slug = slug
+            url = f"{base_url}-{counter}"
+        self.url = url
         super(UserProfile, self).save(*args, **kwargs)
 
     def __str__(self):
