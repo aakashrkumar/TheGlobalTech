@@ -33,7 +33,7 @@
     <div class="container">
         <div class="authors">
             {% for author in page.team %}
-            <a href="/team/{{author.userprofile.url }}">
+            <a href="#/team/{{author.userprofile.url }}">
                 <div class="profile-card draw image-cover-shadow" style="overflow: hidden">
                     <img src="/media/{{ author.userprofile.profile }}" class="" style="width: 100%; height: 100%; object-fit:cover;"/>
                     <div class="authorName">{{author.first_name}} {{author.last_name}}</div>
